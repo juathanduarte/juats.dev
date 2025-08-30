@@ -1,0 +1,100 @@
+{
+  "common": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "viewAll": "Ver Todos",
+    "getInTouch": "Entre em Contato",
+    "sendMessage": "Enviar Mensagem",
+    "followMe": "Me Siga",
+    "yearsExperience": "Anos de Experiência",
+    "projectsCompleted": "Projetos Concluídos",
+    "happyClients": "Clientes Satisfeitos",
+    "clientSatisfaction": "Satisfação do Cliente"
+  },
+  "header": {
+    "logo": "juats.dev",
+    "navigation": {
+      "home": "Início",
+      "about": "Sobre",
+      "projects": "Projetos",
+      "contact": "Contato"
+    }
+  },
+  "hero": {
+    "greeting": "Olá, me chamo",
+    "nicknameIntro": "! Mas pode me chamar de",
+    "title": "juats",
+    "subtitle": "Desenvolvedor Full-Stack formado em Ciência da Computação pela Universidade Federal de Pelotas. Especializado em React, Next.js e tecnologias web modernas. Crio experiências web bonitas, performáticas e acessíveis.",
+    "cta": {
+      "viewWork": "Ver Meu Trabalho",
+      "getInTouch": "Entre em Contato"
+    },
+    "scrollIndicator": "Role para baixo"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "subtitle": "Sou um desenvolvedor full-stack apaixonado com formação em Ciência da Computação pela Universidade Federal de Pelotas. Com mais de 5 anos de experiência criando aplicações web modernas, adoro transformar problemas complexos em soluções simples, bonitas e intuitivas.",
+    "journey": {
+      "title": "Minha Jornada",
+      "description1": "Comecei minha jornada no desenvolvimento web com curiosidade sobre como as coisas funcionam na internet. Ao longo dos anos, trabalhei em vários projetos, desde sites de pequenas empresas até aplicações empresariais complexas.",
+      "description2": "Minha paixão está em criar experiências do usuário que não são apenas visualmente atrativas, mas também altamente funcionais e acessíveis. Acredito em escrever código limpo e manutenível e manter-me atualizado com as últimas tecnologias e melhores práticas.",
+      "description3": "Quando não estou programando, você pode me encontrar explorando novas tecnologias, contribuindo para projetos open-source ou compartilhando conhecimento com a comunidade de desenvolvedores."
+    },
+    "skills": {
+      "title": "Habilidades e Tecnologias",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Ferramentas",
+      "languages": "Linguagens"
+    },
+    "stats": {
+      "years": "Anos de Experiência",
+      "projects": "Projetos Concluídos",
+      "clients": "Clientes Satisfeitos",
+      "satisfaction": "Satisfação do Cliente"
+    }
+  },
+  "projects": {
+    "title": "Projetos em Destaque",
+    "subtitle": "Aqui estão alguns dos meus projetos recentes que mostram minhas habilidades e paixão por criar experiências web excepcionais.",
+    "viewAllProjects": "Ver Todos os Projetos",
+    "github": "GitHub",
+    "liveDemo": "Demo ao Vivo"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Estou sempre interessado em ouvir sobre novas oportunidades e projetos emocionantes. Vamos trabalhar juntos para criar algo incrível!",
+    "form": {
+      "title": "Envie-me uma Mensagem",
+      "name": "Nome",
+      "email": "Email",
+      "subject": "Assunto",
+      "message": "Mensagem",
+      "namePlaceholder": "Seu nome",
+      "emailPlaceholder": "seu.email@exemplo.com",
+      "subjectPlaceholder": "Sobre o que é?",
+      "messagePlaceholder": "Conte-me sobre seu projeto...",
+      "submit": "Enviar Mensagem"
+    },
+    "info": {
+      "title": "Vamos Conectar",
+      "description": "Atualmente estou disponível para trabalho freelance e oportunidades emocionantes. Seja qual for sua pergunta ou se você só quiser dizer oi, farei o possível para responder!",
+      "email": "Email",
+      "location": "Localização",
+      "locationValue": "Remoto / Mundial"
+    }
+  },
+  "footer": {
+    "description": "Desenvolvedor Full-Stack formado em Ciência da Computação pela Universidade Federal de Pelotas, especializado em React, Next.js e tecnologias web modernas",
+    "quickLinks": "Links Rápidos",
+    "connect": "Conecte-se",
+    "copyright": "Todos os direitos reservados."
+  },
+  "languages": {
+    "pt": "Português",
+    "en": "English",
+    "es": "Español"
+  }
+}

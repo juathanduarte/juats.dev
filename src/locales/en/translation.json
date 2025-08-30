@@ -1,0 +1,100 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "viewAll": "View All",
+    "getInTouch": "Get In Touch",
+    "sendMessage": "Send Message",
+    "followMe": "Follow Me",
+    "yearsExperience": "Years Experience",
+    "projectsCompleted": "Projects Completed",
+    "happyClients": "Happy Clients",
+    "clientSatisfaction": "Client Satisfaction"
+  },
+  "header": {
+    "logo": "juats.dev",
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "greeting": "Hi, my name is",
+    "nicknameIntro": "! But you can call me",
+    "title": "juats",
+    "subtitle": "Full-Stack Developer with a degree in Computer Science from the Federal University of Pelotas. Specializing in React, Next.js, and modern web technologies. I create beautiful, performant, and accessible web experiences.",
+    "cta": {
+      "viewWork": "View My Work",
+      "getInTouch": "Get In Touch"
+    },
+    "scrollIndicator": "Scroll down"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "I'm a passionate full-stack developer with a degree in Computer Science from the Federal University of Pelotas. With over 5 years of experience creating modern web applications, I love turning complex problems into simple, beautiful, and intuitive solutions.",
+    "journey": {
+      "title": "My Journey",
+      "description1": "I started my journey in web development with a curiosity about how things work on the internet. Over the years, I've worked on various projects ranging from small business websites to complex enterprise applications.",
+      "description2": "My passion lies in creating user experiences that are not only visually appealing but also highly functional and accessible. I believe in writing clean, maintainable code and staying up-to-date with the latest technologies and best practices.",
+      "description3": "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community."
+    },
+    "skills": {
+      "title": "Skills & Technologies",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools",
+      "languages": "Languages"
+    },
+    "stats": {
+      "years": "Years Experience",
+      "projects": "Projects Completed",
+      "clients": "Happy Clients",
+      "satisfaction": "Client Satisfaction"
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Here are some of my recent projects that showcase my skills and passion for creating exceptional web experiences.",
+    "viewAllProjects": "View All Projects",
+    "github": "GitHub",
+    "liveDemo": "Live Demo"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "I'm always interested in hearing about new opportunities and exciting projects. Let's work together to create something amazing!",
+    "form": {
+      "title": "Send Me a Message",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "your.email@example.com",
+      "subjectPlaceholder": "What's this about?",
+      "messagePlaceholder": "Tell me about your project...",
+      "submit": "Send Message"
+    },
+    "info": {
+      "title": "Let's Connect",
+      "description": "I'm currently available for freelance work and exciting opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+      "email": "Email",
+      "location": "Location",
+      "locationValue": "Remote / Worldwide"
+    }
+  },
+  "footer": {
+    "description": "Full-Stack Developer with a degree in Computer Science from the Federal University of Pelotas, specializing in React, Next.js, and modern web technologies",
+    "quickLinks": "Quick Links",
+    "connect": "Connect",
+    "copyright": "All rights reserved."
+  },
+  "languages": {
+    "pt": "Português",
+    "en": "English",
+    "es": "Español"
+  }
+}

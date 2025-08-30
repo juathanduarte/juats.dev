@@ -1,0 +1,100 @@
+{
+  "common": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "viewAll": "Ver Todos",
+    "getInTouch": "Ponte en Contacto",
+    "sendMessage": "Enviar Mensaje",
+    "followMe": "Sígueme",
+    "yearsExperience": "Años de Experiencia",
+    "projectsCompleted": "Proyectos Completados",
+    "happyClients": "Clientes Satisfechos",
+    "clientSatisfaction": "Satisfacción del Cliente"
+  },
+  "header": {
+    "logo": "juats.dev",
+    "navigation": {
+      "home": "Inicio",
+      "about": "Acerca de",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    }
+  },
+  "hero": {
+    "greeting": "¡Hola, me llamo",
+    "nicknameIntro": "! Pero puedes llamarme",
+    "title": "juats",
+    "subtitle": "Desarrollador Full-Stack con título en Ciencias de la Computación de la Universidad Federal de Pelotas. Especializado en React, Next.js y tecnologías web modernas. Creo experiencias web hermosas, performantes y accesibles.",
+    "cta": {
+      "viewWork": "Ver Mi Trabajo",
+      "getInTouch": "Ponte en Contacto"
+    },
+    "scrollIndicator": "Desplázate hacia abajo"
+  },
+  "about": {
+    "title": "Acerca de Mí",
+    "subtitle": "Soy un desarrollador full-stack apasionado con título en Ciencias de la Computación de la Universidad Federal de Pelotas. Con más de 5 años de experiencia creando aplicaciones web modernas, me encanta convertir problemas complejos en soluciones simples, hermosas e intuitivas.",
+    "journey": {
+      "title": "Mi Viaje",
+      "description1": "Comencé mi viaje en el desarrollo web con curiosidad sobre cómo funcionan las cosas en internet. A lo largo de los años, he trabajado en varios proyectos, desde sitios web de pequeñas empresas hasta aplicaciones empresariales complejas.",
+      "description2": "Mi pasión está en crear experiencias de usuario que no solo sean visualmente atractivas, sino también altamente funcionales y accesibles. Creo en escribir código limpio y mantenible y mantenerme actualizado con las últimas tecnologías y mejores prácticas.",
+      "description3": "Cuando no estoy programando, puedes encontrarme explorando nuevas tecnologías, contribuyendo a proyectos de código abierto o compartiendo conocimiento con la comunidad de desarrolladores."
+    },
+    "skills": {
+      "title": "Habilidades y Tecnologías",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Herramientas",
+      "languages": "Lenguajes"
+    },
+    "stats": {
+      "years": "Años de Experiencia",
+      "projects": "Proyectos Completados",
+      "clients": "Clientes Satisfechos",
+      "satisfaction": "Satisfacción del Cliente"
+    }
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "Aquí hay algunos de mis proyectos recientes que muestran mis habilidades y pasión por crear experiencias web excepcionales.",
+    "viewAllProjects": "Ver Todos los Proyectos",
+    "github": "GitHub",
+    "liveDemo": "Demo en Vivo"
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "subtitle": "Siempre estoy interesado en escuchar sobre nuevas oportunidades y proyectos emocionantes. ¡Trabajemos juntos para crear algo increíble!",
+    "form": {
+      "title": "Envíame un Mensaje",
+      "name": "Nombre",
+      "email": "Email",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "namePlaceholder": "Tu nombre",
+      "emailPlaceholder": "tu.email@ejemplo.com",
+      "subjectPlaceholder": "¿De qué se trata?",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+      "submit": "Enviar Mensaje"
+    },
+    "info": {
+      "title": "Conectemos",
+      "description": "Actualmente estoy disponible para trabajo freelance y oportunidades emocionantes. Ya sea que tengas una pregunta o solo quieras saludar, ¡haré lo posible por responderte!",
+      "email": "Email",
+      "location": "Ubicación",
+      "locationValue": "Remoto / Mundial"
+    }
+  },
+  "footer": {
+    "description": "Desarrollador Full-Stack con título en Ciencias de la Computación de la Universidad Federal de Pelotas, especializado en React, Next.js y tecnologías web modernas",
+    "quickLinks": "Enlaces Rápidos",
+    "connect": "Conecta",
+    "copyright": "Todos los derechos reservados."
+  },
+  "languages": {
+    "pt": "Português",
+    "en": "English",
+    "es": "Español"
+  }
+}
