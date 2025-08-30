@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
 import avatar from '../assets/images/avatar.jpg';
+import AnimatedIcon from '../components/ui/AnimatedIcon';
 import { SOCIAL_LINKS } from '../constants';
 import {
   buttonVariants,
@@ -43,15 +44,20 @@ const Hero = () => {
           >
             <motion.h1
               variants={titleVariants}
-              className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
+              className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 relative"
             >
               {t('hero.greeting')}{' '}
               <span className="text-primary-600 dark:text-primary-400">
                 Juathan
               </span>
               {t('hero.nicknameIntro')}{' '}
-              <span className="text-secondary-600 dark:text-secondary-400">
+                            <span className="text-secondary-600 dark:text-secondary-400 relative">
                 {t('hero.title')}
+
+                {/* Ícone animado no canto direito baixo de "Juats" */}
+                <div className="absolute -bottom-2 -right-2">
+                  <AnimatedIcon />
+                </div>
               </span>
             </motion.h1>
 
