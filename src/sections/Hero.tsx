@@ -32,7 +32,7 @@ const Hero = () => {
             <img
               src={avatar}
               alt="Juathan - Desenvolvedor Full-Stack"
-              className="w-48 h-48 lg:w-64 lg:h-64 rounded-full object-cover shadow-2xl border-4 border-primary-200 dark:border-primary-800"
+              className="w-48 h-48 lg:w-64 lg:h-64 rounded-lg object-cover shadow-lg"
             />
           </motion.div>
 
