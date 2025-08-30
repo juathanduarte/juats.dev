@@ -17,7 +17,7 @@ export const itemVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: 'easeOut' as const,
+      ease: "easeOut" as const,
     },
   },
 };
@@ -30,8 +30,8 @@ export const imageVariants = {
     rotate: 0,
     transition: {
       duration: 0.8,
-      ease: 'easeOut' as const,
-      type: 'spring' as const,
+      ease: "easeOut" as const,
+      type: "spring" as const,
       stiffness: 100,
     },
   },
@@ -44,8 +44,8 @@ export const titleVariants = {
     x: 0,
     transition: {
       duration: 0.8,
-      ease: 'easeOut' as const,
-      type: 'spring' as const,
+      ease: "easeOut" as const,
+      type: "spring" as const,
       stiffness: 80,
     },
   },
@@ -58,14 +58,14 @@ export const buttonVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: 'easeOut' as const,
+      ease: "easeOut" as const,
     },
   },
   hover: {
     scale: 1.05,
     transition: {
       duration: 0.2,
-      ease: 'easeInOut' as const,
+      ease: "easeInOut" as const,
     },
   },
   tap: {
@@ -80,7 +80,7 @@ export const socialLinkVariants = {
     y: 0,
     transition: {
       duration: 0.4,
-      ease: 'easeOut' as const,
+      ease: "easeOut" as const,
     },
   },
   hover: {

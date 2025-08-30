@@ -1,5 +1,5 @@
-import { useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useCallback } from "react";
+import { useTranslation } from "react-i18next";
 
 export const useLanguage = () => {
   const { i18n, t } = useTranslation();
@@ -7,8 +7,7 @@ export const useLanguage = () => {
   const changeLanguage = useCallback(
     (language: string) => {
       i18n.changeLanguage(language);
-      // Salvar no localStorage para persistência
-      localStorage.setItem('i18nextLng', language);
+      localStorage.setItem("i18nextLng", language);
     },
     [i18n]
   );
@@ -16,9 +15,9 @@ export const useLanguage = () => {
   const currentLanguage = i18n.language;
 
   const availableLanguages = [
-    { code: 'pt-BR', name: t('languages.pt'), flag: '🇧🇷' },
-    { code: 'en', name: t('languages.en'), flag: '🇺🇸' },
-    { code: 'es', name: t('languages.es'), flag: '🇪🇸' },
+    { code: "pt-BR", name: t("languages.pt"), flag: "🇧🇷" },
+    { code: "en", name: t("languages.en"), flag: "🇺🇸" },
+    { code: "es", name: t("languages.es"), flag: "🇪🇸" },
   ];
 
   return {

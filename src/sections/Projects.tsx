@@ -1,30 +1,30 @@
-import { useTranslation } from 'react-i18next';
-import { PROJECTS } from '../constants';
+import { PROJECTS } from "@constants/index";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
   const { t } = useTranslation();
 
   const handleProjectClick = (url?: string) => {
     if (url) {
-      window.open(url, '_blank', 'noopener,noreferrer');
+      window.open(url, "_blank", "noopener,noreferrer");
     }
   };
 
   const handleKeyDown = (event: React.KeyboardEvent, url?: string) => {
-    if (event.key === 'Enter' || event.key === ' ') {
+    if (event.key === "Enter" || event.key === " ") {
       handleProjectClick(url);
     }
   };
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {t('projects.title')}
+            {t("projects.title")}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {t('projects.subtitle')}
+            {t("projects.subtitle")}
           </p>
         </div>
 
@@ -34,14 +34,12 @@ const Projects = () => {
               key={project.id}
               className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
-              {/* Project Image */}
               <div className="h-48 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
                 <span className="text-4xl font-bold text-primary-600">
                   {project.title.charAt(0)}
                 </span>
               </div>
 
-              {/* Project Content */}
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {project.title}
@@ -50,7 +48,6 @@ const Projects = () => {
                   {project.description}
                 </p>
 
-                {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span
@@ -62,7 +59,6 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* Project Links */}
                 <div className="flex space-x-3">
                   {project.githubUrl && (
                     <button
@@ -70,10 +66,9 @@ const Projects = () => {
                       onClick={() => handleProjectClick(project.githubUrl)}
                       onKeyDown={(e) => handleKeyDown(e, project.githubUrl)}
                       className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
-                      tabIndex={0}
                       aria-label={`View ${project.title} on GitHub`}
                     >
-                      {t('projects.github')}
+                      {t("projects.github")}
                     </button>
                   )}
                   {project.liveUrl && (
@@ -85,7 +80,7 @@ const Projects = () => {
                       tabIndex={0}
                       aria-label={`View ${project.title} live`}
                     >
-                      {t('projects.liveDemo')}
+                      {t("projects.liveDemo")}
                     </button>
                   )}
                 </div>
@@ -94,7 +89,6 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* View All Projects Button */}
         <div className="text-center mt-12">
           <a
             href="https://github.com/juats-dev"
@@ -103,7 +97,7 @@ const Projects = () => {
             className="inline-flex items-center px-6 py-3 border border-primary-600 text-primary-600 rounded-lg font-medium hover:bg-primary-600 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
             tabIndex={0}
           >
-            {t('projects.viewAllProjects')}
+            {t("projects.viewAllProjects")}
             <svg
               className="ml-2 w-4 h-4"
               fill="none"
