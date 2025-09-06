@@ -37,7 +37,6 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {/* Brand */}
           <motion.div
             className="space-y-4"
             initial={{ x: -20, opacity: 0 }}
@@ -51,7 +50,6 @@ const Footer = () => {
             <p className="text-gray-300 max-w-md">{t("footer.description")}</p>
           </motion.div>
 
-          {/* Quick Links */}
           <motion.div
             className="space-y-4"
             initial={{ y: 20, opacity: 0 }}
@@ -82,7 +80,6 @@ const Footer = () => {
                     duration={800}
                     offset={-80}
                     className="text-gray-300 hover:text-primary-400 transition-colors cursor-pointer block focus:outline-none"
-                    tabIndex={0}
                   >
                     {item.label}
                   </Link>
@@ -91,7 +88,6 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Social Links */}
           <motion.div
             className="space-y-4"
             initial={{ x: 20, opacity: 0 }}
@@ -110,7 +106,6 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors text-gray-300 hover:text-white focus:outline-none"
-                  tabIndex={0}
                   aria-label={`${t("common.followMe")} ${link.name}`}
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
@@ -127,7 +122,6 @@ const Footer = () => {
           </motion.div>
         </motion.div>
 
-        {/* Bottom */}
         <motion.div
           className="border-t border-gray-800 mt-8 pt-8 text-center"
           initial={{ y: 20, opacity: 0 }}

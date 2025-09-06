@@ -41,7 +41,7 @@ const LanguageSelector = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <span className="hidden sm:block text-sm font-medium">
+        <span className="text-sm font-medium">
           {currentLang?.code === "pt-BR"
             ? "PT-BR"
             : currentLang?.code.toUpperCase()}
