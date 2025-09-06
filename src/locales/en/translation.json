@@ -77,10 +77,10 @@
     "github": "GitHub",
     "liveDemo": "Live Demo",
     "descriptions": {
-      "letralandia": "Educational mobile app for learning letters and words",
-      "suite": "Business management platform with modern interface",
-      "meupassApp": "Mobile-first password management app with PWA",
-      "meupassDash": "Administrative dashboard for Meupass management"
+      "letralandia": "Educational app for children's literacy, featuring 3 interactive games, parent area with detailed feedback, and dedicated alphabet learning section",
+      "suite": "Administrative dashboard integrated with omnichannel customer service area, developed for call centers and customer support with modern and intuitive interface",
+      "meupassApp": "Mobile-first app for selling products and services, with special focus on promotional offers and optimized shopping experience",
+      "meupassDash": "Complete administrative dashboard for managing stores in the Meupass app, including inventory control, sales, and analytics"
     }
   },
   "contact": {

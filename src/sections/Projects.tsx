@@ -1,5 +1,19 @@
 import { PROJECTS } from "@constants/index";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import appMeupassImg from "../assets/projects/app-meupass.jpg";
+import dashMeupassImg from "../assets/projects/dash-meupass.png";
+// Import project images
+import letralandiaImg from "../assets/projects/letralandia.png";
+import suiteImg from "../assets/projects/suite.png";
+
+// Image mapping
+const projectImages: Record<string, string> = {
+  "letralandia.png": letralandiaImg,
+  "suite.png": suiteImg,
+  "app-meupass.jpg": appMeupassImg,
+  "dash-meupass.png": dashMeupassImg,
+};
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -15,13 +29,21 @@ const Projects = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {PROJECTS.map((project) => (
-            <div
+          {PROJECTS.map((project, index) => (
+            <motion.div
               key={project.id}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
-              <div className="h-48 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 flex items-center justify-center">
-                <div className="text-6xl">📱</div>
+              <div className="h-48 relative overflow-hidden">
+                <img
+                  src={projectImages[project.image]}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
 
               <div className="p-6">
@@ -60,7 +82,7 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -77,10 +77,10 @@
     "github": "GitHub",
     "liveDemo": "Demo en Vivo",
     "descriptions": {
-      "letralandia": "Aplicación móvil educativa para aprender letras y palabras",
-      "suite": "Plataforma de gestión empresarial con interfaz moderna",
-      "meupassApp": "Aplicación móvil-first para gestión de contraseñas con PWA",
-      "meupassDash": "Panel administrativo para gestión de Meupass"
+      "letralandia": "Aplicación educativa para alfabetización infantil, con 3 juegos interactivos, área de padres con retroalimentación detallada y sección dedicada al aprendizaje del alfabeto",
+      "suite": "Panel administrativo integrado con área de atención al cliente omnicanal, desarrollado para centros de llamadas y soporte al cliente con interfaz moderna e intuitiva",
+      "meupassApp": "Aplicación móvil-first para venta de productos y servicios, con enfoque especial en ofertas promocionales y experiencia de compra optimizada",
+      "meupassDash": "Panel administrativo completo para gestionar tiendas en la aplicación Meupass, incluyendo control de inventario, ventas y análisis"
     }
   },
   "contact": {
