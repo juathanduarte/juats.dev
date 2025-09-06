@@ -1,4 +1,8 @@
+import Button from "@components/ui/Button";
+import Input from "@components/ui/Input";
+import TextArea from "@components/ui/TextArea";
 import { SOCIAL_LINKS } from "@constants/index";
+import { useId } from "react";
 import { useTranslation } from "react-i18next";
 import {
   FaEnvelope,
@@ -9,6 +13,10 @@ import {
 
 const Contact = () => {
   const { t } = useTranslation();
+  const nameId = useId();
+  const emailId = useId();
+  const subjectId = useId();
+  const messageId = useId();
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -30,7 +38,8 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-800">
+    // biome-ignore lint/correctness/useUniqueElementIds: <>
+    <section id="contact" className="py-20 bg-white dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
@@ -48,76 +57,45 @@ const Contact = () => {
               {t("contact.form.title")}
             </h3>
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300"
-                >
-                  {t("contact.form.name")}
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-                  placeholder={t("contact.form.namePlaceholder")}
-                />
-              </div>
+              <Input
+                id={nameId}
+                name="name"
+                type="text"
+                label={t("contact.form.name")}
+                placeholder={t("contact.form.namePlaceholder")}
+                required
+              />
 
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300"
-                >
-                  {t("contact.form.email")}
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-                  placeholder={t("contact.form.emailPlaceholder")}
-                />
-              </div>
+              <Input
+                id={emailId}
+                name="email"
+                type="email"
+                label={t("contact.form.email")}
+                placeholder={t("contact.form.emailPlaceholder")}
+                required
+              />
 
-              <div>
-                <label
-                  htmlFor="subject"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300"
-                >
-                  {t("contact.form.subject")}
-                </label>
-                <input
-                  type="text"
-                  name="subject"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-                  placeholder={t("contact.form.subjectPlaceholder")}
-                />
-              </div>
+              <Input
+                id={subjectId}
+                name="subject"
+                type="text"
+                label={t("contact.form.subject")}
+                placeholder={t("contact.form.subjectPlaceholder")}
+                required
+              />
 
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300"
-                >
-                  {t("contact.form.message")}
-                </label>
-                <textarea
-                  name="message"
-                  rows={5}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors resize-none bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-                  placeholder={t("contact.form.messagePlaceholder")}
-                />
-              </div>
+              <TextArea
+                id={messageId}
+                name="message"
+                label={t("contact.form.message")}
+                placeholder={t("contact.form.messagePlaceholder")}
+                rows={5}
+                required
+              />
 
-              <button
-                type="submit"
-                className="w-full bg-primary-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-700 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
-              >
+              <Button type="submit" variant="primary" size="lg" fullWidth>
                 {t("contact.form.submit")}
-              </button>
+              </Button>
             </form>
           </div>
 

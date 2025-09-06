@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useId } from "react";
 import { useTranslation } from "react-i18next";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import avatar from "../assets/images/avatar.jpg";
@@ -17,9 +16,10 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
+    // biome-ignore lint/correctness/useUniqueElementIds: <explanation>
     <section
+      id="home"
       className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-16"
-      key={useId()}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div

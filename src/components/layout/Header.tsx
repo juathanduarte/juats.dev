@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
+import Button from "../ui/Button";
 import LanguageSelector from "../ui/LanguageSelector";
 import ThemeToggle from "../ui/ThemeToggle";
 
@@ -10,12 +11,6 @@ const Header = () => {
 
   const handleToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (event.key === "Enter" || event.key === " ") {
-      handleToggleMenu();
-    }
   };
 
   return (
@@ -89,13 +84,13 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button
+            <Button
               type="button"
-              className="text-gray-700 hover:text-primary-600 focus:outline-none focus:text-primary-600"
+              variant="ghost"
+              size="sm"
               onClick={handleToggleMenu}
-              onKeyDown={handleKeyDown}
+              className="p-2 text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400"
               aria-label="Toggle mobile menu"
-              aria-expanded={isMenuOpen}
             >
               <svg
                 className="h-6 w-6"
@@ -120,7 +115,7 @@ const Header = () => {
                   />
                 )}
               </svg>
-            </button>
+            </Button>
           </div>
         </div>
 

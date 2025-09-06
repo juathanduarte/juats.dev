@@ -5,7 +5,8 @@ const About = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-800">
+    // biome-ignore lint/correctness/useUniqueElementIds: <>
+    <section id="about" className="py-20 bg-white dark:bg-gray-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-12">
           <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white text-center">
