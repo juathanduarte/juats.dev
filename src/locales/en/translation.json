@@ -26,7 +26,7 @@
     "greeting": "Hi, my name is",
     "nicknameIntro": "! But you can call me",
     "title": "Juats",
-    "subtitle": "Full-Stack Developer with a degree in Computer Science from the Federal University of Pelotas. Specializing in React, Next.js, and modern web technologies. I create beautiful, performant, and accessible web experiences.",
+    "subtitle": "Full-Stack Developer with a degree in Computer Science from the Federal University of Pelotas. I create beautiful, performant, and accessible experiences.",
     "cta": {
       "viewWork": "View My Work",
       "getInTouch": "Get In Touch"
@@ -35,12 +35,12 @@
   },
   "about": {
     "title": "About Me",
-    "subtitle": "I'm a passionate full-stack developer with a degree in Computer Science from the Federal University of Pelotas. With over 5 years of experience creating modern web applications, I love turning complex problems into simple, beautiful, and intuitive solutions.",
+    "subtitle": "Full-Stack Developer with a degree in Computer Science from the Federal University of Pelotas, with over two years of experience creating and improving high-impact solutions.",
     "journey": {
       "title": "My Journey",
-      "description1": "I started my journey in web development with a curiosity about how things work on the internet. Over the years, I've worked on various projects ranging from small business websites to complex enterprise applications.",
-      "description2": "My passion lies in creating user experiences that are not only visually appealing but also highly functional and accessible. I believe in writing clean, maintainable code and staying up-to-date with the latest technologies and best practices.",
-      "description3": "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community."
+      "description1": "I worked on large-scale projects, such as Smart NX, a platform with over 10,000 users, where I was the technical lead for the front-end of the application. My main contribution was in the customer service screen, handling a flow of over 4,000,000 monthly chats, of which 85% are resolved by bots, ensuring high performance and usability.",
+      "description2": "My experience includes distributed systems, microservices, microfrontends, and AWS infrastructure, always focusing on observability, testing, and scalability. On a daily basis, I work with technologies like React, React Native, Next.js, Nest.js, Prisma, PostgreSQL, and many others.",
+      "description3": "I am passionate about solving problems and optimizing processes, always seeking to deliver efficient, secure, and innovative solutions. For me, software development goes beyond code: it's about ensuring that each system operates with fluidity, reliability, and high performance, driving business growth and creating experiences for users."
     },
     "skills": {
       "title": "Skills & Technologies",
@@ -58,7 +58,7 @@
   },
   "projects": {
     "title": "Featured Projects",
-    "subtitle": "Here are some of my recent projects that showcase my skills and passion for creating exceptional web experiences.",
+    "subtitle": "Here are some of my recent projects that showcase my skills and passion for creating exceptional experiences.",
     "viewAllProjects": "View All Projects",
     "github": "GitHub",
     "liveDemo": "Live Demo"
@@ -87,7 +87,7 @@
     }
   },
   "footer": {
-    "description": "Full-Stack Developer with a degree in Computer Science from the Federal University of Pelotas, specializing in React, Next.js, and modern web technologies",
+    "description": "Full-Stack Developer with a degree in Computer Science from the Federal University of Pelotas",
     "quickLinks": "Quick Links",
     "connect": "Connect",
     "copyright": "All rights reserved."

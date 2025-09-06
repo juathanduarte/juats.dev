@@ -1,22 +1,12 @@
-import basketballIcon from "@assets/svgs/basketball.svg";
 import hotBeverageIcon from "@assets/svgs/hot-beverage.svg";
 import laptopIcon from "@assets/svgs/laptop.svg";
 import mateIcon from "@assets/svgs/mate.svg";
-import soccerBallIcon from "@assets/svgs/soccer-ball.svg";
-import videoGameIcon from "@assets/svgs/video-game.svg";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const AnimatedIcon = () => {
   const [currentIcon, setCurrentIcon] = useState<number>(0);
-  const icons = [
-    mateIcon,
-    hotBeverageIcon,
-    laptopIcon,
-    videoGameIcon,
-    basketballIcon,
-    soccerBallIcon,
-  ];
+  const icons = [mateIcon, hotBeverageIcon, laptopIcon];
 
   useEffect(() => {
     const interval = setInterval(() => {

@@ -76,7 +76,7 @@ const Projects = () => {
                       type="button"
                       onClick={() => handleProjectClick(project.liveUrl)}
                       onKeyDown={(e) => handleKeyDown(e, project.liveUrl)}
-                      className="flex-1 bg-primary-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary-700 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                      className="flex-1 bg-primary-700 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary-800 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
                       tabIndex={0}
                       aria-label={`View ${project.title} live`}
                     >

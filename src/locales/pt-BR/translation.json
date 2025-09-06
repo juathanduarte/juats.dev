@@ -26,7 +26,7 @@
     "greeting": "Olá, me chamo",
     "nicknameIntro": "! Mas pode me chamar de",
     "title": "Juats",
-    "subtitle": "Desenvolvedor Full-Stack formado em Ciência da Computação pela Universidade Federal de Pelotas. Especializado em React, Next.js e tecnologias web modernas. Crio experiências web bonitas, performáticas e acessíveis.",
+    "subtitle": "Desenvolvedor Full-Stack formado em Ciência da Computação pela Universidade Federal de Pelotas. Crio experiências bonitas, performáticas e acessíveis.",
     "cta": {
       "viewWork": "Ver Meu Trabalho",
       "getInTouch": "Entre em Contato"
@@ -35,12 +35,12 @@
   },
   "about": {
     "title": "Sobre Mim",
-    "subtitle": "Sou um desenvolvedor full-stack apaixonado com formação em Ciência da Computação pela Universidade Federal de Pelotas. Com mais de 5 anos de experiência criando aplicações web modernas, adoro transformar problemas complexos em soluções simples, bonitas e intuitivas.",
+    "subtitle": "Desenvolvedor Full-Stack formado em Ciência da Computação pela Universidade Federal de Pelotas, com mais de dois anos de experiência criando e aprimorando soluções de alto impacto.",
     "journey": {
       "title": "Minha Jornada",
-      "description1": "Comecei minha jornada no desenvolvimento web com curiosidade sobre como as coisas funcionam na internet. Ao longo dos anos, trabalhei em vários projetos, desde sites de pequenas empresas até aplicações empresariais complexas.",
-      "description2": "Minha paixão está em criar experiências do usuário que não são apenas visualmente atrativas, mas também altamente funcionais e acessíveis. Acredito em escrever código limpo e manutenível e manter-me atualizado com as últimas tecnologias e melhores práticas.",
-      "description3": "Quando não estou programando, você pode me encontrar explorando novas tecnologias, contribuindo para projetos open-source ou compartilhando conhecimento com a comunidade de desenvolvedores."
+      "description1": "Atuei em projetos de grande escala, como a Smart NX, plataforma com mais de 10 mil usuários, onde fui responsável técnico pelo front-end da aplicação. Minha principal contribuição foi na tela de atendimento ao cliente, lidando com um fluxo superior a 4.000.000 de chats mensais, dos quais 85% são resolvidos por bots, garantindo alta performance e usabilidade.",
+      "description2": "Minha experiência inclui sistemas distribuídos, microsserviços, microfrontends e infraestrutura em AWS, sempre com foco em observabilidade, testes e escalabilidade. No dia a dia, trabalho com tecnologias como React, React Native, Next.js, Nest.js, Prisma, PostgreSQL e muitas outras.",
+      "description3": "Sou apaixonado por resolver problemas e otimizar processos, sempre em busca de entregar soluções eficientes, seguras e inovadoras. Para mim, desenvolvimento de software vai além do código: trata-se de garantir que cada sistema opere com fluidez, confiabilidade e alto desempenho, impulsionando negócios e criando experiências para os usuários."
     },
     "skills": {
       "title": "Habilidades e Tecnologias",
@@ -58,7 +58,7 @@
   },
   "projects": {
     "title": "Projetos em Destaque",
-    "subtitle": "Aqui estão alguns dos meus projetos recentes que mostram minhas habilidades e paixão por criar experiências web excepcionais.",
+    "subtitle": "Aqui estão alguns dos meus projetos recentes que mostram minhas habilidades e paixão por criar experiências excepcionais.",
     "viewAllProjects": "Ver Todos os Projetos",
     "github": "GitHub",
     "liveDemo": "Demo ao Vivo"
@@ -87,7 +87,7 @@
     }
   },
   "footer": {
-    "description": "Desenvolvedor Full-Stack formado em Ciência da Computação pela Universidade Federal de Pelotas, especializado em React, Next.js e tecnologias web modernas",
+    "description": "Desenvolvedor Full-Stack formado em Ciência da Computação pela Universidade Federal de Pelotas",
     "quickLinks": "Links Rápidos",
     "connect": "Conecte-se",
     "copyright": "Todos os direitos reservados."

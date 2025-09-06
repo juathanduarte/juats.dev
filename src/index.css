@@ -16,7 +16,7 @@
       sans-serif;
     line-height: 1.6;
     color: #374151;
-    @apply bg-beige-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100;
+    @apply bg-primary-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100;
   }
 
   h1,
@@ -101,7 +101,7 @@
 
 /* Focus styles */
 *:focus {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #1a335a;
   outline-offset: 2px;
 }
 

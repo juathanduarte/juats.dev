@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Link } from 'react-scroll';
-import { SOCIAL_LINKS } from '../../constants';
-import LanguageSelector from '../ui/LanguageSelector';
-import ThemeToggle from '../ui/ThemeToggle';
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-scroll";
+import { SOCIAL_LINKS } from "../../constants";
+import LanguageSelector from "../ui/LanguageSelector";
+import ThemeToggle from "../ui/ThemeToggle";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (event.key === 'Enter' || event.key === ' ') {
+    if (event.key === "Enter" || event.key === " ") {
       handleToggleMenu();
     }
   };
@@ -34,7 +34,7 @@ const Header = () => {
               tabIndex={0}
               aria-label="Go to home section"
             >
-              {t('header.logo')}
+              {t("header.logo")}
             </Link>
           </div>
 
@@ -48,7 +48,7 @@ const Header = () => {
               className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-pointer"
               tabIndex={0}
             >
-              {t('header.navigation.home')}
+              {t("header.navigation.home")}
             </Link>
             <Link
               to="about"
@@ -58,7 +58,7 @@ const Header = () => {
               className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-pointer"
               tabIndex={0}
             >
-              {t('header.navigation.about')}
+              {t("header.navigation.about")}
             </Link>
             <Link
               to="projects"
@@ -68,7 +68,7 @@ const Header = () => {
               className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-pointer"
               tabIndex={0}
             >
-              {t('header.navigation.projects')}
+              {t("header.navigation.projects")}
             </Link>
             <Link
               to="contact"
@@ -78,7 +78,7 @@ const Header = () => {
               className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-pointer"
               tabIndex={0}
             >
-              {t('header.navigation.contact')}
+              {t("header.navigation.contact")}
             </Link>
           </nav>
 
@@ -153,7 +153,7 @@ const Header = () => {
                 tabIndex={0}
                 onClick={() => setIsMenuOpen(false)}
               >
-                {t('header.navigation.home')}
+                {t("header.navigation.home")}
               </Link>
               <Link
                 to="about"
@@ -164,7 +164,7 @@ const Header = () => {
                 tabIndex={0}
                 onClick={() => setIsMenuOpen(false)}
               >
-                {t('header.navigation.about')}
+                {t("header.navigation.about")}
               </Link>
               <Link
                 to="projects"
@@ -175,7 +175,7 @@ const Header = () => {
                 tabIndex={0}
                 onClick={() => setIsMenuOpen(false)}
               >
-                {t('header.navigation.projects')}
+                {t("header.navigation.projects")}
               </Link>
               <Link
                 to="contact"
@@ -186,7 +186,7 @@ const Header = () => {
                 tabIndex={0}
                 onClick={() => setIsMenuOpen(false)}
               >
-                {t('header.navigation.contact')}
+                {t("header.navigation.contact")}
               </Link>
 
               {/* Mobile Theme Toggle and Language Selector */}

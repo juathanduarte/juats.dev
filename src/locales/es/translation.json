@@ -26,7 +26,7 @@
     "greeting": "¡Hola, me llamo",
     "nicknameIntro": "! Pero puedes llamarme",
     "title": "Juats",
-    "subtitle": "Desarrollador Full-Stack con título en Ciencias de la Computación de la Universidad Federal de Pelotas. Especializado en React, Next.js y tecnologías web modernas. Creo experiencias web hermosas, performantes y accesibles.",
+    "subtitle": "Desarrollador Full-Stack con título en Ciencias de la Computación de la Universidad Federal de Pelotas. Creo experiencias hermosas, performantes y accesibles.",
     "cta": {
       "viewWork": "Ver Mi Trabajo",
       "getInTouch": "Ponte en Contacto"
@@ -35,12 +35,12 @@
   },
   "about": {
     "title": "Acerca de Mí",
-    "subtitle": "Soy un desarrollador full-stack apasionado con título en Ciencias de la Computación de la Universidad Federal de Pelotas. Con más de 5 años de experiencia creando aplicaciones web modernas, me encanta convertir problemas complejos en soluciones simples, hermosas e intuitivas.",
+    "subtitle": "Desarrollador Full-Stack con título en Ciencias de la Computación de la Universidad Federal de Pelotas, con más de dos años de experiencia creando y mejorando soluciones de alto impacto.",
     "journey": {
       "title": "Mi Viaje",
-      "description1": "Comencé mi viaje en el desarrollo web con curiosidad sobre cómo funcionan las cosas en internet. A lo largo de los años, he trabajado en varios proyectos, desde sitios web de pequeñas empresas hasta aplicaciones empresariales complejas.",
-      "description2": "Mi pasión está en crear experiencias de usuario que no solo sean visualmente atractivas, sino también altamente funcionales y accesibles. Creo en escribir código limpio y mantenible y mantenerme actualizado con las últimas tecnologías y mejores prácticas.",
-      "description3": "Cuando no estoy programando, puedes encontrarme explorando nuevas tecnologías, contribuyendo a proyectos de código abierto o compartiendo conocimiento con la comunidad de desarrolladores."
+      "description1": "Trabajé en proyectos de gran escala, como Smart NX, una plataforma con más de 10,000 usuarios, donde fui el responsable técnico del front-end de la aplicación. Mi principal contribución fue en la pantalla de atención al cliente, manejando un flujo superior a 4,000,000 de chats mensuales, de los cuales 85% son resueltos por bots, garantizando alta performance y usabilidad.",
+      "description2": "Mi experiencia incluye sistemas distribuidos, microservicios, microfrontends e infraestructura en AWS, siempre con foco en observabilidad, pruebas y escalabilidad. En el día a día, trabajo con tecnologías como React, React Native, Next.js, Nest.js, Prisma, PostgreSQL y muchas otras.",
+      "description3": "Soy apasionado por resolver problemas y optimizar procesos, siempre en busca de entregar soluciones eficientes, seguras e innovadoras. Para mí, el desarrollo de software va más allá del código: se trata de garantizar que cada sistema opere con fluidez, confiabilidad y alto rendimiento, impulsando negocios y creando experiencias para los usuarios."
     },
     "skills": {
       "title": "Habilidades y Tecnologías",
@@ -58,7 +58,7 @@
   },
   "projects": {
     "title": "Proyectos Destacados",
-    "subtitle": "Aquí hay algunos de mis proyectos recientes que muestran mis habilidades y pasión por crear experiencias web excepcionales.",
+    "subtitle": "Aquí hay algunos de mis proyectos recientes que muestran mis habilidades y pasión por crear experiencias excepcionales.",
     "viewAllProjects": "Ver Todos los Proyectos",
     "github": "GitHub",
     "liveDemo": "Demo en Vivo"
@@ -87,7 +87,7 @@
     }
   },
   "footer": {
-    "description": "Desarrollador Full-Stack con título en Ciencias de la Computación de la Universidad Federal de Pelotas, especializado en React, Next.js y tecnologías web modernas",
+    "description": "Desarrollador Full-Stack con título en Ciencias de la Computación de la Universidad Federal de Pelotas",
     "quickLinks": "Enlaces Rápidos",
     "connect": "Conecta",
     "copyright": "Todos los derechos reservados."

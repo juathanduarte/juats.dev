@@ -1,9 +1,10 @@
-import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
-import { Link } from 'react-scroll';
-import avatar from '../assets/images/avatar.jpg';
-import AnimatedIcon from '../components/ui/AnimatedIcon';
-import { SOCIAL_LINKS } from '../constants';
+import { motion } from "framer-motion";
+import { useId } from "react";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-scroll";
+import avatar from "../assets/images/avatar.jpg";
+import AnimatedIcon from "../components/ui/AnimatedIcon";
+import { SOCIAL_LINKS } from "../constants";
 import {
   buttonVariants,
   containerVariants,
@@ -11,15 +12,15 @@ import {
   itemVariants,
   socialLinkVariants,
   titleVariants,
-} from '../constants/animations';
+} from "../constants/animations";
 
 const Hero = () => {
   const { t } = useTranslation();
 
   return (
     <section
-      id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-beige-50 via-white to-warm-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-16"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-16"
+      key={useId()}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -46,15 +47,14 @@ const Hero = () => {
               variants={titleVariants}
               className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 relative"
             >
-              {t('hero.greeting')}{' '}
+              {t("hero.greeting")}{" "}
               <span className="text-primary-600 dark:text-primary-400">
                 Juathan
               </span>
-              {t('hero.nicknameIntro')}{' '}
-                            <span className="text-secondary-600 dark:text-secondary-400 relative">
-                {t('hero.title')}
+              {t("hero.nicknameIntro")}{" "}
+              <span className="text-primary-700 dark:text-primary-300 relative">
+                {t("hero.title")}
 
-                {/* Ícone animado no canto direito baixo de "Juats" */}
                 <div className="absolute -bottom-2 -right-2">
                   <AnimatedIcon />
                 </div>
@@ -65,10 +65,9 @@ const Hero = () => {
               variants={itemVariants}
               className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl lg:max-w-none"
             >
-              {t('hero.subtitle')}
+              {t("hero.subtitle")}
             </motion.p>
 
-            {/* CTA Buttons */}
             <motion.div
               variants={itemVariants}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12"
@@ -87,7 +86,7 @@ const Hero = () => {
                   tabIndex={0}
                   aria-label="View my projects"
                 >
-                  {t('hero.cta.viewWork')}
+                  {t("hero.cta.viewWork")}
                 </Link>
               </motion.div>
 
@@ -104,12 +103,11 @@ const Hero = () => {
                   className="border-2 border-primary-600 text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 cursor-pointer block"
                   tabIndex={0}
                 >
-                  {t('hero.cta.getInTouch')}
+                  {t("hero.cta.getInTouch")}
                 </Link>
               </motion.div>
             </motion.div>
 
-            {/* Social Links */}
             <motion.div
               variants={itemVariants}
               className="flex justify-center lg:justify-start space-x-6"

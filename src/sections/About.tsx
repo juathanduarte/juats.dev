@@ -39,10 +39,18 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* About Text */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-gray-900">{t("about.journey.title")}</h3>
-            <p className="text-gray-600 leading-relaxed">{t("about.journey.description1")}</p>
-            <p className="text-gray-600 leading-relaxed">{t("about.journey.description2")}</p>
-            <p className="text-gray-600 leading-relaxed">{t("about.journey.description3")}</p>
+            <h3 className="text-2xl font-semibold text-gray-900">
+              {t("about.journey.title")}
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              {t("about.journey.description1")}
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              {t("about.journey.description2")}
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              {t("about.journey.description3")}
+            </p>
           </div>
 
           {/* Skills */}
@@ -53,7 +61,9 @@ const About = () => {
 
             <div className="space-y-6">
               {skillCategories.map((category) => {
-                const categorySkills = getSkillsByCategory(category.name.toLowerCase());
+                const categorySkills = getSkillsByCategory(
+                  category.name.toLowerCase()
+                );
 
                 return (
                   <div key={category.name} className="space-y-3">
@@ -62,9 +72,16 @@ const About = () => {
                     </h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {categorySkills.map((skill) => (
-                        <div key={skill.id} className="flex items-center justify-between">
-                          <span className="text-sm text-gray-600">{skill.name}</span>
-                          <div className="flex space-x-1">{getSkillLevelBars(skill.level)}</div>
+                        <div
+                          key={skill.id}
+                          className="flex items-center justify-between"
+                        >
+                          <span className="text-sm text-gray-600">
+                            {skill.name}
+                          </span>
+                          <div className="flex space-x-1">
+                            {getSkillLevelBars(skill.level)}
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -81,15 +98,15 @@ const About = () => {
             <div className="text-gray-600">{t("about.stats.years")}</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary-600 mb-2">50+</div>
+            <div className="text-3xl font-bold text-primary-700 mb-2">50+</div>
             <div className="text-gray-600">{t("about.stats.projects")}</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary-600 mb-2">20+</div>
+            <div className="text-3xl font-bold text-primary-800 mb-2">20+</div>
             <div className="text-gray-600">{t("about.stats.clients")}</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary-600 mb-2">100%</div>
+            <div className="text-3xl font-bold text-primary-900 mb-2">100%</div>
             <div className="text-gray-600">{t("about.stats.satisfaction")}</div>
           </div>
         </div>
