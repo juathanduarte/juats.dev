@@ -38,9 +38,24 @@
     "subtitle": "Full-Stack Developer with a degree in Computer Science from the Federal University of Pelotas, with over two years of experience creating and improving high-impact solutions.",
     "journey": {
       "title": "My Journey",
-      "description1": "I worked on large-scale projects, such as Smart NX, a platform with over 10,000 users, where I was the technical lead for the front-end of the application. My main contribution was in the customer service screen, handling a flow of over 4,000,000 monthly chats, of which 85% are resolved by bots, ensuring high performance and usability.",
-      "description2": "My experience includes distributed systems, microservices, microfrontends, and AWS infrastructure, always focusing on observability, testing, and scalability. On a daily basis, I work with technologies like React, React Native, Next.js, Nest.js, Prisma, PostgreSQL, and many others.",
-      "description3": "I am passionate about solving problems and optimizing processes, always seeking to deliver efficient, secure, and innovative solutions. For me, software development goes beyond code: it's about ensuring that each system operates with fluidity, reliability, and high performance, driving business growth and creating experiences for users."
+      "experience1": {
+        "title": "Senior Full-Stack Developer",
+        "company": "dhauz",
+        "description": "Participation from architecture definition to solution maintenance, ensuring robustness, scalability and alignment with business objectives. Implementation of end-to-end new features (front-end and back-end), delivering high-quality, secure and performant code.",
+        "period": "September 2025 - Present"
+      },
+      "experience2": {
+        "title": "Front-End Technical Lead",
+        "company": "Smart NX",
+        "description": "Leadership in front-end restructuring, ensuring scalability, performance and efficiency at scale. Development and improvement of the user support screen, optimizing the experience to handle more than 5,000,000 monthly chats in a fluid and responsive way.",
+        "period": "June 2023 - Present"
+      },
+      "experience3": {
+        "title": "Front-End Developer",
+        "company": "Meupass",
+        "description": "Architecture definition and strategic technology choices, ensuring a robust, scalable and business-aligned foundation. Coordination of the administrative dashboard front-end team, promoting development best practices.",
+        "period": "October 2024 - Present"
+      }
     },
     "skills": {
       "title": "Skills & Technologies",
@@ -57,11 +72,16 @@
     }
   },
   "projects": {
-    "title": "Featured Projects",
-    "subtitle": "Here are some of my recent projects that showcase my skills and passion for creating exceptional experiences.",
+    "title": "Projects",
     "viewAllProjects": "View All Projects",
     "github": "GitHub",
-    "liveDemo": "Live Demo"
+    "liveDemo": "Live Demo",
+    "descriptions": {
+      "letralandia": "Educational mobile app for learning letters and words",
+      "suite": "Business management platform with modern interface",
+      "meupassApp": "Mobile-first password management app with PWA",
+      "meupassDash": "Administrative dashboard for Meupass management"
+    }
   },
   "contact": {
     "title": "Get In Touch",

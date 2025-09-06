@@ -38,9 +38,24 @@
     "subtitle": "Desenvolvedor Full-Stack formado em Ciência da Computação pela Universidade Federal de Pelotas, com mais de dois anos de experiência criando e aprimorando soluções de alto impacto.",
     "journey": {
       "title": "Minha Jornada",
-      "description1": "Atuei em projetos de grande escala, como a Smart NX, plataforma com mais de 10 mil usuários, onde fui responsável técnico pelo front-end da aplicação. Minha principal contribuição foi na tela de atendimento ao cliente, lidando com um fluxo superior a 4.000.000 de chats mensais, dos quais 85% são resolvidos por bots, garantindo alta performance e usabilidade.",
-      "description2": "Minha experiência inclui sistemas distribuídos, microsserviços, microfrontends e infraestrutura em AWS, sempre com foco em observabilidade, testes e escalabilidade. No dia a dia, trabalho com tecnologias como React, React Native, Next.js, Nest.js, Prisma, PostgreSQL e muitas outras.",
-      "description3": "Sou apaixonado por resolver problemas e otimizar processos, sempre em busca de entregar soluções eficientes, seguras e inovadoras. Para mim, desenvolvimento de software vai além do código: trata-se de garantir que cada sistema opere com fluidez, confiabilidade e alto desempenho, impulsionando negócios e criando experiências para os usuários."
+      "experience1": {
+        "title": "Desenvolvedor Full-Stack Sênior",
+        "company": "dhauz",
+        "description": "Participação desde a definição da arquitetura até a sustentação das soluções, garantindo robustez, escalabilidade e alinhamento com os objetivos do negócio. Implementação de novas funcionalidades de ponta a ponta (front-end e back-end), entregando código de alta qualidade, seguro e performático.",
+        "period": "Setembro 2025 - Atual"
+      },
+      "experience2": {
+        "title": "Líder Técnico de Front-End",
+        "company": "Smart NX",
+        "description": "Liderança na reestruturação do front-end, garantindo escalabilidade, desempenho e eficiência em larga escala. Desenvolvimento e aprimoramento da tela de atendimento ao usuário, otimizando a experiência para lidar com mais de 5.000.000 chats mensais de forma fluida e responsiva.",
+        "period": "Junho 2023 - Atual"
+      },
+      "experience3": {
+        "title": "Desenvolvedor Front-End",
+        "company": "Meupass",
+        "description": "Definição da arquitetura e escolha estratégica de tecnologias, garantindo uma base robusta, escalável e alinhada às necessidades do negócio. Coordenação da equipe de front-end do dashboard administrativo, promovendo boas práticas de desenvolvimento.",
+        "period": "Outubro 2024 - Atual"
+      }
     },
     "skills": {
       "title": "Habilidades e Tecnologias",
@@ -57,11 +72,16 @@
     }
   },
   "projects": {
-    "title": "Projetos em Destaque",
-    "subtitle": "Aqui estão alguns dos meus projetos recentes que mostram minhas habilidades e paixão por criar experiências excepcionais.",
+    "title": "Projetos",
     "viewAllProjects": "Ver Todos os Projetos",
     "github": "GitHub",
-    "liveDemo": "Demo ao Vivo"
+    "liveDemo": "Demo ao Vivo",
+    "descriptions": {
+      "letralandia": "Aplicativo mobile educacional para aprendizado de letras e palavras",
+      "suite": "Plataforma de gestão empresarial com interface moderna",
+      "meupassApp": "Aplicativo mobile-first para gestão de senhas com PWA",
+      "meupassDash": "Dashboard administrativo para gestão do Meupass"
+    }
   },
   "contact": {
     "title": "Entre em Contato",

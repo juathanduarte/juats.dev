@@ -1,18 +1,19 @@
 export interface IProject {
   id: string;
   title: string;
-  description: string;
+  descriptionKey: string;
   image: string;
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
   featured: boolean;
+  category: "frontend" | "backend" | "fullstack";
 }
 
 export interface ISkill {
   id: string;
   name: string;
-  category: 'frontend' | 'backend' | 'tools' | 'languages';
+  category: "frontend" | "backend" | "tools" | "languages";
   level: number; // 1-5
   icon?: string;
 }

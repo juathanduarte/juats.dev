@@ -26,7 +26,7 @@ const Hero = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="flex flex-col lg:flex-row items-center lg:items-start gap-16 lg:gap-20"
+          className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-20"
         >
           {/* Profile Image - Left Side - Hidden on mobile */}
           <motion.div
@@ -43,11 +43,11 @@ const Hero = () => {
           {/* Main Content - Right Side */}
           <motion.div
             variants={itemVariants}
-            className="text-center lg:text-left flex-1"
+            className="text-center lg:text-left flex-1 flex flex-col gap-6"
           >
             <motion.h1
               variants={titleVariants}
-              className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 relative"
+              className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white relative"
             >
               {t("hero.greeting")}{" "}
               <span className="text-primary-600 dark:text-primary-400">
@@ -65,7 +65,7 @@ const Hero = () => {
 
             <motion.p
               variants={itemVariants}
-              className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl lg:max-w-none"
+              className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl lg:max-w-none"
             >
               {t("hero.subtitle")}
             </motion.p>
