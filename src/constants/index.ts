@@ -3,18 +3,18 @@ import type { IExperience, IProject, ISkill, ISocialLink } from "../types";
 export const SOCIAL_LINKS: ISocialLink[] = [
   {
     name: "GitHub",
-    url: "https://github.com/juats-dev",
+    url: "https://github.com/juathanduarte",
     icon: "github",
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/juats-dev",
+    url: "https://www.linkedin.com/in/juathanduarte",
     icon: "linkedin",
   },
   {
-    name: "Twitter",
-    url: "https://twitter.com/juats-dev",
-    icon: "twitter",
+    name: "Email",
+    url: "mailto:juathanduarte13@gmail.com",
+    icon: "email",
   },
 ];
 
@@ -61,7 +61,8 @@ export const PROJECTS: IProject[] = [
   {
     id: "1",
     title: "Portfolio Website",
-    description: "A modern portfolio website built with React, TypeScript, and Tailwind CSS",
+    description:
+      "A modern portfolio website built with React, TypeScript, and Tailwind CSS",
     image: "/projects/portfolio.jpg",
     technologies: ["React", "TypeScript", "Tailwind CSS"],
     githubUrl: "https://github.com/juats-dev/portfolio",
@@ -86,7 +87,8 @@ export const EXPERIENCES: IExperience[] = [
     position: "Senior Frontend Developer",
     startDate: "2023-01",
     endDate: "2024-12",
-    description: "Led frontend development for multiple projects using React and TypeScript",
+    description:
+      "Led frontend development for multiple projects using React and TypeScript",
     technologies: ["React", "TypeScript", "Tailwind CSS", "Next.js"],
   },
   {
@@ -95,7 +97,8 @@ export const EXPERIENCES: IExperience[] = [
     position: "Full Stack Developer",
     startDate: "2022-01",
     endDate: "2022-12",
-    description: "Developed and maintained web applications using modern technologies",
+    description:
+      "Developed and maintained web applications using modern technologies",
     technologies: ["React", "Node.js", "TypeScript", "MongoDB"],
   },
 ];
