@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
-import { SOCIAL_LINKS } from "../../constants";
 import LanguageSelector from "../ui/LanguageSelector";
 import ThemeToggle from "../ui/ThemeToggle";
 
@@ -30,7 +29,7 @@ const Header = () => {
               smooth={true}
               duration={800}
               offset={-80}
-              className="text-2xl font-bold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-pointer"
+              className="text-2xl font-bold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-pointer focus:outline-none"
               tabIndex={0}
               aria-label="Go to home section"
             >
@@ -38,14 +37,14 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden md:flex space-x-8 absolute left-1/2 transform -translate-x-1/2">
             <Link
               to="home"
               smooth={true}
               duration={800}
               offset={-80}
-              className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-pointer"
+              className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-pointer focus:outline-none"
               tabIndex={0}
             >
               {t("header.navigation.home")}
@@ -55,7 +54,7 @@ const Header = () => {
               smooth={true}
               duration={800}
               offset={-80}
-              className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-pointer"
+              className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-pointer focus:outline-none"
               tabIndex={0}
             >
               {t("header.navigation.about")}
@@ -65,7 +64,7 @@ const Header = () => {
               smooth={true}
               duration={800}
               offset={-80}
-              className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-pointer"
+              className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-pointer focus:outline-none"
               tabIndex={0}
             >
               {t("header.navigation.projects")}
@@ -75,33 +74,17 @@ const Header = () => {
               smooth={true}
               duration={800}
               offset={-80}
-              className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-pointer"
+              className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-pointer focus:outline-none"
               tabIndex={0}
             >
               {t("header.navigation.contact")}
             </Link>
           </nav>
 
-          {/* Right side - Theme Toggle, Language Selector and Social Links */}
+          {/* Right side - Theme Toggle and Language Selector */}
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
             <LanguageSelector />
-
-            {/* Social Links */}
-            {SOCIAL_LINKS.map((link) => (
-              <a
-                key={link.name}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary-600 transition-colors"
-                tabIndex={0}
-                aria-label={`Visit ${link.name}`}
-              >
-                <span className="sr-only">{link.name}</span>
-                <div className="w-6 h-6 bg-gray-400 rounded-full" />
-              </a>
-            ))}
           </div>
 
           {/* Mobile menu button */}
@@ -119,6 +102,7 @@ const Header = () => {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
+                aria-hidden="true"
               >
                 {isMenuOpen ? (
                   <path
@@ -149,7 +133,7 @@ const Header = () => {
                 smooth={true}
                 duration={800}
                 offset={-80}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors cursor-pointer"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors cursor-pointer focus:outline-none"
                 tabIndex={0}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -160,7 +144,7 @@ const Header = () => {
                 smooth={true}
                 duration={800}
                 offset={-80}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors cursor-pointer"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors cursor-pointer focus:outline-none"
                 tabIndex={0}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -171,7 +155,7 @@ const Header = () => {
                 smooth={true}
                 duration={800}
                 offset={-80}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors cursor-pointer"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors cursor-pointer focus:outline-none"
                 tabIndex={0}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -182,7 +166,7 @@ const Header = () => {
                 smooth={true}
                 duration={800}
                 offset={-80}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors cursor-pointer"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors cursor-pointer focus:outline-none"
                 tabIndex={0}
                 onClick={() => setIsMenuOpen(false)}
               >
