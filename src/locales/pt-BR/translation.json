@@ -37,7 +37,7 @@
     "title": "Sobre Mim",
     "subtitle": "Desenvolvedor Full-Stack formado em Ciência da Computação pela Universidade Federal de Pelotas, com experiência em produtos de alto impacto, liderando frentes de front-end e entregando soluções ponta a ponta.",
     "bio": {
-      "paragraph": "Desarrollador full-stack con más de tres años de experiencia, graduado en Informática por la Universidad Federal de Pelotas. Trabajo desde el front-end hasta el back-end, participando desde la definición de la arquitectura hasta el soporte de soluciones, siempre con un enfoque en la escalabilidad, la calidad del código, la accesibilidad y el alto rendimiento. Tengo experiencia liderando iniciativas front-end, estructurando sistemas para soportar millones de interacciones, creando API seguras y escalables, y entregando productos que equilibran la excelencia técnica con una experiencia de usuario fluida."
+      "paragraph": "Desenvolvedor full-stack com mais de três anos de experiência, sou formado em Ciência da Computação pela Universidade Federal de Pelotas. Atuo do front-end ao back-end, participando da definição da arquitetura até o suporte da solução, sempre com foco em escalabilidade, qualidade de código, acessibilidade e alto desempenho. Tenho experiência liderando iniciativas de front-end, estruturando sistemas para suportar milhões de interações, criando APIs seguras e escaláveis ​​e entregando produtos que equilibram excelência técnica com uma experiência de usuário fluida."
     },
     "journey": {
       "title": "Minha Jornada",
@@ -88,7 +88,7 @@
   },
   "contact": {
     "title": "Entre em Contato",
-    "subtitle": "Estou sempre interessado em ouvir sobre novas oportunidades e projetos emocionantes. Vamos trabalhar juntos para criar algo incrível!",
+    "subtitle": "Estou sempre interessado em ouvir sobre novas oportunidades e projetos emocionantes. Vamos trabalhar juntos para criar algo!",
     "form": {
       "title": "Envie-me uma Mensagem",
       "name": "Nome",
@@ -103,7 +103,7 @@
     },
     "info": {
       "title": "Vamos Conectar",
-      "description": "Atualmente estou disponível para trabalho freelance e oportunidades emocionantes. Seja qual for sua pergunta ou se você só quiser dizer oi, farei o possível para responder!",
+      "description": "Atualmente estou disponível para trabalho freelance e oportunidades. Seja qual for sua pergunta ou se você só quiser dizer oi, farei o possível para responder!",
       "email": "Email",
       "location": "Localização",
       "locationValue": "Remoto / Mundial"

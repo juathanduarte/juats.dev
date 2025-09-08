@@ -88,7 +88,7 @@
   },
   "contact": {
     "title": "Get In Touch",
-    "subtitle": "I'm always interested in hearing about new opportunities and exciting projects. Let's work together to create something amazing!",
+    "subtitle": "I'm always interested in hearing about new opportunities and projects. Let's work together to create something!",
     "form": {
       "title": "Send Me a Message",
       "name": "Name",
@@ -103,7 +103,7 @@
     },
     "info": {
       "title": "Let's Connect",
-      "description": "I'm currently available for freelance work and exciting opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+      "description": "I'm currently available for freelance work and opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
       "email": "Email",
       "location": "Location",
       "locationValue": "Remote / Worldwide"
