@@ -1,15 +1,9 @@
-import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import avatar from "../assets/images/avatar.jpg";
 import { SOCIAL_LINKS } from "../constants";
-import {
-  containerVariants,
-  imageVariants,
-  itemVariants,
-  socialLinkVariants,
-  titleVariants,
-} from "../constants/animations";
+
+// Animations implemented via TailwindCSS transitions
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -21,31 +15,17 @@ const Hero = () => {
       className="min-h-[calc(100vh)] py-6 flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-20"
-        >
-          <motion.div
-            variants={imageVariants}
-            className="flex-shrink-0 hidden lg:block"
-          >
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-20">
+          <div className="flex-shrink-0 hidden lg:block">
             <img
               src={avatar}
               alt="Juathan - Desenvolvedor Full-Stack"
               className="w-64 h-96 lg:w-80 lg:h-112 xl:w-96 xl:h-128 rounded-lg object-cover shadow-lg"
             />
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={itemVariants}
-            className="text-center lg:text-left flex-1 flex flex-col gap-6"
-          >
-            <motion.h1
-              variants={titleVariants}
-              className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white relative"
-            >
+          <div className="text-center lg:text-left flex-1 flex flex-col gap-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white relative">
               {t("hero.greeting")}{" "}
               <span className="text-primary-600 dark:text-primary-400">
                 Juathan
@@ -55,34 +35,27 @@ const Hero = () => {
                 {t("hero.title")}
               </span>
               .
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              variants={itemVariants}
-              className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl lg:max-w-none"
-            >
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl lg:max-w-none">
               {t("hero.subtitle")}
-            </motion.p>
+            </p>
 
-            <motion.div
-              variants={itemVariants}
-              className="flex justify-center lg:justify-start space-x-8"
-            >
+            <div className="flex justify-center lg:justify-start space-x-8">
               {SOCIAL_LINKS.map((link, index) => (
-                <motion.a
+                <a
                   key={link.name}
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary-600 transition-colors text-3xl focus:outline-none"
+                  className="text-gray-600 hover:text-primary-600 transition-colors text-3xl focus:outline-none transform duration-200 hover:scale-110 active:scale-95"
                   aria-label={`Visit ${link.name}`}
-                  variants={socialLinkVariants}
-                  custom={index}
-                  whileHover="hover"
-                  whileTap="tap"
                 >
                   <span className="sr-only">{link.name}</span>
-                  <div className="w-12 h-12 flex items-center justify-center">
+                  <div
+                    className="w-12 h-12 flex items-center justify-center"
+                    style={{ transitionDelay: `${index * 100}ms` }}
+                  >
                     {link.icon === "github" && <FaGithub className="w-8 h-8" />}
                     {link.icon === "linkedin" && (
                       <FaLinkedin className="w-8 h-8" />
@@ -91,11 +64,11 @@ const Hero = () => {
                       <FaEnvelope className="w-8 h-8" />
                     )}
                   </div>
-                </motion.a>
+                </a>
               ))}
-            </motion.div>
-          </motion.div>
-        </motion.div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

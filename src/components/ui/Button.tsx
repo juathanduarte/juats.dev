@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { forwardRef } from "react";
 
 interface IButtonProps {
@@ -55,24 +54,15 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>(
     const buttonClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${widthClasses} ${className}`;
 
     return (
-      <motion.button
+      <button
         ref={ref}
         type={type}
         disabled={disabled || loading}
         onClick={onClick}
-        className={buttonClasses}
-        whileHover={{ scale: disabled || loading ? 1 : 1.05 }}
-        whileTap={{ scale: disabled || loading ? 1 : 0.95 }}
-        transition={{ duration: 0.2 }}
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
+        className={`${buttonClasses} transform transition-transform duration-200 ${disabled || loading ? "" : "hover:scale-105 active:scale-95"}`}
       >
         {loading && (
-          <motion.div
-            className="mr-2"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-          >
+          <span className="mr-2 animate-spin">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24">
               <title>Loading</title>
               <circle
@@ -89,10 +79,10 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>(
                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
               />
             </svg>
-          </motion.div>
+          </span>
         )}
         {children}
-      </motion.button>
+      </button>
     );
   }
 );

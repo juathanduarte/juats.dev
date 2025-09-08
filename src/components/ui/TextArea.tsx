@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { forwardRef } from "react";
 
 interface ITextAreaProps {
@@ -57,12 +56,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, ITextAreaProps>(
     const textAreaClasses = `${baseClasses} ${variantClasses[variant]} ${resizeClasses[resize]} ${className}`;
 
     return (
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
-        className="space-y-2"
-      >
+      <div className="space-y-2">
         {label && (
           <label
             htmlFor={id}
@@ -72,7 +66,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, ITextAreaProps>(
             {required && <span className="text-red-500 ml-1">*</span>}
           </label>
         )}
-        <motion.textarea
+        <textarea
           ref={ref}
           id={id}
           name={name}
@@ -83,20 +77,12 @@ const TextArea = forwardRef<HTMLTextAreaElement, ITextAreaProps>(
           required={required}
           disabled={disabled}
           rows={rows}
-          className={textAreaClasses}
-          whileFocus={{ scale: 1.02 }}
-          transition={{ duration: 0.2 }}
+          className={`${textAreaClasses} transform transition-transform duration-200 focus:scale-[1.02]`}
         />
         {error && (
-          <motion.p
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-sm text-red-500 dark:text-red-400"
-          >
-            {error}
-          </motion.p>
+          <p className="text-sm text-red-500 dark:text-red-400">{error}</p>
         )}
-      </motion.div>
+      </div>
     );
   }
 );

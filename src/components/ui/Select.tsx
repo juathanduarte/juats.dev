@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { forwardRef } from "react";
 
 interface ISelectOption {
@@ -54,12 +53,7 @@ const Select = forwardRef<HTMLSelectElement, ISelectProps>(
     const selectClasses = `${baseClasses} ${variantClasses[variant]} ${className}`;
 
     return (
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
-        className="space-y-2"
-      >
+      <div className="space-y-2">
         {label && (
           <label
             htmlFor={id}
@@ -70,7 +64,7 @@ const Select = forwardRef<HTMLSelectElement, ISelectProps>(
           </label>
         )}
         <div className="relative">
-          <motion.select
+          <select
             ref={ref}
             id={id}
             name={name}
@@ -79,9 +73,7 @@ const Select = forwardRef<HTMLSelectElement, ISelectProps>(
             onBlur={onBlur}
             required={required}
             disabled={disabled}
-            className={selectClasses}
-            whileFocus={{ scale: 1.02 }}
-            transition={{ duration: 0.2 }}
+            className={`${selectClasses} transform transition-transform duration-200 focus:scale-[1.02]`}
           >
             {placeholder && (
               <option value="" disabled>
@@ -97,16 +89,13 @@ const Select = forwardRef<HTMLSelectElement, ISelectProps>(
                 {option.label}
               </option>
             ))}
-          </motion.select>
+          </select>
           <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-            <motion.svg
+            <svg
               className="w-5 h-5 text-gray-400"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              initial={{ rotate: 0 }}
-              whileHover={{ rotate: 180 }}
-              transition={{ duration: 0.3 }}
             >
               <title>Dropdown arrow</title>
               <path
@@ -115,19 +104,13 @@ const Select = forwardRef<HTMLSelectElement, ISelectProps>(
                 strokeWidth={2}
                 d="M19 9l-7 7-7-7"
               />
-            </motion.svg>
+            </svg>
           </div>
         </div>
         {error && (
-          <motion.p
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-sm text-red-500 dark:text-red-400"
-          >
-            {error}
-          </motion.p>
+          <p className="text-sm text-red-500 dark:text-red-400">{error}</p>
         )}
-      </motion.div>
+      </div>
     );
   }
 );

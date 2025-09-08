@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { forwardRef } from "react";
 
 interface IInputProps {
@@ -48,12 +47,7 @@ const Input = forwardRef<HTMLInputElement, IInputProps>(
     const inputClasses = `${baseClasses} ${variantClasses[variant]} ${className}`;
 
     return (
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
-        className="space-y-2"
-      >
+      <div className="space-y-2">
         {label && (
           <label
             htmlFor={id}
@@ -63,7 +57,7 @@ const Input = forwardRef<HTMLInputElement, IInputProps>(
             {required && <span className="text-red-500 ml-1">*</span>}
           </label>
         )}
-        <motion.input
+        <input
           ref={ref}
           id={id}
           name={name}
@@ -74,20 +68,12 @@ const Input = forwardRef<HTMLInputElement, IInputProps>(
           onBlur={onBlur}
           required={required}
           disabled={disabled}
-          className={inputClasses}
-          whileFocus={{ scale: 1.02 }}
-          transition={{ duration: 0.2 }}
+          className={`${inputClasses} transform transition-transform duration-200 focus:scale-[1.02]`}
         />
         {error && (
-          <motion.p
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-sm text-red-500 dark:text-red-400"
-          >
-            {error}
-          </motion.p>
+          <p className="text-sm text-red-500 dark:text-red-400">{error}</p>
         )}
-      </motion.div>
+      </div>
     );
   }
 );
