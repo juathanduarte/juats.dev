@@ -18,7 +18,7 @@ const Hero = () => {
     // biome-ignore lint/correctness/useUniqueElementIds: Section anchors used for SPA navigation
     <section
       id="home"
-      className="min-h-[calc(var(--vh)*100)] flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-16"
+      className="min-h-[calc(100vh)] py-6 flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div

@@ -22,8 +22,11 @@ const Contact = () => {
 
   return (
     // biome-ignore lint/correctness/useUniqueElementIds: <>
-    <section id="contact" className="py-20 bg-white dark:bg-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-16">
+    <section
+      id="contact"
+      className="min-h-[calc(100vh)] py-6 flex items-center bg-white dark:bg-gray-800"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-16 w-full">
         <div className="text-center flex flex-col gap-4">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
             {t("contact.title")}
