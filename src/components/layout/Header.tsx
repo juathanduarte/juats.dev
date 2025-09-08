@@ -157,7 +157,7 @@ const Header = () => {
           <div className="md:hidden">
             <div
               ref={menuRef}
-              className="absolute right-4 top-16 w-80 max-w-[90vw] bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border border-gray-200/60 dark:border-gray-700/60 shadow-xl rounded-xl overflow-hidden"
+              className="absolute right-4 top-16 w-80 max-w-[90vw] bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border border-gray-200/60 dark:border-gray-700/60 shadow-xl rounded-xl overflow-visible"
             >
               <div className="px-4 py-6 space-y-2">
                 <Link
