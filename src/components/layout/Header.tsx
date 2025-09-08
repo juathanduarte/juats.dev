@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { HiMenu, HiX } from "react-icons/hi";
 import { Link } from "react-scroll";
+import AnimatedIcon from "../ui/AnimatedIcon";
 import Button from "../ui/Button";
 import LanguageSelector from "../ui/LanguageSelector";
 import ThemeToggle from "../ui/ThemeToggle";
@@ -19,16 +20,20 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <Link
-              to="home"
-              smooth={true}
-              duration={800}
-              offset={-80}
-              className="text-2xl font-bold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-pointer focus:outline-none"
-              aria-label="Go to home section"
-            >
-              {t("header.logo")}
-            </Link>
+            <div className="flex items-center gap-2">
+              <Link
+                to="home"
+                smooth={true}
+                duration={800}
+                offset={-80}
+                className="text-2xl font-bold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-pointer focus:outline-none"
+                aria-label="Go to home section"
+              >
+                {t("header.logo")}
+              </Link>
+              <div className="w-px h-6 bg-gray-300 dark:bg-gray-600" />
+              <AnimatedIcon />
+            </div>
           </div>
 
           {/* Desktop Navigation - Centered */}

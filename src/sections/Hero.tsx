@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import avatar from "../assets/images/avatar.jpg";
-import AnimatedIcon from "../components/ui/AnimatedIcon";
 import { SOCIAL_LINKS } from "../constants";
 import {
   containerVariants,
@@ -16,7 +15,7 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    // biome-ignore lint/correctness/useUniqueElementIds: <explanation>
+    // biome-ignore lint/correctness/useUniqueElementIds: Section anchors used for SPA navigation
     <section
       id="home"
       className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-16"
@@ -56,10 +55,6 @@ const Hero = () => {
               {t("hero.nicknameIntro")}{" "}
               <span className="text-primary-700 dark:text-primary-300 relative">
                 {t("hero.title")}
-
-                <div className="absolute -bottom-2 -right-2">
-                  <AnimatedIcon />
-                </div>
               </span>
             </motion.h1>
 

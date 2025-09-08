@@ -23,8 +23,8 @@ const Contact = () => {
   return (
     // biome-ignore lint/correctness/useUniqueElementIds: <>
     <section id="contact" className="py-20 bg-white dark:bg-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-16">
+        <div className="text-center flex flex-col gap-4">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
             {t("contact.title")}
           </h2>
@@ -33,13 +33,13 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="space-y-6">
+          <div className="flex flex-col gap-6">
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
               {t("contact.form.title")}
             </h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <Input
                 id={nameId}
                 name="name"
@@ -83,8 +83,8 @@ const Contact = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="space-y-6">
+          <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-6">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
                 {t("contact.info.title")}
               </h3>
@@ -94,7 +94,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Details */}
-            <div className="space-y-4">
+            <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center">
                   <FaEnvelope className="w-5 h-5 text-primary-600 dark:text-primary-400" />
@@ -132,7 +132,7 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div className="space-y-4">
+            <div className="flex flex-col gap-4">
               <h4 className="text-lg font-medium text-gray-900 dark:text-white">
                 {t("common.followMe")}
               </h4>
