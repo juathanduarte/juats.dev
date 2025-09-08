@@ -35,7 +35,10 @@
   },
   "about": {
     "title": "About Me",
-    "subtitle": "Full-Stack Developer with a degree in Computer Science from the Federal University of Pelotas, with over two years of experience creating and improving high-impact solutions.",
+    "subtitle": "Full-Stack Developer with a degree in Computer Science, experienced in high-impact products, leading front-end initiatives and delivering end-to-end solutions.",
+    "bio": {
+      "paragraph": "Full-stack developer with over three years of experience, graduated in Computer Science from the Federal University of Pelotas. I work from the front-end to the back-end, participating from defining the architecture to supporting solutions, always focusing on scalability, code quality, accessibility, and high performance. I have experience leading front-end initiatives, structuring systems to support millions of interactions, building secure and scalable APIs, and delivering products that balance technical excellence with a seamless user experience."
+    },
     "journey": {
       "title": "My Journey",
       "experience1": {

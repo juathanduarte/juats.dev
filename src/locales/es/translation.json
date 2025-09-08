@@ -36,6 +36,9 @@
   "about": {
     "title": "Acerca de Mí",
     "subtitle": "Desarrollador Full-Stack con título en Ciencias de la Computación de la Universidad Federal de Pelotas, con más de dos años de experiencia creando y mejorando soluciones de alto impacto.",
+    "bio": {
+      "paragraph": "Desarrollador full-stack con más de tres años de experiencia, graduado en Informática por la Universidad Federal de Pelotas. Trabajo desde el front-end hasta el back-end, participando desde la definición de la arquitectura hasta el soporte de soluciones, siempre con un enfoque en la escalabilidad, la calidad del código, la accesibilidad y el alto rendimiento. Tengo experiencia liderando iniciativas front-end, estructurando sistemas para soportar millones de interacciones, creando API seguras y escalables, y entregando productos que combinan la excelencia técnica con una experiencia de usuario fluida."
+    },
     "journey": {
       "title": "Mi Viaje",
       "experience1": {

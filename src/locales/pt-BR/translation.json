@@ -35,7 +35,10 @@
   },
   "about": {
     "title": "Sobre Mim",
-    "subtitle": "Desenvolvedor Full-Stack formado em Ciência da Computação pela Universidade Federal de Pelotas, com mais de dois anos de experiência criando e aprimorando soluções de alto impacto.",
+    "subtitle": "Desenvolvedor Full-Stack formado em Ciência da Computação pela Universidade Federal de Pelotas, com experiência em produtos de alto impacto, liderando frentes de front-end e entregando soluções ponta a ponta.",
+    "bio": {
+      "paragraph": "Desarrollador full-stack con más de tres años de experiencia, graduado en Informática por la Universidad Federal de Pelotas. Trabajo desde el front-end hasta el back-end, participando desde la definición de la arquitectura hasta el soporte de soluciones, siempre con un enfoque en la escalabilidad, la calidad del código, la accesibilidad y el alto rendimiento. Tengo experiencia liderando iniciativas front-end, estructurando sistemas para soportar millones de interacciones, creando API seguras y escalables, y entregando productos que equilibran la excelencia técnica con una experiencia de usuario fluida."
+    },
     "journey": {
       "title": "Minha Jornada",
       "experience1": {

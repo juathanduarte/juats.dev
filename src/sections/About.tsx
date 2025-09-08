@@ -13,6 +13,12 @@ const About = () => {
             {t("about.journey.title")}
           </h3>
 
+          <div className="flex flex-col gap-6">
+            <p className="text-lg text-gray-700 dark:text-gray-200 leading-relaxed text-center md:text-left">
+              {t("about.bio.paragraph")}
+            </p>
+          </div>
+
           <Timeline />
         </div>
       </div>
