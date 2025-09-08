@@ -39,22 +39,22 @@
     "journey": {
       "title": "Mi Viaje",
       "experience1": {
-        "title": "Desarrollador Full-Stack Senior",
-        "company": "dhauz",
-        "description": "Participación desde la definición de arquitectura hasta el mantenimiento de soluciones, garantizando robustez, escalabilidad y alineación con los objetivos del negocio. Implementación de nuevas funcionalidades de extremo a extremo (front-end y back-end), entregando código de alta calidad, seguro y performante.",
-        "period": "Septiembre 2025 - Actual"
-      },
-      "experience2": {
         "title": "Líder Técnico de Front-End",
         "company": "Smart NX",
         "description": "Liderazgo en la reestructuración del front-end, garantizando escalabilidad, rendimiento y eficiencia a gran escala. Desarrollo y mejora de la pantalla de atención al usuario, optimizando la experiencia para manejar más de 5,000,000 chats mensuales de forma fluida y responsiva.",
         "period": "Junio 2023 - Actual"
       },
-      "experience3": {
+      "experience2": {
         "title": "Desarrollador Front-end",
         "company": "Meupass",
         "description": "Definición de arquitectura y elección estratégica de tecnologías, garantizando una base robusta, escalable y alineada con las necesidades del negocio. Coordinación del equipo de front-end del dashboard administrativo, promoviendo buenas prácticas de desarrollo.",
         "period": "Octubre 2024 - Actual"
+      },
+      "experience3": {
+        "title": "Desarrollador Full-Stack Senior",
+        "company": "dhauz",
+        "description": "Participación desde la definición de arquitectura hasta el mantenimiento de soluciones, garantizando robustez, escalabilidad y alineación con los objetivos del negocio. Implementación de nuevas funcionalidades de extremo a extremo (front-end y back-end), entregando código de alta calidad, seguro y performante.",
+        "period": "Septiembre 2025 - Actual"
       }
     },
     "skills": {
@@ -77,10 +77,10 @@
     "github": "GitHub",
     "liveDemo": "Demo en Vivo",
     "descriptions": {
-      "letralandia": "Aplicación educativa para alfabetización infantil, con 3 juegos interactivos, área de padres con retroalimentación detallada y sección dedicada al aprendizaje del alfabeto",
-      "suite": "Panel administrativo integrado con área de atención al cliente omnicanal, desarrollado para centros de llamadas y soporte al cliente con interfaz moderna e intuitiva",
-      "meupassApp": "Aplicación móvil-first para venta de productos y servicios, con enfoque especial en ofertas promocionales y experiencia de compra optimizada",
-      "meupassDash": "Panel administrativo completo para gestionar tiendas en la aplicación Meupass, incluyendo control de inventario, ventas y análisis"
+      "letralandia": "Aplicación educativa para alfabetización infantil, con 3 juegos interactivos, área de padres con retroalimentación detallada y sección dedicada al aprendizaje del alfabeto.",
+      "suite": "Panel administrativo integrado con área de atención al cliente omnicanal, desarrollado para centros de llamadas y soporte al cliente con interfaz moderna e intuitiva.",
+      "meupassApp": "Aplicación móvil-first para venta de productos y servicios, con enfoque especial en ofertas promocionales y experiencia de compra optimizada.",
+      "meupassDash": "Panel administrativo completo para gestionar tiendas en la aplicación Meupass, incluyendo control de inventario, ventas y análisis."
     }
   },
   "contact": {
@@ -110,7 +110,7 @@
     "description": "Desarrollador Full-Stack con título en Ciencias de la Computación de la Universidad Federal de Pelotas",
     "quickLinks": "Enlaces Rápidos",
     "connect": "Conecta",
-    "copyright": "Todos los derechos reservados, tchê!"
+    "copyright": "Todos los derechos reservados, tchê! 🧉"
   },
   "languages": {
     "pt": "Português",

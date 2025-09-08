@@ -46,8 +46,8 @@ const Projects = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
 
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-2">
+              <div className="p-6 flex flex-col gap-4">
+                <div className="flex items-center justify-between">
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                     {project.title}
                   </h3>
@@ -67,7 +67,7 @@ const Projects = () => {
                         : "Front-end"}
                   </span>
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                <p className="text-gray-600 dark:text-gray-300">
                   {t(project.descriptionKey)}
                 </p>
 

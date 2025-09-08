@@ -39,22 +39,22 @@
     "journey": {
       "title": "My Journey",
       "experience1": {
-        "title": "Senior Full-Stack Developer",
-        "company": "dhauz",
-        "description": "Participation from architecture definition to solution maintenance, ensuring robustness, scalability and alignment with business objectives. Implementation of end-to-end new features (front-end and back-end), delivering high-quality, secure and performant code.",
-        "period": "September 2025 - Present"
-      },
-      "experience2": {
         "title": "Front-End Technical Lead",
         "company": "Smart NX",
         "description": "Leadership in front-end restructuring, ensuring scalability, performance and efficiency at scale. Development and improvement of the user support screen, optimizing the experience to handle more than 5,000,000 monthly chats in a fluid and responsive way.",
         "period": "June 2023 - Present"
       },
-      "experience3": {
+      "experience2": {
         "title": "Front-End Developer",
         "company": "Meupass",
         "description": "Architecture definition and strategic technology choices, ensuring a robust, scalable and business-aligned foundation. Coordination of the administrative dashboard front-end team, promoting development best practices.",
         "period": "October 2024 - Present"
+      },
+      "experience3": {
+        "title": "Senior Full-Stack Developer",
+        "company": "dhauz",
+        "description": "Participation from architecture definition to solution maintenance, ensuring robustness, scalability and alignment with business objectives. Implementation of end-to-end new features (front-end and back-end), delivering high-quality, secure and performant code.",
+        "period": "September 2025 - Present"
       }
     },
     "skills": {
@@ -77,10 +77,10 @@
     "github": "GitHub",
     "liveDemo": "Live Demo",
     "descriptions": {
-      "letralandia": "Educational app for children's literacy, featuring 3 interactive games, parent area with detailed feedback, and dedicated alphabet learning section",
-      "suite": "Administrative dashboard integrated with omnichannel customer service area, developed for call centers and customer support with modern and intuitive interface",
-      "meupassApp": "Mobile-first app for selling products and services, with special focus on promotional offers and optimized shopping experience",
-      "meupassDash": "Complete administrative dashboard for managing stores in the Meupass app, including inventory control, sales, and analytics"
+      "letralandia": "Educational app for children's literacy, featuring 3 interactive games, parent area with detailed feedback, and dedicated alphabet learning section.",
+      "suite": "Administrative dashboard integrated with omnichannel customer service area, developed for call centers and customer support with modern and intuitive interface.",
+      "meupassApp": "Mobile-first app for selling products and services, with special focus on promotional offers and optimized shopping experience.",
+      "meupassDash": "Complete administrative dashboard for managing stores in the Meupass app, including inventory control, sales, and analytics."
     }
   },
   "contact": {
@@ -110,7 +110,7 @@
     "description": "Full-Stack Developer with a degree in Computer Science from the Federal University of Pelotas",
     "quickLinks": "Quick Links",
     "connect": "Connect",
-    "copyright": "All rights reserved, tchê!"
+    "copyright": "All rights reserved, tchê! 🧉"
   },
   "languages": {
     "pt": "Português",

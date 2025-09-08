@@ -2,7 +2,7 @@ import { getSocialIcon } from "@utils/social";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
-import { SITE_CONFIG, SOCIAL_LINKS } from "../../constants";
+import { SOCIAL_LINKS } from "../../constants";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -14,7 +14,7 @@ const Footer = () => {
         <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <motion.div className="space-y-4">
             <h3 className="text-2xl font-bold text-primary-400">
-              {SITE_CONFIG.author}
+              Juathan Coelho Duarte
             </h3>
             <p className="text-gray-300 max-w-md">{t("footer.description")}</p>
           </motion.div>
@@ -71,7 +71,7 @@ const Footer = () => {
 
         <motion.div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © {currentYear} {SITE_CONFIG.author}. {t("footer.copyright")}
+            © {currentYear} Juathan Coelho Duarte. {t("footer.copyright")}
           </p>
         </motion.div>
       </div>
