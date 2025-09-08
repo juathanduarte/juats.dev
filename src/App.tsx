@@ -7,7 +7,7 @@ import Projects from "./sections/Projects";
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-[calc(var(--vh)*100)] bg-white dark:bg-gray-900">
       <Header />
       <main className="flex flex-col">
         <Hero />
