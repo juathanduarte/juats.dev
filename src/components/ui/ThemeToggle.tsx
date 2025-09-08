@@ -1,8 +1,8 @@
 import { FiMoon, FiSun } from "react-icons/fi";
-import { useThemeStore } from "../../stores/themeStore";
+import { useTheme } from "../../context/ThemeContext";
 
 const ThemeToggle = () => {
-  const { theme, toggleTheme } = useThemeStore();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <button
