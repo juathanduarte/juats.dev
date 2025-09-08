@@ -14,8 +14,8 @@ const Hero = () => {
       id="home"
       className="min-h-[calc(100vh)] py-6 flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-8 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-20 w-full">
           <div className="flex-shrink-0 hidden lg:block">
             <img
               src={avatar}
