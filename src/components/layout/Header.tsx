@@ -149,62 +149,65 @@ const Header = () => {
           </div>
         </div>
 
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div
-              ref={menuRef}
-              className="absolute right-4 top-16 w-80 max-w-[90vw] bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border border-gray-200/60 dark:border-gray-700/60 shadow-xl rounded-xl overflow-visible"
-            >
-              <div className="px-4 py-6 space-y-2">
-                <Link
-                  to="home"
-                  smooth={true}
-                  duration={800}
-                  offset={-80}
-                  className="block w-full text-left px-4 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-500/20"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {t("header.navigation.home")}
-                </Link>
-                <Link
-                  to="about"
-                  smooth={true}
-                  duration={800}
-                  offset={-80}
-                  className="block w-full text-left px-4 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-500/20"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {t("header.navigation.about")}
-                </Link>
-                <Link
-                  to="projects"
-                  smooth={true}
-                  duration={800}
-                  offset={-80}
-                  className="block w-full text-left px-4 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-500/20"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {t("header.navigation.projects")}
-                </Link>
-                <Link
-                  to="contact"
-                  smooth={true}
-                  duration={800}
-                  offset={-80}
-                  className="block w-full text-left px-4 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-500/20"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {t("header.navigation.contact")}
-                </Link>
-              </div>
-              <div className="border-t border-gray-200/50 dark:border-gray-700/50 mx-4"></div>
-              <div className="px-4 py-4 flex items-center justify-center space-x-6">
-                <ThemeToggle />
-                <LanguageSelector />
-              </div>
+        <div className="md:hidden">
+          <div
+            ref={menuRef}
+            className={`absolute right-4 top-16 w-80 max-w-[90vw] bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border border-gray-200/60 dark:border-gray-700/60 shadow-xl rounded-xl overflow-visible transition-all duration-200 origin-top ${
+              isMenuOpen
+                ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
+                : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+            }`}
+            aria-hidden={!isMenuOpen}
+          >
+            <div className="px-4 py-6 space-y-2">
+              <Link
+                to="home"
+                smooth={true}
+                duration={800}
+                offset={-80}
+                className="block w-full text-left px-4 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t("header.navigation.home")}
+              </Link>
+              <Link
+                to="about"
+                smooth={true}
+                duration={800}
+                offset={-80}
+                className="block w-full text-left px-4 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t("header.navigation.about")}
+              </Link>
+              <Link
+                to="projects"
+                smooth={true}
+                duration={800}
+                offset={-80}
+                className="block w-full text-left px-4 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t("header.navigation.projects")}
+              </Link>
+              <Link
+                to="contact"
+                smooth={true}
+                duration={800}
+                offset={-80}
+                className="block w-full text-left px-4 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t("header.navigation.contact")}
+              </Link>
+            </div>
+            <div className="border-t border-gray-200/50 dark:border-gray-700/50 mx-4"></div>
+            <div className="px-4 py-4 flex items-center justify-center space-x-6">
+              <ThemeToggle />
+              <LanguageSelector />
             </div>
           </div>
-        )}
+        </div>
       </div>
     </header>
   );
