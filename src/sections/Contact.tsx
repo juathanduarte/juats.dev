@@ -2,14 +2,10 @@ import Button from "@components/ui/Button";
 import Input from "@components/ui/Input";
 import TextArea from "@components/ui/TextArea";
 import { SOCIAL_LINKS } from "@constants/index";
+import { getSocialIcon } from "@utils/social";
 import { useId } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  FaEnvelope,
-  FaGithub,
-  FaLinkedin,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -22,19 +18,6 @@ const Contact = () => {
     event.preventDefault();
     // Handle form submission
     console.log("Form submitted");
-  };
-
-  const getSocialIcon = (iconName: string) => {
-    switch (iconName) {
-      case "github":
-        return <FaGithub className="w-6 h-6" />;
-      case "linkedin":
-        return <FaLinkedin className="w-6 h-6" />;
-      case "email":
-        return <FaEnvelope className="w-6 h-6" />;
-      default:
-        return <div className="w-6 h-6 bg-gray-400 rounded-full" />;
-    }
   };
 
   return (
@@ -165,7 +148,7 @@ const Contact = () => {
                     aria-label={`${t("common.followMe")} ${link.name}`}
                   >
                     <span className="sr-only">{link.name}</span>
-                    {getSocialIcon(link.icon)}
+                    {getSocialIcon(link.icon, "w-6 h-6")}
                   </a>
                 ))}
               </div>

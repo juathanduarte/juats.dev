@@ -1,4 +1,4 @@
-import type { IExperience, IProject, ISkill, ISocialLink } from "../types";
+import type { IExperience, IProject, ISocialLink } from "../types";
 
 export const SOCIAL_LINKS: ISocialLink[] = [
   {
@@ -16,45 +16,6 @@ export const SOCIAL_LINKS: ISocialLink[] = [
     url: "mailto:juathanduarte13@gmail.com",
     icon: "email",
   },
-];
-
-export const SKILLS: ISkill[] = [
-  // Frontend
-  { id: "1", name: "React", category: "frontend", level: 5, icon: "react" },
-  { id: "2", name: "Next.js", category: "frontend", level: 5, icon: "nextjs" },
-  {
-    id: "3",
-    name: "TypeScript",
-    category: "frontend",
-    level: 5,
-    icon: "typescript",
-  },
-  {
-    id: "4",
-    name: "Tailwind CSS",
-    category: "frontend",
-    level: 5,
-    icon: "tailwind",
-  },
-  { id: "5", name: "HTML/CSS", category: "frontend", level: 5, icon: "html" },
-
-  // Backend
-  { id: "6", name: "Node.js", category: "backend", level: 4, icon: "nodejs" },
-  { id: "7", name: "Express", category: "backend", level: 4, icon: "express" },
-
-  // Tools
-  { id: "8", name: "Git", category: "tools", level: 5, icon: "git" },
-  { id: "9", name: "VS Code", category: "tools", level: 5, icon: "vscode" },
-
-  // Languages
-  {
-    id: "10",
-    name: "JavaScript",
-    category: "languages",
-    level: 5,
-    icon: "javascript",
-  },
-  { id: "11", name: "Python", category: "languages", level: 3, icon: "python" },
 ];
 
 export const PROJECTS: IProject[] = [
@@ -128,9 +89,9 @@ export const EXPERIENCES: IExperience[] = [
 ];
 
 export const SITE_CONFIG = {
-  title: "Juats Dev - Portfolio",
+  title: "juats.dev - Full-Stack Developer",
   description:
-    "Senior Frontend Developer specializing in React, Next.js, and modern web technologies",
-  author: "Juats Dev",
+    "Full-Stack Developer specializing in React, Next.js, and modern web technologies",
+  author: "Juathan Coelho Duarte",
   url: "https://juats-dev.vercel.app",
 };
