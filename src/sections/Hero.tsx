@@ -27,10 +27,9 @@ const Hero = () => {
           animate="visible"
           className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-20"
         >
-          {/* Profile Image - Left Side - Hidden on mobile */}
           <motion.div
             variants={imageVariants}
-            className="flex-shrink-0 hidden sm:block"
+            className="flex-shrink-0 hidden lg:block"
           >
             <img
               src={avatar}
@@ -39,7 +38,6 @@ const Hero = () => {
             />
           </motion.div>
 
-          {/* Main Content - Right Side */}
           <motion.div
             variants={itemVariants}
             className="text-center lg:text-left flex-1 flex flex-col gap-6"
@@ -56,6 +54,7 @@ const Hero = () => {
               <span className="text-primary-700 dark:text-primary-300 relative">
                 {t("hero.title")}
               </span>
+              .
             </motion.h1>
 
             <motion.p
