@@ -1,4 +1,3 @@
-import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { HiMenu, HiX } from "react-icons/hi";
@@ -124,31 +123,28 @@ const Header = () => {
               className="p-2 text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400 ring-0 focus:ring-0 -visible:ring-0focus ring-offset-0 focus:ring-offset-0 focus-visible:ring-offset-0 outline-none focus:outline-none focus-visible:outline-none active:outline-none"
               aria-label="Toggle mobile menu"
             >
-              <AnimatePresence mode="wait" initial={false}>
-                {isMenuOpen ? (
-                  <motion.span
-                    key="close"
-                    initial={{ opacity: 0, rotate: -90, scale: 0.8 }}
-                    animate={{ opacity: 1, rotate: 0, scale: 1 }}
-                    exit={{ opacity: 0, rotate: 90, scale: 0.8 }}
-                    transition={{ duration: 0.18 }}
-                    className="inline-flex"
-                  >
-                    <HiX className="h-6 w-6" aria-hidden="true" />
-                  </motion.span>
-                ) : (
-                  <motion.span
-                    key="menu"
-                    initial={{ opacity: 0, rotate: 90, scale: 0.8 }}
-                    animate={{ opacity: 1, rotate: 0, scale: 1 }}
-                    exit={{ opacity: 0, rotate: -90, scale: 0.8 }}
-                    transition={{ duration: 0.18 }}
-                    className="inline-flex"
-                  >
-                    <HiMenu className="h-6 w-6" aria-hidden="true" />
-                  </motion.span>
-                )}
-              </AnimatePresence>
+              <span className="relative inline-flex w-6 h-6">
+                <span
+                  className={`absolute inset-0 inline-flex items-center justify-center transition-all duration-200 ${
+                    isMenuOpen
+                      ? "opacity-0 -rotate-90 scale-90"
+                      : "opacity-100 rotate-0 scale-100"
+                  }`}
+                  aria-hidden={isMenuOpen}
+                >
+                  <HiMenu className="h-6 w-6" aria-hidden="true" />
+                </span>
+                <span
+                  className={`absolute inset-0 inline-flex items-center justify-center transition-all duration-200 ${
+                    isMenuOpen
+                      ? "opacity-100 rotate-0 scale-100"
+                      : "opacity-0 rotate-90 scale-90"
+                  }`}
+                  aria-hidden={!isMenuOpen}
+                >
+                  <HiX className="h-6 w-6" aria-hidden="true" />
+                </span>
+              </span>
             </Button>
           </div>
         </div>
