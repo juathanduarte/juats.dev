@@ -1,9 +1,11 @@
-import hotBeverageIcon from "@assets/svgs/hot-beverage.svg";
-import laptopIcon from "@assets/svgs/laptop.svg";
-import mateIcon from "@assets/svgs/mate.svg";
 import { useEffect, useState } from "react";
 
-const ICONS = [mateIcon, hotBeverageIcon, laptopIcon];
+type TEmojiItem = { emoji: string; label: string };
+const ICONS: TEmojiItem[] = [
+  { emoji: "🧉", label: "mate" },
+  { emoji: "☕", label: "hot beverage" },
+  { emoji: "💻", label: "laptop" },
+];
 
 const AnimatedIcon = () => {
   const [currentIcon, setCurrentIcon] = useState<number>(0);
@@ -17,22 +19,26 @@ const AnimatedIcon = () => {
   }, []);
 
   return (
-    <div className="relative w-6 h-6 lg:w-8 lg:h-8 overflow-hidden">
-      {ICONS.map((icon, index) => {
+    <div className="relative w-6 h-6 lg:w-8 lg:h-8 overflow-hidden flex items-center justify-center">
+      {ICONS.map((item, index) => {
         const isActive = index === currentIcon;
 
         return (
-          <img
-            key={icon}
-            src={icon}
-            alt={`Icon ${index + 1}`}
-            className={`absolute top-0 left-0 w-full h-full transition-all duration-500 [transition-timing-function:cubic-bezier(0.22,0.61,0.36,1)] will-change-transform ${
+          <span
+            key={item.emoji}
+            role="img"
+            aria-label={item.label}
+            className={`absolute transition-all duration-500 [transition-timing-function:cubic-bezier(0.22,0.61,0.36,1)] will-change-transform select-none ${
               isActive
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 -translate-x-3"
             }`}
             aria-hidden={!isActive}
-          />
+          >
+            <span className="text-[1.25rem] leading-none lg:text-[1.5rem]">
+              {item.emoji}
+            </span>
+          </span>
         );
       })}
     </div>
