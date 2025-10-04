@@ -4,6 +4,7 @@ import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
+import Technologies from "./sections/Technologies";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <main className="flex flex-col">
         <Hero />
         <About />
+        <Technologies />
         <Projects />
         <Contact />
       </main>

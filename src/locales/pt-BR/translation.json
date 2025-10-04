@@ -2,6 +2,7 @@
   "common": {
     "home": "Início",
     "about": "Sobre",
+    "technologies": "Tecnologias",
     "projects": "Projetos",
     "contact": "Contato",
     "viewAll": "Ver Todos",
@@ -18,6 +19,7 @@
     "navigation": {
       "home": "Início",
       "about": "Sobre",
+      "technologies": "Tecnologias",
       "projects": "Projetos",
       "contact": "Contato"
     }
@@ -70,8 +72,25 @@
     "stats": {
       "years": "Anos de Experiência",
       "projects": "Projetos Concluídos",
+      "users": "Usuários Satisfeitos",
       "clients": "Clientes Satisfeitos",
       "satisfaction": "Satisfação do Cliente"
+    }
+  },
+  "technologies": {
+    "title": "Tecnologias",
+    "subtitle": "Tecnologias e ferramentas que utilizo para criar soluções robustas e escaláveis",
+    "frontend": {
+      "title": "Front-end"
+    },
+    "backend": {
+      "title": "Back-end"
+    },
+    "mobile": {
+      "title": "Mobile"
+    },
+    "others": {
+      "title": "Outros Conhecimentos"
     }
   },
   "projects": {

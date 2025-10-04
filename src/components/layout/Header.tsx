@@ -89,6 +89,15 @@ const Header = () => {
               {t("header.navigation.about")}
             </Link>
             <Link
+              to="technologies"
+              smooth={true}
+              duration={800}
+              offset={-80}
+              className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-pointer focus:outline-none"
+            >
+              {t("header.navigation.technologies")}
+            </Link>
+            <Link
               to="projects"
               smooth={true}
               duration={800}
@@ -179,6 +188,16 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t("header.navigation.about")}
+              </Link>
+              <Link
+                to="technologies"
+                smooth={true}
+                duration={800}
+                offset={-80}
+                className="block w-full text-left px-4 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t("header.navigation.technologies")}
               </Link>
               <Link
                 to="projects"

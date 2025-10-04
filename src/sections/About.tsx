@@ -1,3 +1,4 @@
+import Stats from "@components/ui/Stats";
 import Timeline from "@components/ui/Timeline";
 import { useTranslation } from "react-i18next";
 
@@ -21,6 +22,9 @@ const About = () => {
               {t("about.bio.paragraph")}
             </p>
           </div>
+
+          {/* Stats Section */}
+          <Stats />
 
           <Timeline />
         </div>
