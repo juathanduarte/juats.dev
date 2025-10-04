@@ -8,7 +8,7 @@ import Technologies from "./sections/Technologies";
 
 const App = () => {
   return (
-    <div className="bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <Header />
       <main className="flex flex-col">
         <Hero />

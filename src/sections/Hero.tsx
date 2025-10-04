@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import avatar from "../assets/images/avatar.jpg";
+import AnimatedBackground from "../components/ui/AnimatedBackground";
 import { SOCIAL_LINKS } from "../constants";
 
 // Animations implemented via TailwindCSS transitions
@@ -12,60 +13,88 @@ const Hero = () => {
     // biome-ignore lint/correctness/useUniqueElementIds: Section anchors used for SPA navigation
     <section
       id="home"
-      className="min-h-[calc(100vh)] py-6 flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-8 lg:gap-20">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-20 w-full">
-          <div className="flex-shrink-0 hidden lg:block">
-            <img
-              src={avatar}
-              alt="Juathan - Desenvolvedor Full-Stack"
-              className="w-64 h-96 lg:w-80 lg:h-112 xl:w-96 xl:h-128 rounded-lg object-cover shadow-lg"
-            />
-          </div>
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary-100/20 via-transparent to-transparent dark:from-primary-900/20" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-primary-200/20 via-transparent to-transparent dark:from-primary-800/20" />
 
-          <div className="text-center lg:text-left flex-1 flex flex-col gap-6">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white relative">
-              {t("hero.greeting")}{" "}
-              <span className="text-primary-600 dark:text-primary-400">
-                Juathan
-              </span>
-              {t("hero.nicknameIntro")}{" "}
-              <span className="text-primary-700 dark:text-primary-300 relative">
-                {t("hero.title")}
-              </span>
-              .
-            </h1>
+      {/* Floating Elements */}
+      <div className="absolute top-20 left-10 w-20 h-20 bg-primary-200/30 dark:bg-primary-800/30 rounded-full blur-xl animate-pulse" />
+      <div className="absolute bottom-20 right-10 w-32 h-32 bg-primary-300/30 dark:bg-primary-700/30 rounded-full blur-xl animate-pulse delay-1000" />
+      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-primary-400/30 dark:bg-primary-600/30 rounded-full blur-xl animate-pulse delay-2000" />
 
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl lg:max-w-none">
-              {t("hero.subtitle")}
-            </p>
+      <AnimatedBackground />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+          {/* Content - Left Side */}
+          <div className="col-span-12 lg:col-span-7 text-center lg:text-left">
+            <div className="space-y-6 lg:space-y-8">
+              {/* Main Heading */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight">
+                <span className="text-gray-900 dark:text-white">
+                  {t("hero.greeting")}{" "}
+                </span>
+                <span className="gradient-text">Juathan</span>
+                <br />
+                <span className="text-gray-900 dark:text-white">
+                  {t("hero.nicknameIntro")}{" "}
+                </span>
+                <span className="gradient-text">{t("hero.title")}</span>
+                <span className="text-gray-900 dark:text-white">.</span>
+              </h1>
 
-            <div className="flex justify-center lg:justify-start space-x-8">
-              {SOCIAL_LINKS.map((link, index) => (
-                <a
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary-600 transition-colors text-3xl focus:outline-none transform duration-200 hover:scale-110 active:scale-95"
-                  aria-label={`Visit ${link.name}`}
-                >
-                  <span className="sr-only">{link.name}</span>
-                  <div
-                    className="w-12 h-12 flex items-center justify-center"
+              {/* Subtitle */}
+              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl">
+                {t("hero.subtitle")}
+              </p>
+
+              {/* Social Links */}
+              <div className="flex justify-center lg:justify-start space-x-6 pt-4">
+                {SOCIAL_LINKS.map((link, index) => (
+                  <a
+                    key={link.name}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group p-3 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 hover:bg-primary-50 dark:hover:bg-primary-900/50 hover:border-primary-300 dark:hover:border-primary-600 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+                    aria-label={`Visit ${link.name}`}
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
-                    {link.icon === "github" && <FaGithub className="w-8 h-8" />}
-                    {link.icon === "linkedin" && (
-                      <FaLinkedin className="w-8 h-8" />
-                    )}
-                    {link.icon === "email" && (
-                      <FaEnvelope className="w-8 h-8" />
-                    )}
-                  </div>
-                </a>
-              ))}
+                    <span className="sr-only">{link.name}</span>
+                    <div className="w-6 h-6 flex items-center justify-center text-gray-600 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                      {link.icon === "github" && (
+                        <FaGithub className="w-5 h-5" />
+                      )}
+                      {link.icon === "linkedin" && (
+                        <FaLinkedin className="w-5 h-5" />
+                      )}
+                      {link.icon === "email" && (
+                        <FaEnvelope className="w-5 h-5" />
+                      )}
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Image - Right Side */}
+          <div className="lg:col-span-5 hidden lg:flex justify-center lg:justify-end">
+            <div className="relative">
+              {/* Decorative Elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full opacity-20 blur-xl" />
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full opacity-20 blur-xl" />
+
+              {/* Main Image */}
+              <div className="relative z-10">
+                <img
+                  src={avatar}
+                  alt="Juathan - Desenvolvedor Full-Stack"
+                  className="w-80 h-96 lg:w-96 lg:h-[28rem] xl:w-[28rem] xl:h-[32rem] rounded-2xl object-cover shadow-2xl border-4 border-white/20 dark:border-gray-700/20"
+                />
+              </div>
             </div>
           </div>
         </div>

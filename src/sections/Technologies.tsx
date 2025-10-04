@@ -147,48 +147,57 @@ const Technologies = () => {
   return (
     <section
       id={`technologies-${sectionId}`}
-      className="min-h-[calc(100vh)] py-12 flex items-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800"
+      className="section-padding bg-gradient-to-br from-white to-primary-50/20 dark:from-gray-900 dark:to-gray-800"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-12">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              {t("technologies.title")}
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="space-y-20">
+          {/* Header */}
+          <div className="text-center space-y-6">
+            <div className="inline-flex items-center px-8 py-4 rounded-full bg-primary-100/80 dark:bg-primary-900/80 backdrop-blur-sm border border-primary-200/50 dark:border-primary-700/50">
+              <span className="text-2xl font-bold text-primary-700 dark:text-primary-300">
+                {t("technologies.title")}
+              </span>
+            </div>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
               {t("technologies.subtitle")}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Technologies Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {technologyCategories.map((category) => (
               <div
                 key={`${sectionId}-${category.title}`}
-                className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50 dark:border-gray-700/50 hover:scale-[1.01]"
+                className="card hover:scale-[1.02] transition-all duration-300"
               >
-                <div className="flex items-center gap-2 mb-4">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                    {category.title}
-                  </h3>
-                </div>
+                <div className="space-y-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-8 bg-gradient-to-b from-primary-500 to-primary-700 rounded-full" />
+                    <h3 className="text-2xl font-display font-bold text-gray-900 dark:text-white">
+                      {category.title}
+                    </h3>
+                  </div>
 
-                <div className="grid grid-cols-4 sm:grid-cols-5 gap-3">
-                  {category.technologies.map((tech) => {
-                    const IconComponent = tech.icon;
-                    return (
-                      <div
-                        key={`${sectionId}-${category.title}-${tech.name}`}
-                        className="flex flex-col items-center p-3 rounded-lg bg-gray-50 dark:bg-gray-700/50 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 group"
-                      >
-                        <IconComponent
-                          className={`w-6 h-6 ${tech.color} group-hover:scale-110 transition-transform duration-200`}
-                        />
-                        <span className="text-xs font-medium text-gray-700 dark:text-gray-300 mt-1 text-center leading-tight">
-                          {tech.name}
-                        </span>
-                      </div>
-                    );
-                  })}
+                  <div className="grid grid-cols-4 sm:grid-cols-5 gap-4">
+                    {category.technologies.map((tech) => {
+                      const IconComponent = tech.icon;
+                      return (
+                        <div
+                          key={`${sectionId}-${category.title}-${tech.name}`}
+                          className="group flex flex-col items-center p-4 rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700/50 dark:to-gray-800/50 hover:from-primary-50 hover:to-primary-100 dark:hover:from-primary-900/20 dark:hover:to-primary-800/20 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+                        >
+                          <div className="p-3 rounded-lg bg-white/80 dark:bg-gray-800/80 shadow-sm group-hover:shadow-md transition-all duration-300">
+                            <IconComponent
+                              className={`w-6 h-6 ${tech.color} group-hover:scale-110 transition-transform duration-200`}
+                            />
+                          </div>
+                          <span className="text-xs font-semibold text-gray-700 dark:text-gray-300 mt-2 text-center leading-tight group-hover:text-primary-700 dark:group-hover:text-primary-300 transition-colors">
+                            {tech.name}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             ))}

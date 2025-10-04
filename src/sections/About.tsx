@@ -9,24 +9,31 @@ const About = () => {
     // biome-ignore lint/correctness/useUniqueElementIds: <>
     <section
       id="about"
-      className="min-h-[calc(100vh)] py-6 flex items-center bg-white dark:bg-gray-800"
+      className="section-padding bg-gradient-to-br from-primary-50/30 to-primary-100/30 dark:from-gray-800 dark:to-gray-900"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-12">
-        <div className="flex flex-col gap-12 w-full">
-          <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white text-center">
-            {t("about.journey.title")}
-          </h3>
-
-          <div className="flex flex-col gap-6">
-            <p className="text-lg text-gray-700 dark:text-gray-200 leading-relaxed text-center md:text-left">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="space-y-20">
+          {/* Header */}
+          <div className="text-center space-y-6">
+            <div className="inline-flex items-center px-8 py-4 rounded-full bg-primary-100/80 dark:bg-primary-900/80 backdrop-blur-sm border border-primary-200/50 dark:border-primary-700/50">
+              <span className="text-2xl font-bold text-primary-700 dark:text-primary-300">
+                {t("about.journey.title")}
+              </span>
+            </div>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
               {t("about.bio.paragraph")}
             </p>
           </div>
 
           {/* Stats Section */}
-          <Stats />
+          <div className="card">
+            <Stats />
+          </div>
 
-          <Timeline />
+          {/* Timeline Section */}
+          <div className="card">
+            <Timeline />
+          </div>
         </div>
       </div>
     </section>
