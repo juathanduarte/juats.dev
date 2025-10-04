@@ -13,7 +13,7 @@ const Hero = () => {
     // biome-ignore lint/correctness/useUniqueElementIds: Section anchors used for SPA navigation
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900" />
@@ -26,8 +26,8 @@ const Hero = () => {
       <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-primary-400/30 dark:bg-primary-600/30 rounded-full blur-xl animate-pulse delay-2000" />
 
       <AnimatedBackground />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center min-h-[calc(100vh-4rem)]">
           {/* Content - Left Side */}
           <div className="col-span-12 lg:col-span-7 text-center lg:text-left">
             <div className="space-y-6 lg:space-y-8">
@@ -37,6 +37,7 @@ const Hero = () => {
                   {t("hero.greeting")}{" "}
                 </span>
                 <span className="gradient-text">Juathan</span>
+                <span className="text-gray-900 dark:text-white">!</span>
                 <br />
                 <span className="text-gray-900 dark:text-white">
                   {t("hero.nicknameIntro")}{" "}
@@ -58,20 +59,20 @@ const Hero = () => {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group p-3 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 hover:bg-primary-50 dark:hover:bg-primary-900/50 hover:border-primary-300 dark:hover:border-primary-600 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+                    className="group p-3 lg:p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 hover:bg-primary-50 dark:hover:bg-primary-900/50 hover:border-primary-300 dark:hover:border-primary-600 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
                     aria-label={`Visit ${link.name}`}
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
                     <span className="sr-only">{link.name}</span>
-                    <div className="w-6 h-6 flex items-center justify-center text-gray-600 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                    <div className="w-6 h-6 lg:w-8 lg:h-8 flex items-center justify-center text-gray-600 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                       {link.icon === "github" && (
-                        <FaGithub className="w-5 h-5" />
+                        <FaGithub className="w-5 h-5 lg:w-6 lg:h-6" />
                       )}
                       {link.icon === "linkedin" && (
-                        <FaLinkedin className="w-5 h-5" />
+                        <FaLinkedin className="w-5 h-5 lg:w-6 lg:h-6" />
                       )}
                       {link.icon === "email" && (
-                        <FaEnvelope className="w-5 h-5" />
+                        <FaEnvelope className="w-5 h-5 lg:w-6 lg:h-6" />
                       )}
                     </div>
                   </a>

@@ -26,7 +26,7 @@
   },
   "hero": {
     "greeting": "Olá, me chamo",
-    "nicknameIntro": "! Mas pode me chamar de",
+    "nicknameIntro": "Mas pode me chamar de",
     "title": "Juats",
     "subtitle": "Desenvolvedor Full-Stack formado em Ciência da Computação pela Universidade Federal de Pelotas. Crio experiências bonitas, performáticas e acessíveis.",
     "cta": {

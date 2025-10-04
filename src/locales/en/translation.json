@@ -26,7 +26,7 @@
   },
   "hero": {
     "greeting": "Hi, my name is",
-    "nicknameIntro": "! But you can call me",
+    "nicknameIntro": "But you can call me",
     "title": "Juats",
     "subtitle": "Full-Stack Developer with a degree in Computer Science from the Federal University of Pelotas. I create beautiful, performant, and accessible experiences.",
     "cta": {

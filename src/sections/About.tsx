@@ -31,9 +31,7 @@ const About = () => {
           </div>
 
           {/* Timeline Section */}
-          <div className="card">
-            <Timeline />
-          </div>
+          <Timeline />
         </div>
       </div>
     </section>
