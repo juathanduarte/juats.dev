@@ -13,7 +13,7 @@ const Hero = () => {
     // biome-ignore lint/correctness/useUniqueElementIds: Section anchors used for SPA navigation
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
+      className="min-h-screen flex items-start sm:items-center justify-center relative overflow-hidden pt-20 sm:pt-16"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900" />
@@ -26,13 +26,13 @@ const Hero = () => {
       <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-primary-400/30 dark:bg-primary-600/30 rounded-full blur-xl animate-pulse delay-2000" />
 
       <AnimatedBackground />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center min-h-[calc(100vh-4rem)]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-0 relative z-10 h-full">
+        <div className="grid lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-20 items-center min-h-[calc(100vh-5rem)] sm:min-h-[calc(100vh-4rem)] lg:min-h-0">
           {/* Content - Left Side */}
           <div className="col-span-12 lg:col-span-7 text-center lg:text-left">
-            <div className="space-y-6 lg:space-y-8">
+            <div className="space-y-6 sm:space-y-8 lg:space-y-8 flex flex-col justify-center h-full">
               {/* Main Heading */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight">
                 <span className="text-gray-900 dark:text-white">
                   {t("hero.greeting")}{" "}
                 </span>
@@ -47,12 +47,12 @@ const Hero = () => {
               </h1>
 
               {/* Subtitle */}
-              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl">
                 {t("hero.subtitle")}
               </p>
 
               {/* Social Links */}
-              <div className="flex justify-center lg:justify-start space-x-6 pt-4">
+              <div className="flex justify-center lg:justify-start space-x-6 pt-6 sm:pt-4">
                 {SOCIAL_LINKS.map((link, index) => (
                   <a
                     key={link.name}
