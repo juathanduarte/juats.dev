@@ -176,20 +176,20 @@ const Technologies = () => {
                     </h3>
                   </div>
 
-                  <div className="grid grid-cols-4 sm:grid-cols-5 gap-4">
+                  <div className="grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 gap-3 sm:gap-4">
                     {category.technologies.map((tech) => {
                       const IconComponent = tech.icon;
                       return (
                         <div
                           key={`${sectionId}-${category.title}-${tech.name}`}
-                          className="group flex flex-col items-center p-4 rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700/50 dark:to-gray-800/50 hover:from-primary-50 hover:to-primary-100 dark:hover:from-primary-900/20 dark:hover:to-primary-800/20 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+                          className="group flex flex-col items-center p-3 sm:p-4 rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700/50 dark:to-gray-800/50 hover:from-primary-50 hover:to-primary-100 dark:hover:from-primary-900/20 dark:hover:to-primary-800/20 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
                         >
                           <div className="p-3 rounded-lg bg-white/80 dark:bg-gray-800/80 shadow-sm group-hover:shadow-md transition-all duration-300">
                             <IconComponent
                               className={`w-6 h-6 ${tech.color} group-hover:scale-110 transition-transform duration-200`}
                             />
                           </div>
-                          <span className="text-xs font-semibold text-gray-700 dark:text-gray-300 mt-2 text-center leading-tight group-hover:text-primary-700 dark:group-hover:text-primary-300 transition-colors">
+                          <span className="text-xs font-semibold text-gray-700 dark:text-gray-300 mt-2 text-center leading-tight group-hover:text-primary-700 dark:group-hover:text-primary-300 transition-colors break-words hyphens-auto">
                             {tech.name}
                           </span>
                         </div>
