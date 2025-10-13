@@ -49,7 +49,7 @@ const Timeline = () => {
               index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
             }`}
           >
-            <div className="absolute left-0 md:left-1/2 top-0 z-10 flex items-center justify-center w-8 h-8 bg-primary-500 rounded-full border-4 border-white dark:border-gray-800 shadow-lg transform md:-translate-x-4">
+            <div className="absolute left-0 md:left-1/2 top-0 z-10 flex items-center justify-center w-8 h-8 bg-primary-500 rounded-full border-2 border-primary-600 transform md:-translate-x-4">
               <div className="w-3 h-3 bg-white rounded-full"></div>
             </div>
 
@@ -58,7 +58,7 @@ const Timeline = () => {
                 index % 2 === 0 ? "md:mr-auto md:pr-8" : "md:ml-auto md:pl-8"
               }`}
             >
-              <div className="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-600">
+              <div className="bg-white dark:bg-gray-700 rounded-xl p-6 border-2 border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500 transition-all duration-300">
                 <div className="flex flex-col gap-4">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                     {experience.title}

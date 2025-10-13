@@ -82,7 +82,7 @@ const Hero = () => {
                 <img
                   src={avatar}
                   alt="Juathan - Desenvolvedor Full-Stack"
-                  className="w-80 h-96 lg:w-96 lg:h-[28rem] xl:w-[28rem] xl:h-[32rem] rounded-2xl object-cover shadow-2xl border-4 border-white/20 dark:border-gray-700/20"
+                  className="w-80 h-96 lg:w-96 lg:h-[28rem] xl:w-[28rem] xl:h-[32rem] rounded-2xl object-cover border-4 border-white/30 dark:border-gray-600/30"
                 />
               </div>
             </div>

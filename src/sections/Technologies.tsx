@@ -184,7 +184,7 @@ const Technologies = () => {
                           key={`${sectionId}-${category.title}-${tech.name}`}
                           className="group flex flex-col items-center p-3 sm:p-4 rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700/50 dark:to-gray-800/50 hover:from-primary-50 hover:to-primary-100 dark:hover:from-primary-900/20 dark:hover:to-primary-800/20 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
                         >
-                          <div className="p-3 rounded-lg bg-white/80 dark:bg-gray-800/80 shadow-sm group-hover:shadow-md transition-all duration-300">
+                          <div className="p-3 rounded-lg bg-white/80 dark:bg-gray-800/80 border border-gray-200/50 dark:border-gray-600/50 group-hover:border-gray-300 dark:group-hover:border-gray-500 transition-all duration-300">
                             <IconComponent
                               className={`w-6 h-6 ${tech.color} group-hover:scale-110 transition-transform duration-200`}
                             />

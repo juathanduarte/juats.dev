@@ -36,7 +36,7 @@ const Stats = () => {
       {stats.map((stat) => (
         <div
           key={stat.id}
-          className="text-center bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-700 dark:to-primary-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-primary-100 dark:border-primary-600"
+          className="text-center bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-700 dark:to-primary-800 rounded-xl p-8 border-2 border-primary-200 dark:border-primary-600 hover:border-primary-300 dark:hover:border-primary-500 transition-all duration-300"
         >
           <div className="flex flex-col items-center gap-4">
             <div className="relative">
