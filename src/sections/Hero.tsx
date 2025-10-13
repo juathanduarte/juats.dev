@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import avatar from "../assets/images/avatar.jpg";
 import AnimatedBackground from "../components/ui/AnimatedBackground";
-import OptimizedImage from "../components/ui/OptimizedImage";
 import { SOCIAL_LINKS } from "../constants";
 
 const Hero = () => {
@@ -80,14 +79,11 @@ const Hero = () => {
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full opacity-20 blur-xl" />
 
               <div className="relative z-10">
-                <OptimizedImage
+                <img
                   src={avatar}
                   alt="Juathan - Desenvolvedor Full-Stack"
                   className="w-80 h-96 lg:w-96 lg:h-[28rem] xl:w-[28rem] xl:h-[32rem] rounded-2xl object-cover border-4 border-white/30 dark:border-gray-600/30"
-                  width={448}
-                  height={512}
-                  sizes="(max-width: 1024px) 320px, (max-width: 1280px) 384px, 448px"
-                  priority={true}
+                  loading="eager"
                 />
               </div>
             </div>

@@ -5,7 +5,7 @@ Portfólio profissional de **Juathan Coelho Duarte** - Desenvolvedor Full-Stack 
 ## ✨ Características
 
 - **🎨 Design Moderno**: Interface responsiva e acessível com dark mode
-- **⚡ Performance Otimizada**: Lazy loading, otimização de imagens e WebP
+- **⚡ Performance Otimizada**: Lazy loading nativo e otimizações
 - **🌍 Internacionalização**: Suporte a Português, Inglês e Espanhol
 - **📱 PWA Ready**: Manifest e funcionalidades de Progressive Web App
 - **🔍 SEO Otimizado**: Meta tags, Open Graph, Twitter Cards e structured data
@@ -82,11 +82,9 @@ pnpm preview
 - ✅ Canonical URLs
 
 ### Performance
-- ✅ Lazy loading de imagens
-- ✅ Otimização de imagens com WebP
+- ✅ Lazy loading nativo de imagens
 - ✅ Preconnect para recursos externos
-- ✅ Intersection Observer para lazy loading
-- ✅ Responsive images com srcset
+- ✅ Otimizações de carregamento
 
 ### Arquivos de SEO
 - `public/sitemap.xml` - Mapa do site
@@ -140,9 +138,8 @@ Configurações centralizadas em `src/config/seo.ts`:
 
 ### Performance
 Configurações de otimização em `src/config/seo.ts`:
-- Lazy loading
 - Cache strategies
-- Image optimization
+- Performance monitoring
 
 ## 📈 Próximas Melhorias
 
