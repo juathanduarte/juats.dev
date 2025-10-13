@@ -118,14 +118,24 @@
       "emailPlaceholder": "your.email@example.com",
       "subjectPlaceholder": "What's this about?",
       "messagePlaceholder": "Tell me about your project...",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "successMessage": "Message sent successfully! You will be redirected to WhatsApp.",
+      "errorMessage": "Error sending message. Please try again."
     },
     "info": {
       "title": "Let's Connect",
       "description": "Feel free to reach out with any questions or just to say hi — I'll do my best to get back to you!",
       "email": "Email",
       "location": "Location",
-      "locationValue": "Remote / Worldwide"
+      "locationValue": "Remote / Worldwide",
+      "whatsapp": "WhatsApp"
+    },
+    "whatsapp": {
+      "title": "Quick Chat",
+      "description": "For a faster and more direct conversation, call me on WhatsApp!",
+      "button": "Call on WhatsApp",
+      "defaultMessage": "Hi Juats! I saw your portfolio and would like to talk about a project."
     }
   },
   "footer": {

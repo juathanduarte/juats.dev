@@ -118,14 +118,24 @@
       "emailPlaceholder": "seu.email@exemplo.com",
       "subjectPlaceholder": "Sobre o que é?",
       "messagePlaceholder": "Conte-me sobre seu projeto...",
-      "submit": "Enviar Mensagem"
+      "submit": "Enviar Mensagem",
+      "submitting": "Enviando...",
+      "successMessage": "Mensagem enviada com sucesso! Você será redirecionado para o WhatsApp.",
+      "errorMessage": "Erro ao enviar mensagem. Tente novamente."
     },
     "info": {
       "title": "Vamos Conectar",
       "description": "Sinta-se à vontade para entrar em contato com dúvidas ou só para dizer oi — farei o possível para responder!",
       "email": "Email",
       "location": "Localização",
-      "locationValue": "Remoto / Mundial"
+      "locationValue": "Remoto / Mundial",
+      "whatsapp": "WhatsApp"
+    },
+    "whatsapp": {
+      "title": "Conversa Rápida",
+      "description": "Para uma conversa mais rápida e direta, me chame no WhatsApp!",
+      "button": "Chamar no WhatsApp",
+      "defaultMessage": "Olá Juats! Vi seu portfólio e gostaria de conversar sobre um projeto."
     }
   },
   "footer": {

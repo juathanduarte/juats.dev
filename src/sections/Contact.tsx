@@ -3,9 +3,16 @@ import Input from "@components/ui/Input";
 import TextArea from "@components/ui/TextArea";
 import { SOCIAL_LINKS } from "@constants/index";
 import { getSocialIcon } from "@utils/social";
-import { useId } from "react";
+import { useId, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
+
+interface IFormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -14,10 +21,63 @@ const Contact = () => {
   const subjectId = useId();
   const messageId = useId();
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const [formData, setFormData] = useState<IFormData>({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = event.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    // Handle form submission
-    console.log("Form submitted");
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      // Simular envio de email (aqui você pode integrar com um serviço como EmailJS, Formspree, etc.)
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      // Por enquanto, vamos redirecionar para o WhatsApp com a mensagem
+      const whatsappMessage = encodeURIComponent(
+        `Olá Juats! Meu nome é ${formData.name} e quero falar sobre: ${formData.subject}\n\nMensagem: ${formData.message}\n\nEmail: ${formData.email}`
+      );
+
+      const whatsappUrl = `https://wa.me/5553999515492?text=${whatsappMessage}`;
+      window.open(whatsappUrl, "_blank");
+
+      setSubmitStatus("success");
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      setSubmitStatus("error");
+      console.error("Erro ao enviar mensagem:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleWhatsAppClick = () => {
+    const whatsappUrl = `https://wa.me/5553999515492?text=${encodeURIComponent(t("contact.whatsapp.defaultMessage"))}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
@@ -48,6 +108,8 @@ const Contact = () => {
                 type="text"
                 label={t("contact.form.name")}
                 placeholder={t("contact.form.namePlaceholder")}
+                value={formData.name}
+                onChange={handleInputChange}
                 required
               />
 
@@ -57,6 +119,8 @@ const Contact = () => {
                 type="email"
                 label={t("contact.form.email")}
                 placeholder={t("contact.form.emailPlaceholder")}
+                value={formData.email}
+                onChange={handleInputChange}
                 required
               />
 
@@ -66,6 +130,8 @@ const Contact = () => {
                 type="text"
                 label={t("contact.form.subject")}
                 placeholder={t("contact.form.subjectPlaceholder")}
+                value={formData.subject}
+                onChange={handleInputChange}
                 required
               />
 
@@ -75,11 +141,37 @@ const Contact = () => {
                 label={t("contact.form.message")}
                 placeholder={t("contact.form.messagePlaceholder")}
                 rows={5}
+                value={formData.message}
+                onChange={handleInputChange}
                 required
               />
 
-              <Button type="submit" variant="primary" size="lg" fullWidth>
-                {t("contact.form.submit")}
+              {submitStatus === "success" && (
+                <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+                  <p className="text-green-700 dark:text-green-300 text-sm">
+                    {t("contact.form.successMessage")}
+                  </p>
+                </div>
+              )}
+
+              {submitStatus === "error" && (
+                <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+                  <p className="text-red-700 dark:text-red-300 text-sm">
+                    {t("contact.form.errorMessage")}
+                  </p>
+                </div>
+              )}
+
+              <Button
+                type="submit"
+                variant="primary"
+                size="lg"
+                fullWidth
+                disabled={isSubmitting}
+              >
+                {isSubmitting
+                  ? t("contact.form.submitting")
+                  : t("contact.form.submit")}
               </Button>
             </form>
           </div>
@@ -129,6 +221,39 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
+
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center">
+                  <FaWhatsapp className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-gray-900 dark:text-white">
+                    {t("contact.info.whatsapp")}
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    (53) 99951-5492
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              <h4 className="text-lg font-medium text-gray-900 dark:text-white">
+                {t("contact.whatsapp.title")}
+              </h4>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                {t("contact.whatsapp.description")}
+              </p>
+              <Button
+                onClick={handleWhatsAppClick}
+                variant="primary"
+                size="lg"
+                fullWidth
+                className="bg-green-600 hover:bg-green-700 text-white"
+              >
+                <FaWhatsapp className="w-5 h-5 mr-2" />
+                {t("contact.whatsapp.button")}
+              </Button>
             </div>
 
             <div className="flex flex-col gap-4">
