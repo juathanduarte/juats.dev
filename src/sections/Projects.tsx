@@ -4,6 +4,7 @@ import appMeupassImg from "../assets/projects/app-meupass.jpg";
 import dashMeupassImg from "../assets/projects/dash-meupass.png";
 import letralandiaImg from "../assets/projects/letralandia.png";
 import suiteImg from "../assets/projects/suite.png";
+import OptimizedImage from "../components/ui/OptimizedImage";
 
 const projectImages: Record<string, string> = {
   "letralandia.png": letralandiaImg,
@@ -39,10 +40,14 @@ const Projects = () => {
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="h-48 relative overflow-hidden">
-                  <img
+                  <OptimizedImage
                     src={projectImages[project.image]}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    className="transition-transform duration-300 hover:scale-110"
+                    width={400}
+                    height={192}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority={index < 3}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 </div>
