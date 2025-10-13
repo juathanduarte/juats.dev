@@ -13,7 +13,6 @@ const About = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-20">
-          {/* Header */}
           <div className="text-center space-y-6">
             <div className="inline-flex items-center px-8 py-4 rounded-full bg-primary-100/80 dark:bg-primary-900/80 backdrop-blur-sm border border-primary-200/50 dark:border-primary-700/50">
               <span className="text-2xl font-bold text-primary-700 dark:text-primary-300">
@@ -25,12 +24,10 @@ const About = () => {
             </p>
           </div>
 
-          {/* Stats Section */}
           <div className="card">
             <Stats />
           </div>
 
-          {/* Timeline Section */}
           <Timeline />
         </div>
       </div>

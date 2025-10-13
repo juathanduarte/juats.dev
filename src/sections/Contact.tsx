@@ -37,7 +37,6 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full">
-          {/* Contact Form */}
           <div className="flex flex-col gap-6">
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
               {t("contact.form.title")}
@@ -85,7 +84,6 @@ const Contact = () => {
             </form>
           </div>
 
-          {/* Contact Information */}
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-6">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
@@ -96,7 +94,6 @@ const Contact = () => {
               </p>
             </div>
 
-            {/* Contact Details */}
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center">
@@ -134,7 +131,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Social Links */}
             <div className="flex flex-col gap-4">
               <h4 className="text-lg font-medium text-gray-900 dark:text-white">
                 {t("common.followMe")}
@@ -147,7 +143,6 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary-100 dark:hover:bg-primary-900 transition-colors"
-                    tabIndex={0}
                     aria-label={`${t("common.followMe")} ${link.name}`}
                   >
                     <span className="sr-only">{link.name}</span>

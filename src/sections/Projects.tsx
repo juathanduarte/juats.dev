@@ -2,11 +2,9 @@ import { PROJECTS } from "@constants/index";
 import { useTranslation } from "react-i18next";
 import appMeupassImg from "../assets/projects/app-meupass.jpg";
 import dashMeupassImg from "../assets/projects/dash-meupass.png";
-// Import project images
 import letralandiaImg from "../assets/projects/letralandia.png";
 import suiteImg from "../assets/projects/suite.png";
 
-// Image mapping
 const projectImages: Record<string, string> = {
   "letralandia.png": letralandiaImg,
   "suite.png": suiteImg,
@@ -25,7 +23,6 @@ const Projects = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-20">
-          {/* Header */}
           <div className="text-center space-y-6">
             <div className="inline-flex items-center px-8 py-4 rounded-full bg-primary-100/80 dark:bg-primary-900/80 backdrop-blur-sm border border-primary-200/50 dark:border-primary-700/50">
               <span className="text-2xl font-bold text-primary-700 dark:text-primary-300">
@@ -34,7 +31,6 @@ const Projects = () => {
             </div>
           </div>
 
-          {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {PROJECTS.map((project, index) => (
               <div
