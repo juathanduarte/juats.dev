@@ -146,7 +146,7 @@ const Technologies = () => {
 
   return (
     <section
-      id={`technologies-${sectionId}`}
+      id="technologies"
       className="section-padding bg-gradient-to-br from-white to-primary-50/20 dark:from-gray-900 dark:to-gray-800"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
