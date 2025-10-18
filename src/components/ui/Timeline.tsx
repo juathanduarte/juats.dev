@@ -20,14 +20,14 @@ const Timeline = () => {
       description: t("about.journey.experience1.description"),
       period: t("about.journey.experience1.period"),
     },
-    {
-      id: "experience2",
-      title: t("about.journey.experience2.title"),
-      company: t("about.journey.experience2.company"),
-      description: t("about.journey.experience2.description"),
-      period: t("about.journey.experience2.period"),
-      isLast: true,
-    },
+    // {
+    //   id: "experience2",
+    //   title: t("about.journey.experience2.title"),
+    //   company: t("about.journey.experience2.company"),
+    //   description: t("about.journey.experience2.description"),
+    //   period: t("about.journey.experience2.period"),
+    //   isLast: true,
+    // },
     // {
     //   id: "experience3",
     //   title: t("about.journey.experience3.title"),
