@@ -89,6 +89,31 @@
     overflow: hidden;
   }
 
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-500;
+  }
+
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(209 213 219) rgb(243 244 246);
+  }
+
+  html.dark {
+    scrollbar-color: rgb(75 85 99) rgb(31 41 55);
+  }
+
   .text-gradient {
     @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
   }
