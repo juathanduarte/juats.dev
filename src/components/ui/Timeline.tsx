@@ -78,16 +78,16 @@ const Timeline = () => {
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                     {experience.title}
                   </h3>
-                  <div className="flex items-center justify-between gap-3 flex-wrap">
-                    <div className="flex items-center gap-3">
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-3 min-w-0 flex-1">
                       {experience.logo && (
                         <img
                           src={experience.logo}
                           alt={`Logo da ${experience.company}`}
-                          className="w-8 h-8 rounded-lg object-cover bg-white p-1"
+                          className="w-8 h-8 rounded-lg object-cover flex-shrink-0"
                         />
                       )}
-                      <p className="text-lg font-semibold text-primary-600 dark:text-primary-400">
+                      <p className="text-base md:text-lg font-semibold text-primary-600 dark:text-primary-400 truncate">
                         {experience.company}
                       </p>
                     </div>
