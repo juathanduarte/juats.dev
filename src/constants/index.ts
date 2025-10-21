@@ -68,4 +68,13 @@ export const PROJECTS: IProject[] = [
     featured: true,
     category: "fullstack",
   },
+  {
+    id: "5",
+    title: "ClinEqApp",
+    descriptionKey: "projects.descriptions.clineqapp",
+    image: "clineqapp-hut8.jpeg",
+    technologies: ["TypeScript", "React Native"],
+    featured: true,
+    category: "frontend",
+  },
 ];

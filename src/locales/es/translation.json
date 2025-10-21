@@ -108,7 +108,8 @@
       "letralandia": "Aplicación educativa para alfabetización infantil, con 3 juegos interactivos, área de padres con retroalimentación detallada y sección dedicada al aprendizaje del alfabeto.",
       "suite": "Panel administrativo integrado con área de atención al cliente omnicanal, desarrollado para centros de llamadas y soporte al cliente con interfaz moderna e intuitiva.",
       "meupassApp": "Aplicación móvil-first para venta de productos y servicios, con enfoque especial en ofertas promocionales y experiencia de compra optimizada.",
-      "meupassDash": "Panel administrativo completo para gestionar tiendas en la aplicación Meupass, incluyendo control de inventario, ventas y análisis."
+      "meupassDash": "Panel administrativo completo para gestionar tiendas en la aplicación Meupass, incluyendo control de inventario, ventas y análisis.",
+      "clineqapp": "Aplicación móvil desarrollada en React Native para monitoreo y control de pesos de equinos, permitiendo seguimiento detallado del desarrollo y salud de los animales con funcionalidades específicas para gestión de haras y propiedades rurales."
     }
   },
   "contact": {
