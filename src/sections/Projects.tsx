@@ -49,35 +49,37 @@ const Projects = () => {
                 </div>
 
                 <div className="p-6 flex flex-col gap-4">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                      {project.title}
-                    </h3>
-                    <span
-                      className={`px-2 py-1 text-xs font-medium rounded-full ${
-                        project.category === "fullstack"
-                          ? "bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300"
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-start justify-between gap-3">
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white flex-1 min-w-0">
+                        {project.title}
+                      </h3>
+                      <span
+                        className={`px-2 py-1 text-xs font-medium rounded-full whitespace-nowrap flex-shrink-0 ${
+                          project.category === "fullstack"
+                            ? "bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300"
+                            : project.category === "backend"
+                              ? "bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300"
+                              : "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300"
+                        }`}
+                      >
+                        {project.category === "fullstack"
+                          ? "Full-stack"
                           : project.category === "backend"
-                            ? "bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300"
-                            : "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300"
-                      }`}
-                    >
-                      {project.category === "fullstack"
-                        ? "Full-stack"
-                        : project.category === "backend"
-                          ? "Back-end"
-                          : "Front-end"}
-                    </span>
+                            ? "Back-end"
+                            : "Front-end"}
+                      </span>
+                    </div>
                   </div>
                   <p className="text-gray-600 dark:text-gray-300">
                     {t(project.descriptionKey)}
                   </p>
 
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mt-2">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 text-sm rounded-full"
+                        className="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 text-sm rounded-full whitespace-nowrap flex-shrink-0"
                       >
                         {tech}
                       </span>

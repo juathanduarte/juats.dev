@@ -61,7 +61,7 @@
   }
 
   .section-padding {
-    @apply py-24 lg:py-32;
+    @apply py-12 lg:py-16;
   }
 
   .container-padding {
@@ -87,6 +87,31 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-500;
+  }
+
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(209 213 219) rgb(243 244 246);
+  }
+
+  html.dark {
+    scrollbar-color: rgb(75 85 99) rgb(31 41 55);
   }
 
   .text-gradient {
