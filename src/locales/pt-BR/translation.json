@@ -60,6 +60,12 @@
         "company": "dhauz",
         "description": "Participação desde a definição da arquitetura até a sustentação das soluções, garantindo robustez, escalabilidade e alinhamento com os objetivos do negócio. Implementação de novas funcionalidades de ponta a ponta (front-end e back-end), entregando código de alta qualidade, seguro e performático.",
         "period": "Setembro 2025 - Atual"
+      },
+      "experience4": {
+        "title": "Desenvolvedor Front-end / Mobile | Diretor de Gestão de Pessoas",
+        "company": "Hut8 - Empresa Júnior da Computação",
+        "description": "Desenvolvimento de aplicação Android utilizando React Native para controle de pesos de equinos com funcionalidades específicas para monitoramento. Gerenciamento de equipe com mais de 25 estudantes, estruturação de processos para orientação de novos membros e organização de processos seletivos.",
+        "period": "Novembro 2020 - Outubro 2022"
       }
     },
     "skills": {

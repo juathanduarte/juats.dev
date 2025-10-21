@@ -60,6 +60,12 @@
         "company": "dhauz",
         "description": "Participation from architecture definition to solution maintenance, ensuring robustness, scalability and alignment with business objectives. Implementation of end-to-end new features (front-end and back-end), delivering high-quality, secure and performant code.",
         "period": "September 2025 - Present"
+      },
+      "experience4": {
+        "title": "Front-end / Mobile Developer | People Management Director",
+        "company": "Hut8 - Junior Computing Company",
+        "description": "Android application development using React Native for equine weight control with specific monitoring features. Team management of over 25 students, process structuring for new member orientation, and organization of selection processes.",
+        "period": "November 2020 - October 2022"
       }
     },
     "skills": {
