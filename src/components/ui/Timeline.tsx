@@ -1,3 +1,6 @@
+import hut8Logo from "@/assets/images/hut8_logo.jpeg";
+import meupassLogo from "@/assets/images/meupass_logo.jpeg";
+import smartnxLogo from "@/assets/images/smartnx_logo.webp";
 import { useTranslation } from "react-i18next";
 
 interface ITimelineItem {
@@ -6,6 +9,7 @@ interface ITimelineItem {
   company: string;
   description: string;
   period: string;
+  logo?: string;
   isLast?: boolean;
 }
 
@@ -19,6 +23,7 @@ const Timeline = () => {
       company: t("about.journey.experience1.company"),
       description: t("about.journey.experience1.description"),
       period: t("about.journey.experience1.period"),
+      logo: smartnxLogo,
     },
     {
       id: "experience2",
@@ -26,6 +31,7 @@ const Timeline = () => {
       company: t("about.journey.experience2.company"),
       description: t("about.journey.experience2.description"),
       period: t("about.journey.experience2.period"),
+      logo: meupassLogo,
     },
     {
       id: "experience4",
@@ -33,6 +39,7 @@ const Timeline = () => {
       company: t("about.journey.experience4.company"),
       description: t("about.journey.experience4.description"),
       period: t("about.journey.experience4.period"),
+      logo: hut8Logo,
       isLast: true,
     },
     // {
@@ -72,9 +79,18 @@ const Timeline = () => {
                     {experience.title}
                   </h3>
                   <div className="flex items-center justify-between gap-3 flex-wrap">
-                    <p className="text-lg font-semibold text-primary-600 dark:text-primary-400">
-                      {experience.company}
-                    </p>
+                    <div className="flex items-center gap-3">
+                      {experience.logo && (
+                        <img
+                          src={experience.logo}
+                          alt={`Logo da ${experience.company}`}
+                          className="w-8 h-8 rounded-lg object-cover bg-white p-1"
+                        />
+                      )}
+                      <p className="text-lg font-semibold text-primary-600 dark:text-primary-400">
+                        {experience.company}
+                      </p>
+                    </div>
                     <span className="inline-block bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs font-semibold px-3 py-1 rounded-full">
                       {experience.period}
                     </span>
