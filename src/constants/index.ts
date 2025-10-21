@@ -72,7 +72,7 @@ export const PROJECTS: IProject[] = [
     id: "5",
     title: "ClinEqApp",
     descriptionKey: "projects.descriptions.clineqapp",
-    image: "clineqapp-hut8.jpeg",
+    image: "clineqapp-hut8.png",
     technologies: ["TypeScript", "React Native"],
     featured: true,
     category: "frontend",
