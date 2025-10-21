@@ -109,7 +109,8 @@
       "suite": "Administrative dashboard integrated with omnichannel customer service area, developed for call centers and customer support with modern and intuitive interface.",
       "meupassApp": "Mobile-first app for selling products and services, with special focus on promotional offers and optimized shopping experience.",
       "meupassDash": "Complete administrative dashboard for managing stores in the Meupass app, including inventory control, sales, and analytics.",
-      "clineqapp": "Mobile application developed in React Native for monitoring and controlling equine weights, enabling detailed tracking of animal development and health with specific features for managing stud farms and rural properties."
+      "clineqapp": "Mobile application developed in React Native for monitoring and controlling equine weights, enabling detailed tracking of animal development and health with specific features for managing stud farms and rural properties.",
+      "siiepe": "Mobile application developed in React Native for attendance registration and control at SIIEPE academic events (Integrated Week of Innovation, Teaching, Research and Extension), facilitating participant management and certificate validation with GraphQL integration."
     }
   },
   "contact": {

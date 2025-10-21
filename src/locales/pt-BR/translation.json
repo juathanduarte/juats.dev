@@ -109,7 +109,8 @@
       "suite": "Dashboard administrativo integrado com área de atendimento omnichannel, desenvolvido para call-centers e suporte ao cliente com interface moderna e intuitiva.",
       "meupassApp": "Aplicativo mobile-first para venda de produtos e serviços, com foco especial em ofertas promocionais e experiência de compra otimizada.",
       "meupassDash": "Dashboard administrativo completo para gerenciamento de lojas no aplicativo Meupass, incluindo controle de estoque, vendas e análises.",
-      "clineqapp": "Aplicativo mobile desenvolvido em React Native para monitoramento e controle de pesos de equinos, permitindo acompanhamento detalhado do desenvolvimento e saúde dos animais com funcionalidades específicas para gerenciamento de haras e propriedades rurais."
+      "clineqapp": "Aplicativo mobile desenvolvido em React Native para monitoramento e controle de pesos de equinos, permitindo acompanhamento detalhado do desenvolvimento e saúde dos animais com funcionalidades específicas para gerenciamento de haras e propriedades rurais.",
+      "siiepe": "Aplicativo mobile desenvolvido em React Native para registro e controle de presenças em eventos acadêmicos do SIIEPE (Semana Integrada de Inovação, Ensino, Pesquisa e Extensão), facilitando o gerenciamento de participantes e a validação de certificados com integração GraphQL."
     }
   },
   "contact": {
