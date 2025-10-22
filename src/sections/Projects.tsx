@@ -1,5 +1,10 @@
 import { PROJECTS } from "@constants/index";
 import { useTranslation } from "react-i18next";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import appMeupassImg from "../assets/projects/app-meupass.jpg";
 import blablacampusImg from "../assets/projects/blablacampus.jpeg";
 import clineqappImg from "../assets/projects/clineqapp-hut8.jpeg";
@@ -36,63 +41,94 @@ const Projects = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {PROJECTS.map((project, index) => (
-              <div
-                key={project.id}
-                className="card hover:scale-[1.02] transition-all duration-300 overflow-hidden"
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <div className="h-48 relative overflow-hidden">
-                  <img
-                    src={projectImages[project.image]}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                    loading={index < 3 ? "eager" : "lazy"}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                </div>
+          <div className="relative">
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              spaceBetween={32}
+              slidesPerView={1}
+              navigation={{
+                nextEl: ".swiper-button-next-custom",
+                prevEl: ".swiper-button-prev-custom",
+              }}
+              pagination={{
+                clickable: true,
+                el: ".swiper-pagination-custom",
+              }}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 24,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 32,
+                },
+              }}
+              className="projects-swiper"
+            >
+              {PROJECTS.map((project, index) => (
+                <SwiperSlide key={project.id}>
+                  <div className="group bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-primary-300 dark:hover:border-primary-600 transition-all duration-300 overflow-hidden h-full hover:shadow-xl hover:shadow-primary-500/10 dark:hover:shadow-primary-400/10">
+                    <div className="h-40 relative overflow-hidden">
+                      <img
+                        src={projectImages[project.image]}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading={index < 3 ? "eager" : "lazy"}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                      <div className="absolute top-3 right-3">
+                        <span
+                          className={`px-2.5 py-1 text-xs font-semibold rounded-full backdrop-blur-sm ${
+                            project.category === "fullstack"
+                              ? "bg-purple-500/90 text-white"
+                              : project.category === "backend"
+                                ? "bg-red-500/90 text-white"
+                                : "bg-blue-500/90 text-white"
+                          }`}
+                        >
+                          {project.category === "fullstack"
+                            ? "Full-stack"
+                            : project.category === "backend"
+                              ? "Back-end"
+                              : "Front-end"}
+                        </span>
+                      </div>
+                    </div>
 
-                <div className="p-6 flex flex-col gap-4">
-                  <div className="flex flex-col gap-3">
-                    <div className="flex items-start justify-between gap-3">
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white flex-1 min-w-0">
+                    <div className="p-5 flex flex-col gap-3">
+                      <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
                         {project.title}
                       </h3>
-                      <span
-                        className={`px-2 py-1 text-xs font-medium rounded-full whitespace-nowrap flex-shrink-0 ${
-                          project.category === "fullstack"
-                            ? "bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300"
-                            : project.category === "backend"
-                              ? "bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300"
-                              : "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300"
-                        }`}
-                      >
-                        {project.category === "fullstack"
-                          ? "Full-stack"
-                          : project.category === "backend"
-                            ? "Back-end"
-                            : "Front-end"}
-                      </span>
+
+                      <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-3 leading-relaxed">
+                        {t(project.descriptionKey)}
+                      </p>
+
+                      <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
+                        {project.technologies.slice(0, 3).map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-2.5 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded-md whitespace-nowrap"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                        {project.technologies.length > 3 && (
+                          <span className="px-2.5 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded-md">
+                            +{project.technologies.length - 3}
+                          </span>
+                        )}
+                      </div>
                     </div>
                   </div>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    {t(project.descriptionKey)}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 text-sm rounded-full whitespace-nowrap flex-shrink-0"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>

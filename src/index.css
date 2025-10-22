@@ -151,3 +151,39 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+
+/* Swiper Custom Styles */
+.projects-swiper {
+  padding: 20px 0 60px 0;
+}
+
+.projects-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+.projects-swiper .swiper-slide-active {
+  transform: scale(1.02);
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: rgb(156 163 175);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet-active {
+  background: rgb(59 130 246);
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.dark .swiper-pagination-custom .swiper-pagination-bullet {
+  background: rgb(75 85 99);
+}
+
+.dark .swiper-pagination-custom .swiper-pagination-bullet-active {
+  background: rgb(96 165 250);
+}

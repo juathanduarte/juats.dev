@@ -78,8 +78,8 @@ const Timeline = () => {
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                     {experience.title}
                   </h3>
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-3 min-w-0 flex-1">
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-center gap-3">
                       {experience.logo && (
                         <img
                           src={experience.logo}
@@ -87,13 +87,15 @@ const Timeline = () => {
                           className="w-8 h-8 rounded-lg object-cover flex-shrink-0"
                         />
                       )}
-                      <p className="text-base md:text-lg font-semibold text-primary-600 dark:text-primary-400 truncate">
+                      <p className="text-base md:text-lg font-semibold text-primary-600 dark:text-primary-400">
                         {experience.company}
                       </p>
                     </div>
-                    <span className="inline-block bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs font-semibold px-3 py-1 rounded-full">
-                      {experience.period}
-                    </span>
+                    <div className="flex justify-start">
+                      <span className="inline-block bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs font-semibold px-3 py-1 rounded-full">
+                        {experience.period}
+                      </span>
+                    </div>
                   </div>
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                     {experience.description}
