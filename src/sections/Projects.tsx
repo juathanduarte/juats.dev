@@ -1,8 +1,11 @@
 import { PROJECTS } from "@constants/index";
 import { useTranslation } from "react-i18next";
 import appMeupassImg from "../assets/projects/app-meupass.jpg";
+import blablacampusImg from "../assets/projects/blablacampus.jpeg";
+import clineqappImg from "../assets/projects/clineqapp-hut8.jpeg";
 import dashMeupassImg from "../assets/projects/dash-meupass.png";
 import letralandiaImg from "../assets/projects/letralandia.png";
+import presencasSiiepeImg from "../assets/projects/presencas_siiepe.jpeg";
 import suiteImg from "../assets/projects/suite.png";
 
 const projectImages: Record<string, string> = {
@@ -10,13 +13,15 @@ const projectImages: Record<string, string> = {
   "suite.png": suiteImg,
   "app-meupass.jpg": appMeupassImg,
   "dash-meupass.png": dashMeupassImg,
+  "clineqapp-hut8.jpeg": clineqappImg,
+  "presencas_siiepe.jpeg": presencasSiiepeImg,
+  "blablacampus.jpeg": blablacampusImg,
 };
 
 const Projects = () => {
   const { t } = useTranslation();
 
   return (
-    // biome-ignore lint/correctness/useUniqueElementIds: Section anchors used for SPA navigation
     <section
       id="projects"
       className="section-padding bg-gradient-to-br from-gray-50 to-primary-50/20 dark:from-gray-900 dark:to-gray-800"
