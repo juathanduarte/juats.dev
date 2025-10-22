@@ -1,4 +1,3 @@
-import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import Footer from "./components/layout/Footer";
 import Header from "./components/layout/Header";
@@ -26,33 +25,23 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-      <AnimatePresence mode="wait">
-        {isLoading && (
-          <InitialLoading onComplete={handleLoadingComplete} />
-        )}
-      </AnimatePresence>
+      {isLoading && (
+        <InitialLoading onComplete={handleLoadingComplete} />
+      )}
 
-      <AnimatePresence>
-        {showContent && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="min-h-screen"
-          >
-            <Header />
-            <main className="flex flex-col">
-              <Hero />
-              <About />
-              <Technologies />
-              <Projects />
-              <Contact />
-            </main>
-            <Footer />
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {showContent && (
+        <div className="min-h-screen animate-slide-up">
+          <Header />
+          <main className="flex flex-col">
+            <Hero />
+            <About />
+            <Technologies />
+            <Projects />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      )}
     </div>
   );
 };
