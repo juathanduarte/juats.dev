@@ -33,7 +33,7 @@ const InitialLoading = ({ onComplete }: IInitialLoadingProps) => {
 
   useEffect(() => {
     const cursorTimer = setInterval(() => {
-      setShowCursor(prev => !prev);
+      setShowCursor((prev) => !prev);
     }, 500);
 
     return () => clearInterval(cursorTimer);
@@ -47,7 +47,7 @@ const InitialLoading = ({ onComplete }: IInitialLoadingProps) => {
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary-100/20 via-transparent to-transparent dark:from-primary-900/20" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-primary-200/20 via-transparent to-transparent dark:from-primary-800/20" />
-      
+
       {/* Animated background elements */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-primary-200/30 dark:bg-primary-800/30 rounded-full blur-xl animate-scale-pulse" />
       <div className="absolute bottom-20 right-10 w-32 h-32 bg-primary-300/30 dark:bg-primary-700/30 rounded-full blur-xl animate-scale-pulse-2" />
@@ -67,7 +67,10 @@ const InitialLoading = ({ onComplete }: IInitialLoadingProps) => {
           </h1>
         </div>
 
-        <div className="w-64 animate-fade-in" style={{ animationDelay: "0.5s" }}>
+        <div
+          className="w-64 animate-fade-in"
+          style={{ animationDelay: "0.5s" }}
+        >
           <div className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
             <div
               className="h-full bg-gradient-to-r from-primary-500 to-primary-700 rounded-full transition-all duration-100 ease-out"
