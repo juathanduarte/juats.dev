@@ -72,7 +72,7 @@ const Projects = () => {
             >
               {PROJECTS.map((project, index) => (
                 <SwiperSlide key={project.id}>
-                  <div className="group bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-primary-300 dark:hover:border-primary-600 transition-all duration-300 overflow-hidden h-full hover:shadow-xl hover:shadow-primary-500/10 dark:hover:shadow-primary-400/10">
+                  <div className="group bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 overflow-hidden h-full">
                     <div className="h-40 relative overflow-hidden">
                       <img
                         src={projectImages[project.image]}
