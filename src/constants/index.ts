@@ -55,9 +55,9 @@ export const PROJECTS: IProject[] = [
     title: "Meupass Dashboard",
     descriptionKey: "projects.descriptions.meupassDash",
     image: "dash-meupass.png",
-    technologies: ["TypeScript", "Next.js", "Tailwind CSS"],
+    technologies: ["TypeScript", "Next.js", "Tailwind CSS", "Express", "PostgreSQL"],
     featured: true,
-    category: "frontend",
+    category: "fullstack",
   },
   {
     id: "4",
