@@ -12,6 +12,7 @@ import dashMeupassImg from "../assets/projects/dash-meupass.png";
 import letralandiaImg from "../assets/projects/letralandia.png";
 import presencasSiiepeImg from "../assets/projects/presencas_siiepe.jpeg";
 import suiteImg from "../assets/projects/suite.png";
+import Tooltip from "../components/ui/tooltip";
 
 const projectImages: Record<string, string> = {
   "letralandia.png": letralandiaImg,
@@ -119,9 +120,22 @@ const Projects = () => {
                           </span>
                         ))}
                         {project.technologies.length > 3 && (
-                          <span className="px-2.5 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded-md">
-                            +{project.technologies.length - 3}
-                          </span>
+                          <Tooltip
+                            content={
+                              <div className="flex flex-col gap-1.5">
+                                {project.technologies.slice(3).map((tech) => (
+                                  <span key={tech} className="font-medium">
+                                    {tech}
+                                  </span>
+                                ))}
+                              </div>
+                            }
+                            position="top"
+                          >
+                            <span className="px-2.5 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded-md cursor-help hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                              +{project.technologies.length - 3}
+                            </span>
+                          </Tooltip>
                         )}
                       </div>
                     </div>
