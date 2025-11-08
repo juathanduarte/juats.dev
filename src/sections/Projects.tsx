@@ -1,5 +1,7 @@
 import { PROJECTS } from "@constants/index";
+import { useCallback, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -26,6 +28,78 @@ const projectImages: Record<string, string> = {
 
 const Projects = () => {
   const { t } = useTranslation();
+  const swiperRef = useRef<SwiperType | null>(null);
+  const cardsRef = useRef<HTMLDivElement[]>([]);
+
+  const equalizeCardHeights = useCallback(() => {
+    if (!swiperRef.current || cardsRef.current.length === 0) return;
+
+    const swiper = swiperRef.current;
+    const swiperEl = swiper.el;
+    if (!swiperEl) return;
+
+    const swiperRect = swiperEl.getBoundingClientRect();
+    const visibleCards: HTMLDivElement[] = [];
+
+    cardsRef.current.forEach((card) => {
+      if (!card) return;
+      const cardRect = card.getBoundingClientRect();
+
+      const isVisible =
+        cardRect.top >= swiperRect.top - 50 &&
+        cardRect.bottom <= swiperRect.bottom + 50 &&
+        cardRect.left >= swiperRect.left - 50 &&
+        cardRect.right <= swiperRect.right + 50;
+
+      if (isVisible) {
+        visibleCards.push(card);
+      }
+    });
+
+    if (visibleCards.length === 0) return;
+
+    let maxHeight = 0;
+    visibleCards.forEach((card) => {
+      card.style.height = "auto";
+      const height = card.offsetHeight;
+      if (height > maxHeight) {
+        maxHeight = height;
+      }
+    });
+
+    visibleCards.forEach((card) => {
+      if (maxHeight > 0) {
+        card.style.height = `${maxHeight}px`;
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setTimeout(equalizeCardHeights, 100);
+    };
+
+    const handleSlideChange = () => {
+      setTimeout(equalizeCardHeights, 100);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    if (swiperRef.current) {
+      swiperRef.current.on("slideChange", handleSlideChange);
+      swiperRef.current.on("resize", handleSlideChange);
+    }
+
+    setTimeout(equalizeCardHeights, 300);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      if (swiperRef.current) {
+        swiperRef.current.off("slideChange", handleSlideChange);
+        swiperRef.current.off("resize", handleSlideChange);
+      }
+    };
+  }, [equalizeCardHeights]);
 
   return (
     <section
@@ -47,6 +121,12 @@ const Projects = () => {
               modules={[Navigation, Pagination, Autoplay]}
               spaceBetween={32}
               slidesPerView={1}
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+              onSlideChange={() => {
+                setTimeout(equalizeCardHeights, 100);
+              }}
               navigation={{
                 nextEl: ".swiper-button-next-custom",
                 prevEl: ".swiper-button-prev-custom",
@@ -73,8 +153,13 @@ const Projects = () => {
             >
               {PROJECTS.map((project, index) => (
                 <SwiperSlide key={project.id}>
-                  <div className="group bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 overflow-hidden h-full">
-                    <div className="h-40 relative overflow-hidden">
+                  <div
+                    ref={(el) => {
+                      if (el) cardsRef.current[index] = el;
+                    }}
+                    className="group bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 overflow-hidden flex flex-col transition-all duration-300"
+                  >
+                    <div className="h-56 relative overflow-hidden">
                       <img
                         src={projectImages[project.image]}
                         alt={project.title}
@@ -101,12 +186,12 @@ const Projects = () => {
                       </div>
                     </div>
 
-                    <div className="p-5 flex flex-col gap-3">
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                    <div className="p-6 flex flex-col gap-4 flex-1">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
                         {project.title}
                       </h3>
 
-                      <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-3 leading-relaxed">
+                      <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex-1">
                         {t(project.descriptionKey)}
                       </p>
 
