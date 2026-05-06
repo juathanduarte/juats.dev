@@ -10,7 +10,7 @@ import ThemeToggle from "../ui/ThemeToggle";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState<boolean>(true);
-  const [lastScrollY, setLastScrollY] = useState<number>(0);
+  const lastScrollY = useRef<number>(0);
   const { t } = useTranslation();
   const menuRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -54,17 +54,22 @@ const Header = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY < 10) {
-        setIsHeaderVisible(true);
-      } else {
-        if (currentScrollY > lastScrollY && currentScrollY > 100) {
-          setIsHeaderVisible(false);
-        } else {
-          setIsHeaderVisible(true);
-        }
+      if (isMenuOpen) {
+        lastScrollY.current = currentScrollY;
+        return;
       }
 
-      setLastScrollY(currentScrollY);
+      if (currentScrollY <= 0) {
+        setIsHeaderVisible(true);
+      } else if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
+        // Scroll down and passed the header height area
+        setIsHeaderVisible(false);
+      } else if (currentScrollY < lastScrollY.current) {
+        // Scroll up
+        setIsHeaderVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -72,7 +77,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY]);
+  }, [isMenuOpen]);
 
   return (
     <header

@@ -1,3 +1,4 @@
+import dhauzLogo from "@/assets/images/dhauz_logo.jpeg";
 import hut8Logo from "@/assets/images/hut8_logo.jpeg";
 import meupassLogo from "@/assets/images/meupass_logo.jpeg";
 import smartnxLogo from "@/assets/images/smartnx_logo.webp";
@@ -17,6 +18,14 @@ const Timeline = () => {
   const { t } = useTranslation();
 
   const experiences: ITimelineItem[] = [
+    {
+      id: "experience3",
+      title: t("about.journey.experience3.title"),
+      company: t("about.journey.experience3.company"),
+      description: t("about.journey.experience3.description"),
+      period: t("about.journey.experience3.period"),
+      logo: dhauzLogo,
+    },
     {
       id: "experience1",
       title: t("about.journey.experience1.title"),
@@ -42,14 +51,6 @@ const Timeline = () => {
       logo: hut8Logo,
       isLast: true,
     },
-    // {
-    //   id: "experience3",
-    //   title: t("about.journey.experience3.title"),
-    //   company: t("about.journey.experience3.company"),
-    //   description: t("about.journey.experience3.description"),
-    //   period: t("about.journey.experience3.period"),
-    //   isLast: true,
-    // },
   ];
 
   return (
