@@ -6,10 +6,11 @@ interface TimelineProps {
 
 const Timeline = ({ items }: TimelineProps) => {
   return (
-    <div className="relative">
-      <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-primary-400 to-transparent md:from-primary-500 md:via-primary-400 md:to-primary-300 transform md:-translate-x-0.5" />
+    <div className="relative py-4">
+      {/* Central Line with Fading Ends */}
+      <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-primary-500 to-transparent transform md:-translate-x-0.5" />
 
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-12">
         {items.map((experience, index) => (
           <div
             key={experience.id}
@@ -17,16 +18,18 @@ const Timeline = ({ items }: TimelineProps) => {
               index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
             }`}
           >
-            <div className="absolute left-0 md:left-1/2 top-0 z-10 flex items-center justify-center w-8 h-8 bg-primary-500 rounded-full border-2 border-primary-600 transform md:-translate-x-4">
+            {/* Timeline Node */}
+            <div className="absolute left-0 md:left-1/2 top-0 z-10 flex items-center justify-center w-8 h-8 bg-primary-500 rounded-full border-2 border-primary-600 transform md:-translate-x-4 shadow-lg shadow-primary-500/20">
               <div className="w-3 h-3 bg-white rounded-full" />
             </div>
 
+            {/* Content Card */}
             <div
               className={`pl-12 md:pl-0 w-full md:w-5/12 ${
                 index % 2 === 0 ? "md:mr-auto md:pr-8" : "md:ml-auto md:pl-8"
               }`}
             >
-              <div className="bg-white dark:bg-gray-700 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500 transition-all duration-300">
+              <div className="bg-white dark:bg-gray-700 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-600 hover:border-primary-400 dark:hover:border-primary-400 transition-all duration-300 shadow-sm hover:shadow-md">
                 <div className="flex flex-col gap-4">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                     {experience.title}
@@ -125,7 +128,7 @@ const Timeline = ({ items }: TimelineProps) => {
                       </span>
                     </div>
                   </div>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
                     {experience.description}
                   </p>
                 </div>
