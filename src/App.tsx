@@ -15,7 +15,7 @@ const App = () => {
 
   useSEO({
     keywords:
-      "desenvolvedor full-stack, react, typescript, nodejs, frontend, backend, javascript, juathan duarte, juats, portfólio, ufpel, ciência da computação",
+      "juathan, juathan coelho duarte, juats, juathan duarte, desenvolvedor full-stack, react, typescript, nodejs, frontend, backend, javascript, portfólio, ufpel, ciência da computação, software engineer, pelotas, desenvolvedor web",
   });
 
   const handleLoadingComplete = () => {

@@ -8,10 +8,8 @@ Sitemap: https://juats.dev/sitemap.xml
 Crawl-delay: 1
 
 # Block access to certain file types
-Disallow: *.json$
 Disallow: *.ts$
 Disallow: *.tsx$
-Disallow: *.js$
 Disallow: *.jsx$
 Disallow: /src/
 Disallow: /node_modules/
