@@ -1,70 +1,16 @@
-import dhauzLogo from "@/assets/images/dhauz_logo.jpeg";
-import quantumRiseLogo from "@/assets/images/quantumrise_logo.png";
-import hut8Logo from "@/assets/images/hut8_logo.jpeg";
-import meupassLogo from "@/assets/images/meupass_logo.jpeg";
-import smartnxLogo from "@/assets/images/smartnx_logo.webp";
-import { useTranslation } from "react-i18next";
+import type { ITimelineItem } from "../../types";
 
-interface ITimelineItem {
-  id: string;
-  title: string;
-  company: string;
-  description: string;
-  period: string;
-  logo?: string | string[];
-  websites?: string | string[];
-  isLast?: boolean;
+interface TimelineProps {
+  items: ITimelineItem[];
 }
 
-const Timeline = () => {
-  const { t } = useTranslation();
-
-  const experiences: ITimelineItem[] = [
-    {
-      id: "experience3",
-      title: t("about.journey.experience3.title"),
-      company: t("about.journey.experience3.company"),
-      description: t("about.journey.experience3.description"),
-      period: t("about.journey.experience3.period"),
-      logo: [dhauzLogo, quantumRiseLogo],
-      websites: ["https://dhauz.com/pt/", "https://www.quantumrise.com/"],
-    },
-    {
-      id: "experience1",
-      title: t("about.journey.experience1.title"),
-      company: t("about.journey.experience1.company"),
-      description: t("about.journey.experience1.description"),
-      period: t("about.journey.experience1.period"),
-      logo: smartnxLogo,
-      websites: "https://www.smartnx.com/",
-    },
-    {
-      id: "experience2",
-      title: t("about.journey.experience2.title"),
-      company: t("about.journey.experience2.company"),
-      description: t("about.journey.experience2.description"),
-      period: t("about.journey.experience2.period"),
-      logo: meupassLogo,
-      websites: "https://parceiros.meupass.com.br/",
-    },
-    {
-      id: "experience4",
-      title: t("about.journey.experience4.title"),
-      company: t("about.journey.experience4.company"),
-      description: t("about.journey.experience4.description"),
-      period: t("about.journey.experience4.period"),
-      logo: hut8Logo,
-      websites: "https://www.hut8.com.br/",
-      isLast: true,
-    },
-  ];
-
+const Timeline = ({ items }: TimelineProps) => {
   return (
     <div className="relative">
-      <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-primary-400 to-transparent md:from-primary-500 md:via-primary-400 md:to-primary-300 transform md:-translate-x-0.5"></div>
+      <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-primary-400 to-transparent md:from-primary-500 md:via-primary-400 md:to-primary-300 transform md:-translate-x-0.5" />
 
       <div className="flex flex-col gap-8">
-        {experiences.map((experience, index) => (
+        {items.map((experience, index) => (
           <div
             key={experience.id}
             className={`relative flex items-start ${
@@ -72,7 +18,7 @@ const Timeline = () => {
             }`}
           >
             <div className="absolute left-0 md:left-1/2 top-0 z-10 flex items-center justify-center w-8 h-8 bg-primary-500 rounded-full border-2 border-primary-600 transform md:-translate-x-4">
-              <div className="w-3 h-3 bg-white rounded-full"></div>
+              <div className="w-3 h-3 bg-white rounded-full" />
             </div>
 
             <div
@@ -80,7 +26,7 @@ const Timeline = () => {
                 index % 2 === 0 ? "md:mr-auto md:pr-8" : "md:ml-auto md:pl-8"
               }`}
             >
-              <div className="bg-white dark:bg-gray-700 rounded-xl p-6 border-2 border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500 transition-all duration-300">
+              <div className="bg-white dark:bg-gray-700 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500 transition-all duration-300">
                 <div className="flex flex-col gap-4">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                     {experience.title}
@@ -115,14 +61,14 @@ const Timeline = () => {
                             href={
                               Array.isArray(experience.websites)
                                 ? experience.websites[0]
-                                : experience.websites
+                                : (experience.websites as string)
                             }
                             target="_blank"
                             rel="noopener noreferrer"
                             className="transition-transform hover:scale-110"
                           >
                             <img
-                              src={experience.logo}
+                              src={experience.logo as string}
                               alt={`Logo da ${experience.company}`}
                               className="w-8 h-8 rounded-lg object-cover flex-shrink-0"
                             />
@@ -163,7 +109,7 @@ const Timeline = () => {
                           href={
                             Array.isArray(experience.websites)
                               ? experience.websites[0]
-                              : experience.websites
+                              : (experience.websites as string)
                           }
                           target="_blank"
                           rel="noopener noreferrer"

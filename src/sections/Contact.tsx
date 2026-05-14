@@ -1,6 +1,7 @@
 import Button from "@components/ui/Button";
 import Input from "@components/ui/Input";
 import TextArea from "@components/ui/TextArea";
+import SectionTitle from "@components/ui/SectionTitle";
 import { SOCIAL_LINKS } from "@constants/index";
 import { getSocialIcon } from "@utils/social";
 import { useId, useState } from "react";
@@ -87,13 +88,8 @@ const Contact = () => {
       className="min-h-[calc(100vh)] py-6 flex items-center bg-white dark:bg-gray-800"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center gap-16">
-        <div className="text-center flex flex-col gap-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-            {t("contact.title")}
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            {t("contact.subtitle")}
-          </p>
+        <div className="w-full">
+          <SectionTitle title={t("contact.title")} />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full">

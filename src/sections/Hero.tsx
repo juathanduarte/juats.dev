@@ -51,7 +51,7 @@ const Hero = () => {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group p-4 lg:p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 hover:bg-primary-50 dark:hover:bg-primary-900/50 hover:border-primary-300 dark:hover:border-primary-600 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+                    className="group p-4 lg:p-4 rounded-lg bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 hover:bg-primary-50 dark:hover:bg-primary-900/50 hover:border-primary-300 dark:hover:border-primary-600 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
                     aria-label={`Visit ${link.name}`}
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
@@ -82,7 +82,7 @@ const Hero = () => {
                 <img
                   src={avatar}
                   alt="Juathan - Desenvolvedor Full-Stack"
-                  className="w-80 h-96 lg:w-96 lg:h-[28rem] xl:w-[28rem] xl:h-[32rem] rounded-2xl object-cover border-4 border-white/30 dark:border-gray-600/30"
+                  className="w-80 h-96 lg:w-96 lg:h-[28rem] xl:w-[28rem] xl:h-[32rem] rounded-lg object-cover border-4 border-white/30 dark:border-gray-600/30"
                   loading="eager"
                 />
               </div>

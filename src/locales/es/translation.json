@@ -4,6 +4,7 @@
     "about": "Acerca de",
     "technologies": "Tecnologías",
     "projects": "Proyectos",
+    "volunteer": "Voluntariado",
     "contact": "Contacto",
     "viewAll": "Ver Todos",
     "getInTouch": "Ponte en Contacto",
@@ -21,6 +22,7 @@
       "about": "Acerca de",
       "technologies": "Tecnologías",
       "projects": "Proyectos",
+      "volunteer": "Voluntariado",
       "contact": "Contacto"
     }
   },
@@ -101,6 +103,7 @@
   },
   "projects": {
     "title": "Proyectos",
+    "subtitle": "Lo mejor de mi portafolio",
     "viewAllProjects": "Ver Todos los Proyectos",
     "github": "GitHub",
     "liveDemo": "Demo en Vivo",
@@ -113,6 +116,16 @@
       "siiepe": "Aplicación móvil desarrollada en React Native para registro y control de presencias en eventos académicos de SIIEPE (Semana Integrada de Innovación, Enseñanza, Investigación y Extensión), facilitando la gestión de participantes y validación de certificados con integración GraphQL.",
       "blablacampus": "Aplicación móvil de viajes compartidos entre los campus de UFPEL, inspirada en BlaBlaCar, conectando estudiantes y personal para facilitar el desplazamiento entre diferentes unidades universitarias.",
       "amigoDePelo": "Plataforma para una ONG donde es posible adoptar nuevos animales, ver rescates, donaciones y un área de voluntarios con CRUD para toda la información, adopciones y más."
+    }
+  },
+  "volunteer": {
+    "title": "Voluntariado",
+    "subtitle": "Tecnología transformando vidas",
+    "experience": {
+      "title": "Desarrollador Full-Stack Voluntario",
+      "company": "ONG Amigo de Pelo",
+      "description": "Desarrollo completo de la plataforma de la ONG Amigo de Pelo, incluyendo sistema de adopción, gestión de rescates, control de donaciones y panel administrativo para voluntarios. Uso de tecnologías modernas para crear una solución escalable y de alto impacto social.",
+      "period": "Abril 2026 - Actual"
     }
   },
   "contact": {

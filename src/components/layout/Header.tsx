@@ -142,6 +142,15 @@ const Header = () => {
               {t("header.navigation.projects")}
             </Link>
             <Link
+              to="volunteer"
+              smooth={true}
+              duration={800}
+              offset={-80}
+              className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-pointer focus:outline-none"
+            >
+              {t("header.navigation.volunteer")}
+            </Link>
+            <Link
               to="contact"
               smooth={true}
               duration={800}
@@ -196,7 +205,7 @@ const Header = () => {
         <div className="md:hidden">
           <div
             ref={menuRef}
-            className={`absolute right-4 top-16 w-80 max-w-[90vw] bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border-2 border-gray-200/60 dark:border-gray-700/60 rounded-xl overflow-visible transition-all duration-200 origin-top ${
+            className={`absolute right-4 top-16 w-80 max-w-[90vw] bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border-2 border-gray-200/60 dark:border-gray-700/60 rounded-lg overflow-visible transition-all duration-200 origin-top ${
               isMenuOpen
                 ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
                 : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
@@ -243,6 +252,16 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t("header.navigation.projects")}
+              </Link>
+              <Link
+                to="volunteer"
+                smooth={true}
+                duration={800}
+                offset={-80}
+                className="block w-full text-left px-4 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t("header.navigation.volunteer")}
               </Link>
               <Link
                 to="contact"

@@ -1,5 +1,6 @@
 import { useId } from "react";
 import { useTranslation } from "react-i18next";
+import SectionTitle from "@components/ui/SectionTitle";
 import { FaWindows } from "react-icons/fa";
 import {
   SiAntdesign,
@@ -151,16 +152,7 @@ const Technologies = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-20">
-          <div className="text-center space-y-6">
-            <div className="inline-flex items-center px-8 py-4 rounded-full bg-primary-100/80 dark:bg-primary-900/80 backdrop-blur-sm border border-primary-200/50 dark:border-primary-700/50">
-              <span className="text-2xl font-bold text-primary-700 dark:text-primary-300">
-                {t("technologies.title")}
-              </span>
-            </div>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              {t("technologies.subtitle")}
-            </p>
-          </div>
+          <SectionTitle title={t("technologies.title")} />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {technologyCategories.map((category) => (
@@ -182,7 +174,7 @@ const Technologies = () => {
                       return (
                         <div
                           key={`${sectionId}-${category.title}-${tech.name}`}
-                          className="group flex flex-col items-center p-3 sm:p-4 rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700/50 dark:to-gray-800/50 hover:from-primary-50 hover:to-primary-100 dark:hover:from-primary-900/20 dark:hover:to-primary-800/20 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+                          className="group flex flex-col items-center p-3 sm:p-4 rounded-lg bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700/50 dark:to-gray-800/50 hover:from-primary-50 hover:to-primary-100 dark:hover:from-primary-900/20 dark:hover:to-primary-800/20 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
                         >
                           <div className="p-3 rounded-lg bg-white/80 dark:bg-gray-800/80 border border-gray-200/50 dark:border-gray-600/50 group-hover:border-gray-300 dark:group-hover:border-gray-500 transition-all duration-300">
                             <IconComponent

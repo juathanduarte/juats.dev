@@ -1,12 +1,7 @@
 import { PROJECTS } from "@constants/index";
-import { useCallback, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import type { Swiper as SwiperType } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import SectionTitle from "@components/ui/SectionTitle";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import appMeupassImg from "../assets/projects/app-meupass.jpg";
 import blablacampusImg from "../assets/projects/blablacampus.jpeg";
 import clineqappImg from "../assets/projects/clineqapp-hut8.jpeg";
@@ -30,78 +25,6 @@ const projectImages: Record<string, string> = {
 
 const Projects = () => {
   const { t } = useTranslation();
-  const swiperRef = useRef<SwiperType | null>(null);
-  const cardsRef = useRef<HTMLDivElement[]>([]);
-
-  const equalizeCardHeights = useCallback(() => {
-    if (!swiperRef.current || cardsRef.current.length === 0) return;
-
-    const swiper = swiperRef.current;
-    const swiperEl = swiper.el;
-    if (!swiperEl) return;
-
-    const swiperRect = swiperEl.getBoundingClientRect();
-    const visibleCards: HTMLDivElement[] = [];
-
-    cardsRef.current.forEach((card) => {
-      if (!card) return;
-      const cardRect = card.getBoundingClientRect();
-
-      const isVisible =
-        cardRect.top >= swiperRect.top - 50 &&
-        cardRect.bottom <= swiperRect.bottom + 50 &&
-        cardRect.left >= swiperRect.left - 50 &&
-        cardRect.right <= swiperRect.right + 50;
-
-      if (isVisible) {
-        visibleCards.push(card);
-      }
-    });
-
-    if (visibleCards.length === 0) return;
-
-    let maxHeight = 0;
-    visibleCards.forEach((card) => {
-      card.style.height = "auto";
-      const height = card.offsetHeight;
-      if (height > maxHeight) {
-        maxHeight = height;
-      }
-    });
-
-    visibleCards.forEach((card) => {
-      if (maxHeight > 0) {
-        card.style.height = `${maxHeight}px`;
-      }
-    });
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setTimeout(equalizeCardHeights, 100);
-    };
-
-    const handleSlideChange = () => {
-      setTimeout(equalizeCardHeights, 100);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    if (swiperRef.current) {
-      swiperRef.current.on("slideChange", handleSlideChange);
-      swiperRef.current.on("resize", handleSlideChange);
-    }
-
-    setTimeout(equalizeCardHeights, 300);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      if (swiperRef.current) {
-        swiperRef.current.off("slideChange", handleSlideChange);
-        swiperRef.current.off("resize", handleSlideChange);
-      }
-    };
-  }, [equalizeCardHeights]);
 
   return (
     <section
@@ -109,127 +32,114 @@ const Projects = () => {
       className="section-padding bg-gradient-to-br from-gray-50 to-primary-50/20 dark:from-gray-900 dark:to-gray-800"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-20">
-          <div className="text-center space-y-6">
-            <div className="inline-flex items-center px-8 py-4 rounded-full bg-primary-100/80 dark:bg-primary-900/80 backdrop-blur-sm border border-primary-200/50 dark:border-primary-700/50">
-              <span className="text-2xl font-bold text-primary-700 dark:text-primary-300">
-                {t("projects.title")}
-              </span>
-            </div>
-          </div>
+        <div className="space-y-16">
+          <SectionTitle title={t("projects.title")} />
 
-          <div className="relative">
-            <Swiper
-              modules={[Navigation, Pagination, Autoplay]}
-              spaceBetween={32}
-              slidesPerView={1}
-              onSwiper={(swiper) => {
-                swiperRef.current = swiper;
-              }}
-              onSlideChange={() => {
-                setTimeout(equalizeCardHeights, 100);
-              }}
-              navigation={{
-                nextEl: ".swiper-button-next-custom",
-                prevEl: ".swiper-button-prev-custom",
-              }}
-              pagination={{
-                clickable: true,
-                el: ".swiper-pagination-custom",
-              }}
-              autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
-              }}
-              breakpoints={{
-                640: {
-                  slidesPerView: 2,
-                  spaceBetween: 24,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 32,
-                },
-              }}
-              className="projects-swiper"
-            >
-              {PROJECTS.map((project, index) => (
-                <SwiperSlide key={project.id}>
-                  <div
-                    ref={(el) => {
-                      if (el) cardsRef.current[index] = el;
-                    }}
-                    className="group bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 overflow-hidden flex flex-col transition-all duration-300"
-                  >
-                    <div className="h-56 relative overflow-hidden">
-                      <img
-                        src={projectImages[project.image]}
-                        alt={project.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        loading={index < 3 ? "eager" : "lazy"}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-                      <div className="absolute top-3 right-3">
-                        <span
-                          className={`px-2.5 py-1 text-xs font-semibold rounded-full backdrop-blur-sm ${
-                            project.category === "fullstack"
-                              ? "bg-purple-500/90 text-white"
-                              : project.category === "backend"
-                                ? "bg-red-500/90 text-white"
-                                : "bg-blue-500/90 text-white"
-                          }`}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {PROJECTS.map((project, index) => (
+              <div
+                key={project.id}
+                className="group relative flex flex-col bg-white/50 dark:bg-gray-800/50 backdrop-blur-md rounded-lg border border-white/20 dark:border-gray-700/30 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10 hover:-translate-y-2"
+              >
+                {/* Image Container */}
+                <div className="h-52 relative overflow-hidden">
+                  <img
+                    src={projectImages[project.image]}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading={index < 3 ? "eager" : "lazy"}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                  
+                  {/* Category Badge */}
+                  <div className="absolute top-4 right-4">
+                    <span
+                      className={`px-3 py-1 text-xs font-bold rounded-full backdrop-blur-md border border-white/20 ${
+                        project.category === "fullstack"
+                          ? "bg-purple-500/80 text-white"
+                          : project.category === "backend"
+                            ? "bg-red-500/80 text-white"
+                            : "bg-blue-500/80 text-white"
+                      }`}
+                    >
+                      {project.category === "fullstack"
+                        ? "Full-stack"
+                        : project.category === "backend"
+                          ? "Back-end"
+                          : "Front-end"}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6 flex flex-col flex-1 gap-4">
+                  <div className="flex justify-between items-start">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                      {project.title}
+                    </h3>
+                    <div className="flex gap-3">
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+                          title={t("projects.github")}
                         >
-                          {project.category === "fullstack"
-                            ? "Full-stack"
-                            : project.category === "backend"
-                              ? "Back-end"
-                              : "Front-end"}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="p-6 flex flex-col gap-4 flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
-                        {project.title}
-                      </h3>
-
-                      <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex-1">
-                        {t(project.descriptionKey)}
-                      </p>
-
-                      <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
-                        {project.technologies.slice(0, 3).map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-2.5 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded-md whitespace-nowrap"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                        {project.technologies.length > 3 && (
-                          <Tooltip
-                            content={
-                              <div className="flex flex-col gap-1.5">
-                                {project.technologies.slice(3).map((tech) => (
-                                  <span key={tech} className="font-medium">
-                                    {tech}
-                                  </span>
-                                ))}
-                              </div>
-                            }
-                            position="top"
-                          >
-                            <span className="px-2.5 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded-md cursor-help hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
-                              +{project.technologies.length - 3}
-                            </span>
-                          </Tooltip>
-                        )}
-                      </div>
+                          <FaGithub size={20} />
+                        </a>
+                      )}
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+                          title={t("projects.liveDemo")}
+                        >
+                          <FaExternalLinkAlt size={18} />
+                        </a>
+                      )}
                     </div>
                   </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+
+                  <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed line-clamp-3">
+                    {t(project.descriptionKey)}
+                  </p>
+
+                  <div className="mt-auto pt-4 border-t border-gray-100 dark:border-gray-700/50">
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.slice(0, 3).map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2.5 py-1 bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-[10px] font-bold uppercase tracking-wider rounded-md border border-primary-100/50 dark:border-primary-800/50"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                      {project.technologies.length > 3 && (
+                        <Tooltip
+                          content={
+                            <div className="flex flex-col gap-1.5 p-1">
+                              {project.technologies.slice(3).map((tech) => (
+                                <span key={tech} className="text-xs font-medium">
+                                  {tech}
+                                </span>
+                              ))}
+                            </div>
+                          }
+                          position="top"
+                        >
+                          <span className="px-2.5 py-1 bg-gray-100 dark:bg-gray-700/50 text-gray-600 dark:text-gray-400 text-[10px] font-bold rounded-md cursor-help hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                            +{project.technologies.length - 3}
+                          </span>
+                        </Tooltip>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@
     "about": "About",
     "technologies": "Technologies",
     "projects": "Projects",
+    "volunteer": "Volunteer",
     "contact": "Contact",
     "viewAll": "View All",
     "getInTouch": "Get In Touch",
@@ -21,6 +22,7 @@
       "about": "About",
       "technologies": "Technologies",
       "projects": "Projects",
+      "volunteer": "Volunteer",
       "contact": "Contact"
     }
   },
@@ -101,6 +103,7 @@
   },
   "projects": {
     "title": "Projects",
+    "subtitle": "My Portfolio Highlights",
     "viewAllProjects": "View All Projects",
     "github": "GitHub",
     "liveDemo": "Live Demo",
@@ -113,6 +116,16 @@
       "siiepe": "Mobile application developed in React Native for attendance registration and control at SIIEPE academic events (Integrated Week of Innovation, Teaching, Research and Extension), facilitating participant management and certificate validation with GraphQL integration.",
       "blablacampus": "Mobile ridesharing app between UFPEL campuses, inspired by BlaBlaCar, connecting students and staff to facilitate transportation between different university units.",
       "amigoDePelo": "Platform for an NGO where it is possible to adopt new animals, see rescues, donations and a volunteer area with CRUD for all information, adoptions and more."
+    }
+  },
+  "volunteer": {
+    "title": "Volunteer",
+    "subtitle": "Technology transforming lives",
+    "experience": {
+      "title": "Volunteer Full-Stack Developer",
+      "company": "NGO Amigo de Pelo",
+      "description": "Full development of the Amigo de Pelo NGO platform, including an adoption system, rescue management, donation control, and a volunteer administrative dashboard. Utilizing modern technologies to create a scalable solution with high social impact.",
+      "period": "April 2026 - Present"
     }
   },
   "contact": {

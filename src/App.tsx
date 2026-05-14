@@ -8,6 +8,7 @@ import Contact from "./sections/Contact";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
 import Technologies from "./sections/Technologies";
+import Volunteer from "./sections/Volunteer";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,6 +38,7 @@ const App = () => {
             <About />
             <Technologies />
             <Projects />
+            <Volunteer />
             <Contact />
           </main>
           <Footer />

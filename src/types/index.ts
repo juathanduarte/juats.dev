@@ -17,3 +17,14 @@ export interface ISocialLink {
   url: string;
   icon: string;
 }
+
+export interface ITimelineItem {
+  id: string;
+  title: string;
+  company: string;
+  description: string;
+  period: string;
+  logo?: string | string[];
+  websites?: string | string[];
+  isLast?: boolean;
+}
