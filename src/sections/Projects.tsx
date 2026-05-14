@@ -14,6 +14,7 @@ import dashMeupassImg from "../assets/projects/dash-meupass.png";
 import letralandiaImg from "../assets/projects/letralandia.png";
 import presencasSiiepeImg from "../assets/projects/presencas_siiepe.jpeg";
 import suiteImg from "../assets/projects/suite.png";
+import amigoDePeloImg from "../assets/projects/amigo-de-pelo.png";
 import Tooltip from "../components/ui/tooltip";
 
 const projectImages: Record<string, string> = {
@@ -24,6 +25,7 @@ const projectImages: Record<string, string> = {
   "clineqapp-hut8.jpeg": clineqappImg,
   "presencas_siiepe.jpeg": presencasSiiepeImg,
   "blablacampus.jpeg": blablacampusImg,
+  "amigo-de-pelo.png": amigoDePeloImg,
 };
 
 const Projects = () => {

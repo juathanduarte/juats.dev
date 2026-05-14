@@ -20,6 +20,22 @@ export const SOCIAL_LINKS: ISocialLink[] = [
 
 export const PROJECTS: IProject[] = [
   {
+    id: "8",
+    title: "Amigo de Pelo",
+    descriptionKey: "projects.descriptions.amigoDePelo",
+    image: "amigo-de-pelo.png",
+    technologies: [
+      "TypeScript",
+      "React",
+      "Express",
+      "Firebase",
+      "Docker",
+      "Tailwind CSS",
+    ],
+    featured: true,
+    category: "fullstack",
+  },
+  {
     id: "1",
     title: "Suíte",
     descriptionKey: "projects.descriptions.suite",
