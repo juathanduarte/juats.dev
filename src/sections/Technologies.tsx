@@ -10,6 +10,7 @@ import {
   SiDocker,
   SiExpo,
   SiExpress,
+  SiFirebase,
   SiGit,
   SiGithub,
   SiHtml5,
@@ -18,6 +19,7 @@ import {
   SiJira,
   SiLinux,
   SiMongodb,
+  SiMui,
   SiNestjs,
   SiNextdotjs,
   SiNodedotjs,
@@ -25,8 +27,10 @@ import {
   SiPostgresql,
   SiPrisma,
   SiPython,
+  SiRadixui,
   SiReact,
   SiRedux,
+  SiShadcnui,
   SiSqlite,
   SiStyledcomponents,
   SiSupabase,
@@ -34,6 +38,18 @@ import {
   SiTypescript,
   SiVitest,
 } from "react-icons/si";
+
+const SiPlaywright = ({ className }: { className?: string }) => (
+  <svg
+    role="img"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    aria-hidden="true"
+  >
+    <path d="M20.753 11.233c.414-.239.556-.769.317-1.183l-2.02-3.498a.798.798 0 0 0-.256-.282.802.802 0 0 0-1.127.202l-2.072 2.825a16.892 16.892 0 0 0-3.324-.766l.322-3.486a.795.795 0 0 0-.462-.806.797.797 0 0 0-.916.241L8.76 8.01a16.924 16.924 0 0 0-3.398.986l-2.31-2.634c-.161-.184-.395-.29-.641-.29a.801.801 0 0 0-.742 1.101l1.583 3.714c-.66.602-1.258 1.272-1.782 1.998l-3.21-.926a.798.798 0 0 0-.92.38.797.797 0 0 0 .167.933l2.84 2.05a16.93 16.93 0 0 0.174 3.535L.302 18.064c-.198.143-.314.372-.302.616a.798.798 0 0 0 .866.721l3.5-.164c.531.637 1.134 1.21 1.796 1.706l-1.077 3.326a.8.8 0 0 0 .399.967c.105.05.219.075.332.075a.799.799 0 0 0 .614-.287l2.584-3.056c1.076.326 2.2.494 3.332.497 4.14 0 7.933-2.18 10.024-5.748.163-.277.164-.619.004-.897l-1.637-2.836zm-8.22 6.643c-3.13 0-5.67-2.54-5.67-5.67s2.54-5.67 5.67-5.67 5.67 2.54 5.67 5.67-2.54 5.67-5.67 5.67z" />
+  </svg>
+);
 
 interface ITechnology {
   name: string;
@@ -75,7 +91,12 @@ const Technologies = () => {
         },
         { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-400" },
         { name: "Ant Design", icon: SiAntdesign, color: "text-blue-500" },
+        { name: "shadcn/ui", icon: SiShadcnui, color: "text-slate-900 dark:text-white" },
+        { name: "Radix UI", icon: SiRadixui, color: "text-slate-900 dark:text-white" },
+        { name: "Material UI", icon: SiMui, color: "text-blue-500" },
         { name: "Vitest", icon: SiVitest, color: "text-green-500" },
+        { name: "Jest", icon: SiJest, color: "text-red-500" },
+        { name: "Playwright", icon: SiPlaywright, color: "text-green-600 dark:text-green-500" },
       ],
     },
     {
@@ -105,6 +126,7 @@ const Technologies = () => {
         { name: "SQLite", icon: SiSqlite, color: "text-blue-500" },
         { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
         { name: "Supabase", icon: SiSupabase, color: "text-green-600" },
+        { name: "Firebase", icon: SiFirebase, color: "text-amber-500" },
       ],
     },
     {

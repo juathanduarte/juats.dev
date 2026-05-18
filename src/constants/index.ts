@@ -27,10 +27,9 @@ export const PROJECTS: IProject[] = [
     technologies: [
       "TypeScript",
       "React",
-      "Express",
       "Firebase",
-      "Docker",
       "Tailwind CSS",
+      "Docker",
     ],
     featured: true,
     category: "fullstack",
