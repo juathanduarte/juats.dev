@@ -120,7 +120,8 @@
       "clineqapp": "Mobile application developed in React Native for monitoring and controlling equine weights, enabling detailed tracking of animal development and health with specific features for managing stud farms and rural properties.",
       "siiepe": "Mobile application developed in React Native for attendance registration and control at SIIEPE academic events (Integrated Week of Innovation, Teaching, Research and Extension), facilitating participant management and certificate validation with GraphQL integration.",
       "blablacampus": "Mobile ridesharing app between UFPEL campuses, inspired by BlaBlaCar, connecting students and staff to facilitate transportation between different university units.",
-      "amigoDePelo": "Platform for an NGO where it is possible to adopt new animals, see rescues, donations and a volunteer area with CRUD for all information, adoptions and more."
+      "amigoDePelo": "Platform for an NGO where it is possible to adopt new animals, see rescues, donations and a volunteer area with CRUD for all information, adoptions and more.",
+      "logvcinteligencia": "Intelligent platform focused on freight price optimization and market analysis, enabling strategic visualization of operational gaps and logistical efficiency opportunities based on mesoregion distribution."
     }
   },
   "volunteer": {

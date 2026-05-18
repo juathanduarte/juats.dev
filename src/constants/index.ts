@@ -20,6 +20,16 @@ export const SOCIAL_LINKS: ISocialLink[] = [
 
 export const PROJECTS: IProject[] = [
   {
+    id: "9",
+    title: "Log.VC.Inteligência - Votorantim Cimentos",
+    descriptionKey: "projects.descriptions.logvcinteligencia",
+    image: "logvcinteligencia.jpeg",
+    technologies: ["Next.js", "Tailwind CSS", "Supabase", "Docker"],
+    featured: true,
+    category: "fullstack",
+    projectType: "professional",
+  },
+  {
     id: "8",
     title: "Amigo de Pelo",
     descriptionKey: "projects.descriptions.amigoDePelo",

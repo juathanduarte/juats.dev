@@ -14,6 +14,7 @@ import blablacampusImg from "../assets/projects/blablacampus.jpeg";
 import clineqappImg from "../assets/projects/clineqapp-hut8.jpeg";
 import dashMeupassImg from "../assets/projects/dash-meupass.png";
 import letralandiaImg from "../assets/projects/letralandia.png";
+import logvcinteligenciaImg from "../assets/projects/logvcinteligencia.jpeg";
 import presencasSiiepeImg from "../assets/projects/presencas_siiepe.jpeg";
 import suiteImg from "../assets/projects/suite.png";
 import Tooltip from "../components/ui/tooltip";
@@ -27,6 +28,7 @@ const projectImages: Record<string, string> = {
   "presencas_siiepe.jpeg": presencasSiiepeImg,
   "blablacampus.jpeg": blablacampusImg,
   "amigo-de-pelo.png": amigoDePeloImg,
+  "logvcinteligencia.jpeg": logvcinteligenciaImg,
 };
 
 const Projects = () => {
