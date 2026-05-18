@@ -107,6 +107,11 @@
     "viewAllProjects": "View All Projects",
     "github": "GitHub",
     "liveDemo": "Live Demo",
+    "type": {
+      "academic": "Academic",
+      "personal": "Personal",
+      "professional": "Professional"
+    },
     "descriptions": {
       "letralandia": "Educational app for children's literacy, featuring 3 interactive games, parent area with detailed feedback, and dedicated alphabet learning section.",
       "suite": "Administrative dashboard integrated with omnichannel customer service area, developed for call centers and customer support with modern and intuitive interface.",

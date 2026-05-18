@@ -107,6 +107,11 @@
     "viewAllProjects": "Ver Todos os Projetos",
     "github": "GitHub",
     "liveDemo": "Demo ao Vivo",
+    "type": {
+      "academic": "Acadêmico",
+      "personal": "Pessoal",
+      "professional": "Profissional"
+    },
     "descriptions": {
       "letralandia": "Aplicativo educacional para alfabetização infantil, contendo 3 jogos interativos, área dos pais com feedback detalhado e seção dedicada ao aprendizado do alfabeto.",
       "suite": "Dashboard administrativo integrado com área de atendimento omnichannel, desenvolvido para call-centers e suporte ao cliente com interface moderna e intuitiva.",

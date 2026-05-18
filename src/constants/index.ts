@@ -34,6 +34,7 @@ export const PROJECTS: IProject[] = [
     ],
     featured: true,
     category: "fullstack",
+    projectType: "personal",
   },
   {
     id: "1",
@@ -50,6 +51,7 @@ export const PROJECTS: IProject[] = [
     ],
     featured: true,
     category: "frontend",
+    projectType: "professional",
   },
   {
     id: "2",
@@ -65,6 +67,7 @@ export const PROJECTS: IProject[] = [
     ],
     featured: true,
     category: "frontend",
+    projectType: "professional",
   },
   {
     id: "3",
@@ -74,6 +77,7 @@ export const PROJECTS: IProject[] = [
     technologies: ["TypeScript", "Next.js", "Tailwind CSS", "Express", "PostgreSQL"],
     featured: true,
     category: "fullstack",
+    projectType: "professional",
   },
   {
     id: "4",
@@ -83,6 +87,7 @@ export const PROJECTS: IProject[] = [
     technologies: ["TypeScript", "React Native", "NestJS", "SQLite", "Expo"],
     featured: true,
     category: "fullstack",
+    projectType: "academic",
   },
   {
     id: "5",
@@ -92,6 +97,7 @@ export const PROJECTS: IProject[] = [
     technologies: ["TypeScript", "React Native"],
     featured: true,
     category: "frontend",
+    projectType: "academic",
   },
   {
     id: "6",
@@ -101,6 +107,7 @@ export const PROJECTS: IProject[] = [
     technologies: ["TypeScript", "React Native", "GraphQL"],
     featured: true,
     category: "frontend",
+    projectType: "academic",
   },
   {
     id: "7",
@@ -110,5 +117,6 @@ export const PROJECTS: IProject[] = [
     technologies: ["TypeScript", "React Native", "NestJS", "Prisma"],
     featured: true,
     category: "fullstack",
+    projectType: "academic",
   },
 ];

@@ -8,6 +8,7 @@ export interface IProject {
   liveUrl?: string;
   featured: boolean;
   category: TCategory;
+  projectType: "academic" | "personal" | "professional";
 }
 
 export type TCategory = "frontend" | "backend" | "fullstack";
