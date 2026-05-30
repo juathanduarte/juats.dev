@@ -1,7 +1,7 @@
 import Button from "@components/ui/Button";
 import Input from "@components/ui/Input";
-import TextArea from "@components/ui/TextArea";
 import SectionTitle from "@components/ui/SectionTitle";
+import TextArea from "@components/ui/TextArea";
 import { SOCIAL_LINKS } from "@constants/index";
 import { getSocialIcon } from "@utils/social";
 import { useId, useState } from "react";

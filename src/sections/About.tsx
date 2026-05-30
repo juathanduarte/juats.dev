@@ -1,12 +1,13 @@
-import dhauzLogo from "@/assets/images/dhauz_logo.jpeg";
-import quantumRiseLogo from "@/assets/images/quantumrise_logo.png";
-import hut8Logo from "@/assets/images/hut8_logo.jpeg";
-import meupassLogo from "@/assets/images/meupass_logo.jpeg";
-import smartnxLogo from "@/assets/images/smartnx_logo.webp";
+import SectionTitle from "@components/ui/SectionTitle";
 import Stats from "@components/ui/Stats";
 import Timeline from "@components/ui/Timeline";
-import SectionTitle from "@components/ui/SectionTitle";
 import { useTranslation } from "react-i18next";
+import dhauzLogo from "@/assets/images/dhauz_logo.jpeg";
+import hut8Logo from "@/assets/images/hut8_logo.jpeg";
+import meupassLogo from "@/assets/images/meupass_logo.jpeg";
+import murabeiLogo from "@/assets/images/murabei_logo.jpeg";
+import quantumRiseLogo from "@/assets/images/quantumrise_logo.png";
+import smartnxLogo from "@/assets/images/smartnx_logo.webp";
 import type { ITimelineItem } from "../types";
 
 const About = () => {
@@ -21,6 +22,15 @@ const About = () => {
       period: t("about.journey.experience3.period"),
       logo: [dhauzLogo, quantumRiseLogo],
       websites: ["https://dhauz.com/pt/", "https://www.quantumrise.com/"],
+    },
+    {
+      id: "experience5",
+      title: t("about.journey.experience5.title"),
+      company: t("about.journey.experience5.company"),
+      description: t("about.journey.experience5.description"),
+      period: t("about.journey.experience5.period"),
+      logo: murabeiLogo,
+      websites: "https://murabei.com/",
     },
     {
       id: "experience1",

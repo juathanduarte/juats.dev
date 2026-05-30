@@ -1,5 +1,5 @@
-import Timeline from "@components/ui/Timeline";
 import SectionTitle from "@components/ui/SectionTitle";
+import Timeline from "@components/ui/Timeline";
 import { useTranslation } from "react-i18next";
 import amigodepeloLogo from "../assets/images/amigodepelo_logo.png";
 import type { ITimelineItem } from "../types";
@@ -21,7 +21,10 @@ const Volunteer = () => {
   ];
 
   return (
-    <section id="volunteer" className="section-padding bg-white dark:bg-gray-900">
+    <section
+      id="volunteer"
+      className="section-padding bg-white dark:bg-gray-900"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle title={t("volunteer.title")} />
 

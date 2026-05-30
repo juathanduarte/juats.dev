@@ -49,18 +49,18 @@
         "title": "Líder Técnico de Front-End",
         "company": "Smart NX",
         "description": "Liderazgo en la reestructuración del front-end, garantizando escalabilidad, rendimiento y eficiencia a gran escala. Desarrollo y mejora de la pantalla de atención al usuario, optimizando la experiencia para manejar más de 5,000,000 chats mensuales de forma fluida y responsiva.",
-        "period": "Junio 2023 - Actual"
+        "period": "Junio 2023 - Junio 2026"
       },
       "experience2": {
         "title": "Desarrollador Full-Stack Júnior",
         "company": "Meupass",
-        "description": "Definición de arquitectura y elección estratégica de tecnologías, garantizando una base robusta, escalable y alineada con las necesidades del negocio. Coordinación del equipo de front-end del dashboard administrativo, promoviendo buenas prácticas de desarrollo.",
+        "description": "Definición de arquitectura y elección estratégica de tecnologías, garantizando una base robusta, escalable y alineada con las necesidades del negocio. Coordinación del equipo de front-end del dashboard administrativo, promovendo buenas prácticas de desarrollo.",
         "period": "Octubre 2024 - Octubre 2025"
       },
       "experience3": {
         "title": "Desarrollador Full-Stack Sénior",
         "company": "dhauz | Quantum Rise",
-        "description": "Liderazgo técnico y desarrollo de soluciones de extremo a extremo, participando desde la definición de la arquitectura hasta el mantenimiento de las soluciones. Actuación en la evolución de la plataforma durante la transición de la marca a Quantum Rise, garantizando robustez, escalabilidad y excelencia técnica.",
+        "description": "Liderazgo técnico y desarrollo de soluciones de extremo a extremo, participando desde la definición de la arquitectura hasta el mantenimiento de las soluciones, garantizando robustez, escalabilidad y excelencia técnica.",
         "period": "Septiembre 2025 - Actual"
       },
       "experience4": {
@@ -68,6 +68,12 @@
         "company": "Hut8 - Empresa Junior de Computación",
         "description": "Desarrollo de aplicación Android utilizando React Native para control de pesos de equinos con funcionalidades específicas de monitoreo. Gestión de equipo con más de 25 estudiantes, estructuración de procesos para orientación de nuevos miembros y organización de procesos selectivos.",
         "period": "Noviembre 2020 - Octubre 2022"
+      },
+      "experience5": {
+        "title": "Desarrollador Full-Stack Pleno",
+        "company": "Murabei",
+        "description": "Desarrollo de soluciones de extremo a extremo, integrando ciencia de datos e ingeniería de software para entregar aplicaciones robustas, escalables y de alto rendimiento.",
+        "period": "Junio 2026 - Actual"
       }
     },
     "skills": {

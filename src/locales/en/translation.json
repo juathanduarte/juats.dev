@@ -49,7 +49,7 @@
         "title": "Front-End Technical Lead",
         "company": "Smart NX",
         "description": "Leadership in front-end restructuring, ensuring scalability, performance and efficiency at scale. Development and improvement of the user support screen, optimizing the experience to handle more than 5,000,000 monthly chats in a fluid and responsive way.",
-        "period": "June 2023 - Present"
+        "period": "June 2023 - June 2026"
       },
       "experience2": {
         "title": "Junior Full-Stack Developer",
@@ -60,7 +60,7 @@
       "experience3": {
         "title": "Senior Full-Stack Developer",
         "company": "dhauz | Quantum Rise",
-        "description": "Technical leadership and end-to-end solution development, participating from architecture definition to solution maintenance. Active role in the platform's evolution during the brand transition to Quantum Rise, ensuring robustness, scalability, and technical excellence.",
+        "description": "Technical leadership and end-to-end solution development, participating from architecture definition to solution maintenance, ensuring robustness, scalability, and technical excellence.",
         "period": "September 2025 - Present"
       },
       "experience4": {
@@ -68,6 +68,12 @@
         "company": "Hut8 - Junior Computing Company",
         "description": "Android application development using React Native for equine weight control with specific monitoring features. Team management of over 25 students, process structuring for new member orientation, and organization of selection processes.",
         "period": "November 2020 - October 2022"
+      },
+      "experience5": {
+        "title": "Mid-Level Full-Stack Developer",
+        "company": "Murabei",
+        "description": "Development of end-to-end solutions, integrating data science and software engineering to deliver robust, scalable, and high-performance applications.",
+        "period": "June 2026 - Present"
       }
     },
     "skills": {

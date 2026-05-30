@@ -26,9 +26,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-      {isLoading && (
-        <InitialLoading onComplete={handleLoadingComplete} />
-      )}
+      {isLoading && <InitialLoading onComplete={handleLoadingComplete} />}
 
       {showContent && (
         <div className="min-h-screen animate-slide-up">

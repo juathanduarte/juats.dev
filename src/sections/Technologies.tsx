@@ -1,6 +1,6 @@
+import SectionTitle from "@components/ui/SectionTitle";
 import { useId } from "react";
 import { useTranslation } from "react-i18next";
-import SectionTitle from "@components/ui/SectionTitle";
 import { FaWindows } from "react-icons/fa";
 import {
   SiAntdesign,
@@ -91,12 +91,24 @@ const Technologies = () => {
         },
         { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-400" },
         { name: "Ant Design", icon: SiAntdesign, color: "text-blue-500" },
-        { name: "shadcn/ui", icon: SiShadcnui, color: "text-slate-900 dark:text-white" },
-        { name: "Radix UI", icon: SiRadixui, color: "text-slate-900 dark:text-white" },
+        {
+          name: "shadcn/ui",
+          icon: SiShadcnui,
+          color: "text-slate-900 dark:text-white",
+        },
+        {
+          name: "Radix UI",
+          icon: SiRadixui,
+          color: "text-slate-900 dark:text-white",
+        },
         { name: "Material UI", icon: SiMui, color: "text-blue-500" },
         { name: "Vitest", icon: SiVitest, color: "text-green-500" },
         { name: "Jest", icon: SiJest, color: "text-red-500" },
-        { name: "Playwright", icon: SiPlaywright, color: "text-green-600 dark:text-green-500" },
+        {
+          name: "Playwright",
+          icon: SiPlaywright,
+          color: "text-green-600 dark:text-green-500",
+        },
       ],
     },
     {

@@ -1,13 +1,13 @@
-import i18n from 'i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
-import { initReactI18next } from 'react-i18next';
-import en from './en/translation.json';
-import es from './es/translation.json';
+import i18n from "i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+import { initReactI18next } from "react-i18next";
+import en from "./en/translation.json";
+import es from "./es/translation.json";
 // Import translations
-import ptBR from './pt-BR/translation.json';
+import ptBR from "./pt-BR/translation.json";
 
 const resources = {
-  'pt-BR': {
+  "pt-BR": {
     translation: ptBR,
   },
   en: {
@@ -23,7 +23,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'pt-BR',
+    fallbackLng: "pt-BR",
     debug: false,
 
     interpolation: {
@@ -31,8 +31,8 @@ i18n
     },
 
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage'],
+      order: ["localStorage", "navigator", "htmlTag"],
+      caches: ["localStorage"],
     },
   });
 

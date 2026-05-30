@@ -49,7 +49,7 @@
         "title": "Líder Técnico de Front-End",
         "company": "Smart NX",
         "description": "Liderança na reestruturação do front-end, garantindo escalabilidade, desempenho e eficiência em larga escala. Desenvolvimento e aprimoramento da tela de atendimento ao usuário, otimizando a experiência para lidar com mais de 5.000.000 chats mensais de forma fluida e responsiva.",
-        "period": "Junho 2023 - Atual"
+        "period": "Junho 2023 - Junho 2026"
       },
       "experience2": {
         "title": "Desenvolvedor Full-Stack Júnior",
@@ -60,7 +60,7 @@
       "experience3": {
         "title": "Desenvolvedor Full-Stack Sênior",
         "company": "dhauz | Quantum Rise",
-        "description": "Liderança técnica e desenvolvimento de soluções de ponta a ponta, participando desde a definição da arquitetura até a sustentação das soluções. Atuação na evolução da plataforma durante a transição da marca para Quantum Rise, garantindo robustez, escalabilidade e excelência técnica.",
+        "description": "Liderança técnica e desenvolvimento de soluções de ponta a ponta, participando desde a definição da arquitetura até a sustentação das soluções, garantindo robustez, escalabilidade e excelência técnica.",
         "period": "Setembro 2025 - Atual"
       },
       "experience4": {
@@ -68,6 +68,12 @@
         "company": "Hut8 - Empresa Júnior da Computação",
         "description": "Desenvolvimento de aplicação Android utilizando React Native para controle de pesos de equinos com funcionalidades específicas para monitoramento. Gerenciamento de equipe com mais de 25 estudantes, estruturação de processos para orientação de novos membros e organização de processos seletivos.",
         "period": "Novembro 2020 - Outubro 2022"
+      },
+      "experience5": {
+        "title": "Desenvolvedor Full-Stack Pleno",
+        "company": "Murabei",
+        "description": "Atuação no desenvolvimento de soluções de ponta a ponta, integrando ciência de dados e engenharia de software para entregar aplicações robustas, escaláveis e de alto desempenho.",
+        "period": "Junho 2026 - Atual"
       }
     },
     "skills": {
