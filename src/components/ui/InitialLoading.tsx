@@ -23,7 +23,7 @@ const InitialLoading = ({ onComplete }: IInitialLoadingProps) => {
       } else if (currentLetterIndex === word.length) {
         setTimeout(() => {
           setIsVisible(false);
-          setTimeout(onComplete, 400); // Wait for fade out animation
+          setTimeout(onComplete, 400);
         }, pauseTime);
       }
     }, typeSpeed);
@@ -45,12 +45,12 @@ const InitialLoading = ({ onComplete }: IInitialLoadingProps) => {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="relative z-10 flex flex-col items-center space-y-6">
+      <div className="relative z-10 flex flex-col items-center gap-6">
         <div className="text-center">
           <h1 className="text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white font-sans">
             {displayedText}
             <span
-              className={`text-primary-600 dark:text-primary-500 font-light ${
+              className={`text-neutral-950 dark:text-white font-light ${
                 showCursor ? "opacity-100" : "opacity-0"
               } transition-opacity duration-100`}
             >
@@ -60,9 +60,9 @@ const InitialLoading = ({ onComplete }: IInitialLoadingProps) => {
         </div>
 
         <div className="w-48">
-          <div className="w-full h-[1px] bg-neutral-200 dark:bg-neutral-800 rounded-full overflow-hidden">
+          <div className="w-full h-[1px] bg-neutral-200 dark:bg-neutral-800 rounded-none overflow-hidden">
             <div
-              className="h-full bg-primary-600 dark:bg-primary-500 transition-all duration-100 ease-out"
+              className="h-full bg-neutral-950 dark:bg-neutral-50 transition-all duration-100 ease-out"
               style={{ width: `${(currentLetterIndex / word.length) * 100}%` }}
             />
           </div>

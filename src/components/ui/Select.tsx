@@ -42,10 +42,10 @@ const Select = forwardRef<HTMLSelectElement, ISelectProps>(
     ref
   ) => {
     const baseClasses =
-      "w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white appearance-none cursor-pointer";
+      "w-full px-4 py-3 border rounded-none focus:ring-1 focus:ring-neutral-950 dark:focus:ring-white focus:border-neutral-950 dark:focus:border-white transition-colors bg-white dark:bg-zinc-950 text-neutral-900 dark:text-white appearance-none cursor-pointer";
 
     const variantClasses = {
-      default: "border-gray-300 dark:border-gray-600",
+      default: "border-neutral-250 dark:border-neutral-800",
       error:
         "border-red-500 dark:border-red-400 focus:ring-red-500 focus:border-red-500",
     };

@@ -37,7 +37,7 @@ const TypingAnimation = ({
     <span className={className}>
       {displayedText}
       {!isComplete && (
-        <span className="animate-pulse text-primary-600 dark:text-primary-400">
+        <span className="animate-pulse text-neutral-900 dark:text-zinc-50">
           |
         </span>
       )}
