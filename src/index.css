@@ -5,7 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Core animations for minimalist layout transitions */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -150,7 +149,6 @@
   }
 }
 
-/* Hide scrollbar utility */
 .scrollbar-none::-webkit-scrollbar {
   display: none;
 }
@@ -159,7 +157,6 @@
   scrollbar-width: none;
 }
 
-/* Custom minimal scrollbar */
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;
@@ -186,13 +183,11 @@ html.dark {
   scrollbar-color: #262626 transparent;
 }
 
-/* Clean focus ring outline */
 *:focus-visible {
   outline: 1.5px solid currentColor;
   outline-offset: 2.5px;
 }
 
-/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-delay: 0s !important;
@@ -207,7 +202,6 @@ html.dark {
   }
 }
 
-/* Projects Swiper Layout adjustment */
 .projects-swiper {
   padding: 20px 0;
 }

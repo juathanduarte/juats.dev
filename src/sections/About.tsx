@@ -63,7 +63,6 @@ const About = () => {
   ];
 
   return (
-    // biome-ignore lint/correctness/useUniqueElementIds: <>
     <section
       id="about"
       className="section-padding bg-[#fcfcfc] dark:bg-[#0a0a0a] border-t border-neutral-150 dark:border-neutral-900"

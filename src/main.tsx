@@ -13,7 +13,6 @@ import "./locales/i18n";
       const parsed = JSON.parse(stored);
       theme = parsed?.state?.theme as "light" | "dark" | undefined;
     } else {
-      // Migrate from legacy key
       const legacy = localStorage.getItem("theme-storage");
       if (legacy) {
         const parsedLegacy = JSON.parse(legacy);

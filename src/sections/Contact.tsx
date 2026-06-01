@@ -89,7 +89,6 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 w-full items-start">
-          {/* Form Area */}
           <div className="lg:col-span-7 flex flex-col gap-6">
             <h3 className="text-md font-bold text-neutral-950 dark:text-white font-mono uppercase tracking-wider border-b border-neutral-150 dark:border-neutral-900 pb-2">
               {t("contact.form.title")}
@@ -173,7 +172,6 @@ const Contact = () => {
             </form>
           </div>
 
-          {/* Contact Info Area */}
           <div className="lg:col-span-5 flex flex-col gap-10">
             <div className="flex flex-col gap-4">
               <h3 className="text-md font-bold text-neutral-950 dark:text-white font-mono uppercase tracking-wider border-b border-neutral-150 dark:border-neutral-900 pb-2">

@@ -31,7 +31,6 @@ const Volunteer = () => {
       <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
         <div className="flex flex-col gap-12">
           
-          {/* Header */}
           <div className="flex items-center gap-2">
             <Terminal className="w-5 h-5 text-zinc-500" />
             <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 font-sans">
@@ -39,16 +38,13 @@ const Volunteer = () => {
             </h2>
           </div>
 
-          {/* Table list */}
           <div className="relative border border-zinc-200 dark:border-zinc-900 bg-white dark:bg-zinc-950/20 backdrop-blur-sm">
             
-            {/* Table Header Row (Desktop only) */}
             <div className="hidden md:grid grid-cols-[220px_1fr] gap-8 px-6 py-4 border-b border-zinc-200 dark:border-zinc-900 bg-zinc-100/50 dark:bg-zinc-900/30 text-xs font-mono uppercase tracking-wider text-zinc-500 select-none">
               <div>{t("common.organizationOrRole")}</div>
               <div>{t("common.detailsAndImpact")}</div>
             </div>
 
-            {/* Rows */}
             <div className="divide-y divide-zinc-200 dark:divide-zinc-900">
               {items.map((item, idx) => {
                 const title = t(`volunteer.${item.key}.title`);
@@ -64,7 +60,6 @@ const Volunteer = () => {
                     tabIndex={0}
                     aria-label={`${title} at ${company}`}
                   >
-                    {/* Hover Highlight */}
                     {hoveredIdx === idx && (
                       <motion.div
                         layoutId="active-volunteer-bg"
@@ -77,7 +72,6 @@ const Volunteer = () => {
                       />
                     )}
 
-                    {/* Role & Company Column */}
                     <div className="relative z-10 self-center flex flex-col gap-0.5">
                       <h4 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
                         {title}
@@ -96,7 +90,6 @@ const Volunteer = () => {
                       </div>
                     </div>
 
-                    {/* Description Column */}
                     <div className="relative z-10 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed self-center">
                       {description}
                     </div>

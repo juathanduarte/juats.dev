@@ -265,7 +265,6 @@ const Technologies = () => {
       <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
         <div className="flex flex-col gap-12">
           
-          {/* Header */}
           <div className="flex items-center gap-2">
             <Cpu className="w-5 h-5 text-zinc-500" />
             <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 font-sans">
@@ -279,14 +278,12 @@ const Technologies = () => {
                 key={`${sectionId}-${category.title}`}
                 className="grid grid-cols-1 md:grid-cols-12 py-8 md:py-10 border-b border-zinc-200 dark:border-zinc-900 gap-6 items-start"
               >
-                {/* Category Header (Left Column) */}
                 <div className="md:col-span-4">
                   <h3 className="text-xs uppercase tracking-wider font-mono text-neutral-450 dark:text-neutral-500">
                     {category.title}
                   </h3>
                 </div>
 
-                {/* Technology Tags (Right Column) */}
                 <div className="md:col-span-8 flex flex-wrap gap-2">
                   {category.technologies.map((tech) => {
                     const IconComponent = tech.icon;

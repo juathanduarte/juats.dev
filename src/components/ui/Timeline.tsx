@@ -7,7 +7,6 @@ interface TimelineProps {
 const Timeline = ({ items }: TimelineProps) => {
   return (
     <div className="relative py-4 pl-6 md:pl-8">
-      {/* Left Line */}
       <div className="absolute left-[7px] top-0 bottom-0 w-[1px] bg-neutral-200 dark:bg-neutral-850" />
 
       <div className="flex flex-col gap-12">
@@ -16,10 +15,8 @@ const Timeline = ({ items }: TimelineProps) => {
             key={experience.id}
             className="relative flex flex-col gap-2"
           >
-            {/* Timeline Node */}
             <div className="absolute -left-[24.5px] top-[7px] z-10 w-[11px] h-[11px] rounded-full bg-[#fcfcfc] dark:bg-[#0a0a0a] border border-neutral-300 dark:border-neutral-750" />
 
-            {/* Header Content */}
             <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-2 border-b border-neutral-150 dark:border-neutral-900 pb-2">
               <div className="flex flex-col gap-1.5">
                 <h3 className="text-md font-bold text-neutral-950 dark:text-white tracking-tight">
@@ -120,7 +117,6 @@ const Timeline = ({ items }: TimelineProps) => {
               </div>
             </div>
 
-            {/* Description Text */}
             <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed text-sm mt-1 max-w-3xl font-sans">
               {experience.description}
             </p>

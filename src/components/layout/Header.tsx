@@ -62,10 +62,8 @@ const Header = () => {
       if (currentScrollY <= 0) {
         setIsHeaderVisible(true);
       } else if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
-        // Scroll down and passed the header height area
         setIsHeaderVisible(false);
       } else if (currentScrollY < lastScrollY.current) {
-        // Scroll up
         setIsHeaderVisible(true);
       }
 

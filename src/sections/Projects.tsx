@@ -47,7 +47,6 @@ const Projects = () => {
     container.addEventListener("scroll", checkScrollLimits);
     window.addEventListener("resize", checkScrollLimits);
 
-    // Initial check
     checkScrollLimits();
 
     return () => {
@@ -75,7 +74,6 @@ const Projects = () => {
       <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
         <div className="flex flex-col gap-12">
           
-          {/* Header Row */}
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <FolderOpen className="w-5 h-5 text-zinc-500" />
@@ -84,7 +82,6 @@ const Projects = () => {
               </h2>
             </div>
 
-            {/* Navigation buttons */}
             <div className="flex items-center gap-2 self-start sm:self-auto select-none">
               <button
                 type="button"
@@ -107,7 +104,6 @@ const Projects = () => {
             </div>
           </div>
 
-          {/* Slider Container */}
           <div
             ref={scrollContainerRef}
             className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-6"
@@ -117,7 +113,6 @@ const Projects = () => {
                 key={project.id}
                 className="w-[280px] sm:w-[360px] shrink-0 snap-start flex flex-col border border-zinc-200 dark:border-zinc-900 bg-white dark:bg-zinc-950/20 backdrop-blur-sm transition-all duration-300 hover:border-zinc-400 dark:hover:border-zinc-700"
               >
-                {/* Image Container */}
                 <div className="h-44 relative overflow-hidden border-b border-zinc-200 dark:border-zinc-900 bg-zinc-100 dark:bg-zinc-900/50">
                   <img
                     src={projectImages[project.image]}
@@ -126,7 +121,6 @@ const Projects = () => {
                     loading={index < 3 ? "eager" : "lazy"}
                   />
                   
-                  {/* Badges */}
                   <div className="absolute top-3 left-3 right-3 flex justify-between items-start gap-2 select-none">
                     <span className="px-2 py-0.5 text-[9px] font-bold font-mono uppercase bg-white dark:bg-zinc-950 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 tracking-wider">
                       {t(`projects.type.${project.projectType}`)}
@@ -142,7 +136,6 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Content */}
                 <div className="p-5 flex flex-col flex-1 gap-3">
                   <div className="flex justify-between items-start gap-4">
                     <h4 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 leading-tight">
