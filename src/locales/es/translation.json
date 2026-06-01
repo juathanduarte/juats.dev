@@ -13,7 +13,9 @@
     "yearsExperience": "Años de Experiencia",
     "projectsCompleted": "Proyectos Completados",
     "happyClients": "Clientes Satisfechos",
-    "clientSatisfaction": "Satisfacción del Cliente"
+    "clientSatisfaction": "Satisfacción del Cliente",
+    "detailsAndImpact": "Detalles & Impacto",
+    "organizationOrRole": "Organización / Cargo"
   },
   "header": {
     "logo": "juats.dev",
@@ -27,15 +29,14 @@
     }
   },
   "hero": {
-    "greeting": "¡Hola, me llamo",
-    "nicknameIntro": "Pero puedes llamarme",
-    "title": "Juats",
-    "subtitle": "Juathan Coelho Duarte es Desarrollador Full-Stack con título en Ciencias de la Computación de la Universidad Federal de Pelotas. Creo experiencias hermosas, performantes y accesibles.",
+    "name": "Juathan Coelho Duarte",
+    "tagline": "Científico de la Computación & Ingeniero de Software",
+    "impact": "Diseñando y desarrollando sistemas a gran escala — combinando arquitecturas robustas e interfaces intuitivas para entregar soluciones confiables de extremo a extremo.",
     "cta": {
-      "viewWork": "Ver Mi Trabajo",
-      "getInTouch": "Ponte en Contacto"
-    },
-    "scrollIndicator": "Desplázate hacia abajo"
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "cv": "Currículum"
+    }
   },
   "about": {
     "title": "Acerca de Mí",
@@ -48,14 +49,8 @@
       "experience1": {
         "title": "Líder Técnico de Front-End",
         "company": "Smart NX",
-        "description": "Liderazgo en la reestructuración del front-end, garantizando escalabilidad, rendimiento y eficiencia a gran escala. Desarrollo y mejora de la pantalla de atención al usuario, optimizando la experiencia para manejar más de 5,000,000 chats mensuales de forma fluida y responsiva.",
+        "description": "Liderazgo técnico del ecosistema front-end, implementando arquitectura de micro-frontends (React, Next.js). Procesamiento de 4 millones de chats mensuales con un 85% de resolución vía bot.",
         "period": "Junio 2023 - Junio 2026"
-      },
-      "experience2": {
-        "title": "Desarrollador Full-Stack Júnior",
-        "company": "Meupass",
-        "description": "Definición de arquitectura y elección estratégica de tecnologías, garantizando una base robusta, escalable y alineada con las necesidades del negocio. Coordinación del equipo de front-end del dashboard administrativo, promovendo buenas prácticas de desarrollo.",
-        "period": "Octubre 2024 - Octubre 2025"
       },
       "experience3": {
         "title": "Desarrollador Full-Stack Sénior",
@@ -63,17 +58,23 @@
         "description": "Liderazgo técnico y desarrollo de soluciones de extremo a extremo, participando desde la definición de la arquitectura hasta el mantenimiento de las soluciones, garantizando robustez, escalabilidad y excelencia técnica.",
         "period": "Septiembre 2025 - Actual"
       },
-      "experience4": {
-        "title": "Desarrollador Front-end / Mobile",
-        "company": "Hut8 - Empresa Junior de Computación",
-        "description": "Desarrollo de aplicación Android utilizando React Native para control de pesos de equinos con funcionalidades específicas de monitoreo. Gestión de equipo con más de 25 estudiantes, estructuración de procesos para orientación de nuevos miembros y organización de procesos selectivos.",
-        "period": "Noviembre 2020 - Octubre 2022"
-      },
       "experience5": {
         "title": "Desarrollador Full-Stack Pleno",
         "company": "Murabei",
         "description": "Desarrollo de soluciones de extremo a extremo, integrando ciencia de datos e ingeniería de software para entregar aplicaciones robustas, escalables y de alto rendimiento.",
         "period": "Junio 2026 - Actual"
+      },
+      "experience2": {
+        "title": "Desarrollador Full-Stack Júnior",
+        "company": "Meupass",
+        "description": "Definición de arquitectura y elección estratégica de tecnologías, garantizando una base robusta, escalable y alineada con las necesidades del negocio. Coordinación del equipo de front-end del dashboard administrativo.",
+        "period": "Octubre 2024 - Octubre 2025"
+      },
+      "experience4": {
+        "title": "Desarrollador Front-end / Mobile",
+        "company": "Hut8 - Empresa Junior de Computación",
+        "description": "Desarrollo de aplicación Android utilizando React Native para control de pesos de equinos. Gestión de equipo con más de 25 estudiantes, estructuración de procesos y organización de procesos selectivos.",
+        "period": "Noviembre 2020 - Octubre 2022"
       }
     },
     "skills": {
@@ -136,8 +137,12 @@
     "experience": {
       "title": "Desarrollador Full-Stack Voluntario",
       "company": "ONG Amigo de Pelo",
-      "description": "Desarrollo completo de la plataforma de la ONG Amigo de Pelo, incluyendo sistema de adopción, gestión de rescates, control de donaciones y panel administrativo para voluntarios. Uso de tecnologías modernas para crear una solución escalable y de alto impacto social.",
-      "period": "Abril 2026 - Actual"
+      "description": "Desarrollo completo de la plataforma de la ONG Amigo de Pelo, incluyendo sistema de adopción, gestión de rescates, control de donaciones y panel administrativo para voluntarios. Uso de tecnologías modernas para crear una solución escalable y de alto impacto social."
+    },
+    "experience_gc": {
+      "title": "Desarrollador de Software / Colaborador",
+      "company": "Gamers Club Booster",
+      "description": "Desarrollo de funcionalidades y optimizaciones para Gamers Club Booster, una extensión de navegador de código abierto diseñada para mejorar la experiencia de usuario en la plataforma Gamers Club."
     }
   },
   "contact": {

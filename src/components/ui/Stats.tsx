@@ -1,60 +1,24 @@
 import { useTranslation } from "react-i18next";
 
-interface IStatItem {
-  id: string;
-  number: string;
-  suffix?: string;
-  labelKey: string;
-}
-
 const Stats = () => {
   const { t } = useTranslation();
 
-  const stats: IStatItem[] = [
-    {
-      id: "years",
-      number: "3",
-      suffix: "+",
-      labelKey: "about.stats.years",
-    },
-    {
-      id: "projects",
-      number: "5",
-      suffix: "+",
-      labelKey: "about.stats.projects",
-    },
-    {
-      id: "users",
-      number: "15.000",
-      suffix: "+",
-      labelKey: "about.stats.users",
-    },
-  ];
-
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
-      {stats.map((stat) => (
-        <div
-          key={stat.id}
-          className="text-center bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-700 dark:to-primary-800 rounded-lg p-8 border-2 border-primary-200 dark:border-primary-600 hover:border-primary-300 dark:hover:border-primary-500 transition-all duration-300"
-        >
-          <div className="flex flex-col items-center gap-4">
-            <div className="relative">
-              <span className="text-4xl md:text-5xl font-bold text-primary-600 dark:text-white">
-                {stat.number}
-                {stat.suffix && (
-                  <span className="text-3xl md:text-4xl text-primary-500 dark:text-primary-100">
-                    {stat.suffix}
-                  </span>
-                )}
-              </span>
-            </div>
-            <p className="text-lg font-medium text-primary-500 dark:text-primary-100">
-              {t(stat.labelKey)}
-            </p>
-          </div>
-        </div>
-      ))}
+    <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-8 gap-y-3 py-6 border-y border-neutral-150 dark:border-neutral-900 w-full font-mono text-[11px] uppercase tracking-wider text-neutral-500 dark:text-neutral-450">
+      <div>
+        <span className="text-neutral-950 dark:text-white font-bold mr-1">3+</span>
+        {t("about.stats.years")}
+      </div>
+      <span className="hidden md:inline text-neutral-350 dark:text-neutral-800">//</span>
+      <div>
+        <span className="text-neutral-950 dark:text-white font-bold mr-1">5+</span>
+        {t("about.stats.projects")}
+      </div>
+      <span className="hidden md:inline text-neutral-350 dark:text-neutral-800">//</span>
+      <div>
+        <span className="text-neutral-950 dark:text-white font-bold mr-1">15.000+</span>
+        {t("about.stats.users")}
+      </div>
     </div>
   );
 };

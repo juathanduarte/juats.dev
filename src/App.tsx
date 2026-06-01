@@ -3,7 +3,7 @@ import Footer from "./components/layout/Footer";
 import Header from "./components/layout/Header";
 import InitialLoading from "./components/ui/InitialLoading";
 import { useSEO } from "./hooks/useSEO";
-import About from "./sections/About";
+import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
@@ -25,7 +25,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <div className="min-h-screen bg-[#fcfcfc] dark:bg-[#0a0a0a]">
       {isLoading && <InitialLoading onComplete={handleLoadingComplete} />}
 
       {showContent && (
@@ -33,7 +33,7 @@ const App = () => {
           <Header />
           <main className="flex flex-col">
             <Hero />
-            <About />
+            <Experience />
             <Technologies />
             <Projects />
             <Volunteer />

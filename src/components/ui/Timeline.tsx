@@ -6,134 +6,124 @@ interface TimelineProps {
 
 const Timeline = ({ items }: TimelineProps) => {
   return (
-    <div className="relative py-4">
-      {/* Central Line with Fading Ends */}
-      <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-primary-500 to-transparent transform md:-translate-x-0.5" />
+    <div className="relative py-4 pl-6 md:pl-8">
+      {/* Left Line */}
+      <div className="absolute left-[7px] top-0 bottom-0 w-[1px] bg-neutral-200 dark:bg-neutral-850" />
 
       <div className="flex flex-col gap-12">
-        {items.map((experience, index) => (
+        {items.map((experience) => (
           <div
             key={experience.id}
-            className={`relative flex items-start ${
-              index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-            }`}
+            className="relative flex flex-col gap-2"
           >
             {/* Timeline Node */}
-            <div className="absolute left-0 md:left-1/2 top-0 z-10 flex items-center justify-center w-8 h-8 bg-primary-500 rounded-full border-2 border-primary-600 transform md:-translate-x-4 shadow-lg shadow-primary-500/20">
-              <div className="w-3 h-3 bg-white rounded-full" />
-            </div>
+            <div className="absolute -left-[24.5px] top-[7px] z-10 w-[11px] h-[11px] rounded-full bg-[#fcfcfc] dark:bg-[#0a0a0a] border border-neutral-300 dark:border-neutral-750" />
 
-            {/* Content Card */}
-            <div
-              className={`pl-12 md:pl-0 w-full md:w-5/12 ${
-                index % 2 === 0 ? "md:mr-auto md:pr-8" : "md:ml-auto md:pl-8"
-              }`}
-            >
-              <div className="bg-white dark:bg-gray-700 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-600 hover:border-primary-400 dark:hover:border-primary-400 transition-all duration-300 shadow-sm hover:shadow-md">
-                <div className="flex flex-col gap-4">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                    {experience.title}
-                  </h3>
-                  <div className="flex flex-col gap-3">
-                    <div className="flex items-center gap-3">
-                      {experience.logo &&
-                        (Array.isArray(experience.logo) ? (
-                          <div className="flex gap-2">
-                            {experience.logo.map((logo, i) => (
-                              <a
-                                key={logo}
-                                href={
-                                  Array.isArray(experience.websites)
-                                    ? experience.websites[i]
-                                    : experience.websites
-                                }
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="transition-transform hover:scale-110"
-                              >
-                                <img
-                                  src={logo}
-                                  alt={`Logo da ${experience.company}`}
-                                  className="inline-block w-8 h-8 rounded-lg object-cover flex-shrink-0"
-                                />
-                              </a>
-                            ))}
-                          </div>
-                        ) : (
+            {/* Header Content */}
+            <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-2 border-b border-neutral-150 dark:border-neutral-900 pb-2">
+              <div className="flex flex-col gap-1.5">
+                <h3 className="text-md font-bold text-neutral-950 dark:text-white tracking-tight">
+                  {experience.title}
+                </h3>
+                <div className="flex items-center gap-2 text-xs font-mono">
+                  {experience.logo &&
+                    (Array.isArray(experience.logo) ? (
+                      <div className="flex gap-1.5 mr-1">
+                        {experience.logo.map((logo, i) => (
                           <a
+                            key={logo}
                             href={
                               Array.isArray(experience.websites)
-                                ? experience.websites[0]
-                                : (experience.websites as string)
+                                ? experience.websites[i]
+                                : experience.websites
                             }
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="transition-transform hover:scale-110"
+                            className="transition-opacity hover:opacity-80 shrink-0"
                           >
                             <img
-                              src={experience.logo as string}
-                              alt={`Logo da ${experience.company}`}
-                              className="w-8 h-8 rounded-lg object-cover flex-shrink-0"
+                              src={logo}
+                              alt=""
+                              className="w-5 h-5 rounded-none object-cover grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-200"
                             />
                           </a>
                         ))}
-                      {Array.isArray(experience.websites) &&
-                      experience.company.includes("|") ? (
-                        <div className="flex items-center gap-1.5 text-base md:text-lg font-semibold">
-                          {experience.company.split("|").map((name, i) => (
-                            <div
-                              key={name}
-                              className="flex items-center gap-1.5"
-                            >
-                              <a
-                                href={
-                                  (experience.websites as string[])[i] ||
-                                  (experience.websites as string[])[0]
-                                }
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
-                              >
-                                {name.trim()}
-                              </a>
-                              {i <
-                                (experience.company.split("|") as string[])
-                                  .length -
-                                  1 && (
-                                <span className="text-gray-400 dark:text-gray-500">
-                                  |
-                                </span>
-                              )}
-                            </div>
-                          ))}
-                        </div>
-                      ) : (
-                        <a
-                          href={
-                            Array.isArray(experience.websites)
-                              ? experience.websites[0]
-                              : (experience.websites as string)
-                          }
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-base md:text-lg font-semibold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
+                      </div>
+                    ) : (
+                      <a
+                        href={
+                          Array.isArray(experience.websites)
+                            ? experience.websites[0]
+                            : (experience.websites as string)
+                        }
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-opacity hover:opacity-80 mr-1 shrink-0"
+                      >
+                        <img
+                          src={experience.logo as string}
+                          alt=""
+                          className="w-5 h-5 rounded-none object-cover grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-200"
+                        />
+                      </a>
+                    ))}
+
+                  {Array.isArray(experience.websites) &&
+                  experience.company.includes("|") ? (
+                    <div className="flex items-center gap-1.5 font-bold">
+                      {experience.company.split("|").map((name, i) => (
+                        <div
+                          key={name}
+                          className="flex items-center gap-1.5"
                         >
-                          {experience.company}
-                        </a>
-                      )}
+                          <a
+                            href={
+                              (experience.websites as string[])[i] ||
+                              (experience.websites as string[])[0]
+                            }
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-neutral-500 hover:text-neutral-950 dark:text-neutral-400 dark:hover:text-white transition-colors underline underline-offset-2"
+                          >
+                            {name.trim()}
+                          </a>
+                          {i <
+                            (experience.company.split("|") as string[])
+                              .length -
+                              1 && (
+                            <span className="text-neutral-200 dark:text-neutral-800">
+                              /
+                            </span>
+                          )}
+                        </div>
+                      ))}
                     </div>
-                    <div className="flex justify-start">
-                      <span className="inline-block bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs font-semibold px-3 py-1 rounded-full">
-                        {experience.period}
-                      </span>
-                    </div>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
-                    {experience.description}
-                  </p>
+                  ) : (
+                    <a
+                      href={
+                        Array.isArray(experience.websites)
+                          ? experience.websites[0]
+                          : (experience.websites as string)
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-neutral-500 hover:text-neutral-950 dark:text-neutral-400 dark:hover:text-white transition-colors underline underline-offset-2 font-bold"
+                    >
+                      {experience.company}
+                    </a>
+                  )}
                 </div>
               </div>
+
+              <div className="text-[10px] font-mono tracking-wider text-neutral-400 dark:text-neutral-500 uppercase md:text-right shrink-0">
+                {experience.period}
+              </div>
             </div>
+
+            {/* Description Text */}
+            <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed text-sm mt-1 max-w-3xl font-sans">
+              {experience.description}
+            </p>
           </div>
         ))}
       </div>

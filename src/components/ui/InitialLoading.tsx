@@ -13,8 +13,8 @@ const InitialLoading = ({ onComplete }: IInitialLoadingProps) => {
   const word = "juats.dev";
 
   useEffect(() => {
-    const typeSpeed = 100;
-    const pauseTime = 1000;
+    const typeSpeed = 80;
+    const pauseTime = 800;
 
     const timer = setTimeout(() => {
       if (currentLetterIndex < word.length) {
@@ -23,7 +23,7 @@ const InitialLoading = ({ onComplete }: IInitialLoadingProps) => {
       } else if (currentLetterIndex === word.length) {
         setTimeout(() => {
           setIsVisible(false);
-          setTimeout(onComplete, 500); // Wait for fade out animation
+          setTimeout(onComplete, 400); // Wait for fade out animation
         }, pauseTime);
       }
     }, typeSpeed);
@@ -34,46 +34,35 @@ const InitialLoading = ({ onComplete }: IInitialLoadingProps) => {
   useEffect(() => {
     const cursorTimer = setInterval(() => {
       setShowCursor((prev) => !prev);
-    }, 500);
+    }, 450);
 
     return () => clearInterval(cursorTimer);
   }, []);
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center transition-opacity duration-500 ${
+      className={`fixed inset-0 z-[9999] bg-[#fcfcfc] dark:bg-[#0a0a0a] flex items-center justify-center transition-opacity duration-400 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary-100/20 via-transparent to-transparent dark:from-primary-900/20" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-primary-200/20 via-transparent to-transparent dark:from-primary-800/20" />
-
-      {/* Animated background elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-primary-200/30 dark:bg-primary-800/30 rounded-full blur-xl animate-scale-pulse" />
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-primary-300/30 dark:bg-primary-700/30 rounded-full blur-xl animate-scale-pulse-2" />
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-primary-400/30 dark:bg-primary-600/30 rounded-full blur-xl animate-scale-pulse-3" />
-
-      <div className="relative z-10 flex flex-col items-center space-y-8">
+      <div className="relative z-10 flex flex-col items-center space-y-6">
         <div className="text-center">
-          <h1 className="text-5xl font-bold text-gray-900 dark:text-white animate-slide-up">
+          <h1 className="text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white font-sans">
             {displayedText}
             <span
-              className={`text-primary-500 dark:text-primary-400 ${
+              className={`text-primary-600 dark:text-primary-500 font-light ${
                 showCursor ? "opacity-100" : "opacity-0"
               } transition-opacity duration-100`}
             >
-              |
+              _
             </span>
           </h1>
         </div>
 
-        <div
-          className="w-64 animate-fade-in"
-          style={{ animationDelay: "0.5s" }}
-        >
-          <div className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+        <div className="w-48">
+          <div className="w-full h-[1px] bg-neutral-200 dark:bg-neutral-800 rounded-full overflow-hidden">
             <div
-              className="h-full bg-gradient-to-r from-primary-500 to-primary-700 rounded-full transition-all duration-100 ease-out"
+              className="h-full bg-primary-600 dark:bg-primary-500 transition-all duration-100 ease-out"
               style={{ width: `${(currentLetterIndex / word.length) * 100}%` }}
             />
           </div>

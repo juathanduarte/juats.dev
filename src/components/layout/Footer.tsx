@@ -1,6 +1,4 @@
-import { getSocialIcon } from "@utils/social";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-scroll";
 import { SOCIAL_LINKS } from "../../constants";
 
 const Footer = () => {
@@ -8,67 +6,34 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 dark:bg-black text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col items-center gap-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-primary-400">
-              Juathan Coelho Duarte
-            </h3>
-            <p className="text-gray-300 max-w-md">{t("footer.description")}</p>
-          </div>
-
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">
-              {t("footer.quickLinks")}
-            </h4>
-            <ul className="space-y-2">
-              {[
-                { to: "home", label: t("header.navigation.home") },
-                { to: "about", label: t("header.navigation.about") },
-                { to: "projects", label: t("header.navigation.projects") },
-                { to: "contact", label: t("header.navigation.contact") },
-              ].map((item) => (
-                <li key={item.to}>
-                  <Link
-                    to={item.to}
-                    smooth={true}
-                    duration={800}
-                    offset={-80}
-                    className="text-gray-300 hover:text-primary-400 transition-colors cursor-pointer block focus:outline-none"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">
-              {t("footer.connect")}
-            </h4>
-            <div className="flex gap-4">
-              {SOCIAL_LINKS.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors text-gray-300 hover:text-white focus:outline-none transform hover:scale-110 active:scale-95 duration-200"
-                  aria-label={`${t("common.followMe")} ${link.name}`}
-                >
-                  <span className="sr-only">{link.name}</span>
-                  {getSocialIcon(link.icon, "w-5 h-5")}
-                </a>
-              ))}
-            </div>
-          </div>
+    <footer className="bg-[#fcfcfc] dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 border-t border-neutral-150 dark:border-neutral-900">
+      <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 py-16 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+        <div className="flex flex-col gap-2">
+          <h3 className="text-md font-bold text-neutral-950 dark:text-white">
+            Juathan Coelho Duarte
+          </h3>
+          <p className="text-xs text-neutral-450 dark:text-neutral-500 max-w-sm leading-relaxed font-sans">
+            {t("footer.description")}
+          </p>
         </div>
 
-        <div className="border-t border-gray-800 w-full pt-8 text-center">
-          <p className="text-gray-400">
-            © {currentYear} Juathan Coelho Duarte. {t("footer.copyright")}
+        <div className="flex flex-col items-start md:items-end gap-4">
+          <div className="flex gap-4">
+            {SOCIAL_LINKS.map((link) => (
+              <a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs uppercase tracking-wider font-mono text-neutral-550 hover:text-neutral-950 dark:text-neutral-400 dark:hover:text-white transition-colors duration-150"
+                aria-label={`${t("common.followMe")} ${link.name}`}
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+          <p className="text-[10px] text-neutral-400 dark:text-neutral-505 font-mono">
+            © {currentYear} // {t("footer.copyright")}
           </p>
         </div>
       </div>

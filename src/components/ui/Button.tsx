@@ -28,25 +28,25 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>(
     ref
   ) => {
     const baseClasses =
-      "inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed";
+      "inline-flex items-center justify-center font-mono text-xs uppercase tracking-wider rounded-none transition-colors duration-200 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed";
 
     const variantClasses = {
       primary:
-        "bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500 dark:focus:ring-offset-gray-800",
+        "bg-neutral-950 text-white hover:bg-neutral-800 border border-neutral-950 dark:bg-white dark:text-neutral-950 dark:hover:bg-neutral-150 dark:border-white",
       secondary:
-        "bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-offset-gray-800",
+        "bg-neutral-850 text-white hover:bg-neutral-900 border border-neutral-850 dark:bg-neutral-200 dark:text-neutral-950 dark:hover:bg-neutral-100 dark:border-neutral-200",
       outline:
-        "border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 focus:ring-gray-500",
+        "border border-neutral-350 dark:border-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-900/60",
       ghost:
-        "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:ring-gray-500",
+        "text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-900/80",
       danger:
-        "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500 dark:focus:ring-offset-gray-800",
+        "bg-neutral-950 text-white hover:bg-neutral-800 border border-neutral-950",
     };
 
     const sizeClasses = {
-      sm: "px-3 py-2 text-sm",
-      md: "px-4 py-2 text-base",
-      lg: "px-6 py-3 text-lg",
+      sm: "px-3.5 py-1.5 text-xs",
+      md: "px-5 py-2.5 text-sm",
+      lg: "px-6 py-3.5 text-base",
     };
 
     const widthClasses = fullWidth ? "w-full" : "";
@@ -59,7 +59,7 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>(
         type={type}
         disabled={disabled || loading}
         onClick={onClick}
-        className={`${buttonClasses} transform transition-transform duration-200 ${disabled || loading ? "" : "hover:scale-105 active:scale-95"}`}
+        className={buttonClasses}
       >
         {loading && (
           <span className="mr-2 animate-spin">

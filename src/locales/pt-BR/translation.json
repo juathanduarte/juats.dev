@@ -13,7 +13,9 @@
     "yearsExperience": "Anos de Experiência",
     "projectsCompleted": "Projetos Concluídos",
     "happyClients": "Clientes Satisfeitos",
-    "clientSatisfaction": "Satisfação do Cliente"
+    "clientSatisfaction": "Satisfação do Cliente",
+    "detailsAndImpact": "Detalhes & Impacto",
+    "organizationOrRole": "Organização / Cargo"
   },
   "header": {
     "logo": "juats.dev",
@@ -27,35 +29,28 @@
     }
   },
   "hero": {
-    "greeting": "Olá, me chamo",
-    "nicknameIntro": "Mas pode me chamar de",
-    "title": "Juats",
-    "subtitle": "Juathan Coelho Duarte é Desenvolvedor Full-Stack formado em Ciência da Computação pela Universidade Federal de Pelotas. Crio experiências bonitas, performáticas e acessíveis.",
+    "name": "Juathan Coelho Duarte",
+    "tagline": "Cientista da Computação & Engenheiro de Software",
+    "impact": "Projetando e desenvolvendo sistemas de alta escala — combinando arquiteturas robustas e interfaces intuitivas para entregar soluções confiáveis de ponta a ponta.",
     "cta": {
-      "viewWork": "Ver Meu Trabalho",
-      "getInTouch": "Entre em Contato"
-    },
-    "scrollIndicator": "Role para baixo"
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "cv": "Currículo"
+    }
   },
   "about": {
     "title": "Sobre Mim",
-    "subtitle": "Desenvolvedor Full-Stack formado em Ciência da Computação pela Universidade Federal de Pelotas, com experiência em produtos de alto impacto, liderando frentes de front-end e entregando soluções ponta a ponta.",
+    "subtitle": "Cientista da Computação formado pela Universidade Federal de Pelotas, com experiência em produtos de alto impacto, liderando equipes e entregando soluções de ponta a ponta.",
     "bio": {
-      "paragraph": "Sou Juathan Coelho Duarte, desenvolvedor full-stack com mais de três anos de experiência, formado em Ciência da Computação pela Universidade Federal de Pelotas. Atuo do front-end ao back-end, participando da definição da arquitetura até o suporte da solução, sempre com foco em escalabilidade, qualidade de código, acessibilidade e alto desempenho. Tenho experiência liderando iniciativas de front-end, estruturando sistemas para suportar milhões de interações, criando APIs seguras e escaláveis ​​e entregando produtos que equilibram excelência técnica com uma experiência de usuário fluida."
+      "paragraph": "Sou Juathan Coelho Duarte, desenvolvedor full-stack com mais de três anos de experiência, formado em Ciência da Computação pela Universidade Federal de Pelotas. Atuo do front-end ao back-end, participando da definição da arquitetura até o suporte da solução, sempre com foco em escalabilidade, qualidade de código, acessibilidade e alto desempenho. Tenho experiência liderando equipes e projetos de engenharia, estruturando sistemas para suportar milhões de interações, criando APIs seguras e escaláveis ​​e entregando produtos que equilibram excelência técnica com uma experiência de usuário fluida."
     },
     "journey": {
       "title": "Minha Jornada",
       "experience1": {
         "title": "Líder Técnico de Front-End",
         "company": "Smart NX",
-        "description": "Liderança na reestruturação do front-end, garantindo escalabilidade, desempenho e eficiência em larga escala. Desenvolvimento e aprimoramento da tela de atendimento ao usuário, otimizando a experiência para lidar com mais de 5.000.000 chats mensais de forma fluida e responsiva.",
+        "description": "Liderança técnica do ecossistema front-end, implementando arquitetura de micro-frontends (React, Next.js). Processamento de 4 milhões de chats mensais com 85% de resolução via bot.",
         "period": "Junho 2023 - Junho 2026"
-      },
-      "experience2": {
-        "title": "Desenvolvedor Full-Stack Júnior",
-        "company": "Meupass",
-        "description": "Definição da arquitetura e escolha estratégica de tecnologias, garantindo uma base robusta, escalável e alinhada às necessidades do negócio. Coordenação da equipe de front-end do dashboard administrativo, promovendo boas práticas de desenvolvimento.",
-        "period": "Outubro 2024 - Outubro 2025"
       },
       "experience3": {
         "title": "Desenvolvedor Full-Stack Sênior",
@@ -63,17 +58,23 @@
         "description": "Liderança técnica e desenvolvimento de soluções de ponta a ponta, participando desde a definição da arquitetura até a sustentação das soluções, garantindo robustez, escalabilidade e excelência técnica.",
         "period": "Setembro 2025 - Atual"
       },
-      "experience4": {
-        "title": "Desenvolvedor Front-end / Mobile",
-        "company": "Hut8 - Empresa Júnior da Computação",
-        "description": "Desenvolvimento de aplicação Android utilizando React Native para controle de pesos de equinos com funcionalidades específicas para monitoramento. Gerenciamento de equipe com mais de 25 estudantes, estruturação de processos para orientação de novos membros e organização de processos seletivos.",
-        "period": "Novembro 2020 - Outubro 2022"
-      },
       "experience5": {
         "title": "Desenvolvedor Full-Stack Pleno",
         "company": "Murabei",
         "description": "Atuação no desenvolvimento de soluções de ponta a ponta, integrando ciência de dados e engenharia de software para entregar aplicações robustas, escaláveis e de alto desempenho.",
         "period": "Junho 2026 - Atual"
+      },
+      "experience2": {
+        "title": "Desenvolvedor Full-Stack Júnior",
+        "company": "Meupass",
+        "description": "Definição da arquitetura e escolha estratégica de tecnologias, garantindo uma base robusta, escalável e alinhada às necessidades do negócio. Coordenação da equipe de front-end do dashboard administrativo.",
+        "period": "Outubro 2024 - Outubro 2025"
+      },
+      "experience4": {
+        "title": "Desenvolvedor Front-end / Mobile",
+        "company": "Hut8 - Empresa Júnior da Computação",
+        "description": "Desenvolvimento de aplicação Android utilizando React Native para controle de pesos de equinos. Gerenciamento de equipe com mais de 25 estudantes, estruturação de processos e organização de processos seletivos.",
+        "period": "Novembro 2020 - Outubro 2022"
       }
     },
     "skills": {
@@ -136,8 +137,12 @@
     "experience": {
       "title": "Desenvolvedor Full-Stack Voluntário",
       "company": "ONG Amigo de Pelo",
-      "description": "Desenvolvimento completo da plataforma da ONG Amigo de Pelo, incluindo sistema de adoção, gerenciamento de resgates, controle de doações e dashboard administrativo para voluntários. Utilização de tecnologias modernas para criar uma solução escalável e de alto impacto social.",
-      "period": "Abril 2026 - Atual"
+      "description": "Desenvolvimento completo da plataforma da ONG Amigo de Pelo, incluindo sistema de adoção, gerenciamento de resgates, controle de doações e dashboard administrativo para voluntários. Utilização de tecnologias modernas para criar uma solução escalável e de alto impacto social."
+    },
+    "experience_gc": {
+      "title": "Desenvolvedor de Software / Contribuidor",
+      "company": "Gamers Club Booster",
+      "description": "Desenvolvimento de funcionalidades e otimizações para o Gamers Club Booster, uma extensão de navegador de código aberto focada em aprimorar a experiência dos usuários na plataforma da Gamers Club."
     }
   },
   "contact": {

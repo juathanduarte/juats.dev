@@ -1,6 +1,6 @@
-import SectionTitle from "@components/ui/SectionTitle";
 import { useId } from "react";
 import { useTranslation } from "react-i18next";
+import { Cpu } from "lucide-react";
 import { FaWindows } from "react-icons/fa";
 import {
   SiAntdesign,
@@ -72,42 +72,66 @@ const Technologies = () => {
       title: t("technologies.frontend.title"),
       icon: "",
       technologies: [
-        { name: "HTML5", icon: SiHtml5, color: "text-orange-500" },
-        { name: "CSS3", icon: SiCss3, color: "text-blue-500" },
-        { name: "JavaScript", icon: SiJavascript, color: "text-yellow-500" },
-        { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
-        { name: "React", icon: SiReact, color: "text-cyan-500" },
+        { name: "HTML5", icon: SiHtml5, color: "group-hover:text-orange-500" },
+        { name: "CSS3", icon: SiCss3, color: "group-hover:text-blue-500" },
+        {
+          name: "JavaScript",
+          icon: SiJavascript,
+          color: "group-hover:text-yellow-500",
+        },
+        {
+          name: "TypeScript",
+          icon: SiTypescript,
+          color: "group-hover:text-blue-600",
+        },
+        { name: "React", icon: SiReact, color: "group-hover:text-cyan-500" },
         {
           name: "Next.js",
           icon: SiNextdotjs,
-          color: "text-gray-800 dark:text-white",
+          color: "group-hover:text-neutral-900 dark:group-hover:text-white",
         },
-        { name: "Redux", icon: SiRedux, color: "text-purple-500" },
-        { name: "Zustand", icon: SiRedux, color: "text-orange-600" },
+        { name: "Redux", icon: SiRedux, color: "group-hover:text-purple-500" },
+        {
+          name: "Zustand",
+          icon: SiRedux,
+          color: "group-hover:text-orange-650",
+        },
         {
           name: "Styled Components",
           icon: SiStyledcomponents,
-          color: "text-pink-500",
+          color: "group-hover:text-pink-500",
         },
-        { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-400" },
-        { name: "Ant Design", icon: SiAntdesign, color: "text-blue-500" },
+        {
+          name: "Tailwind CSS",
+          icon: SiTailwindcss,
+          color: "group-hover:text-cyan-400",
+        },
+        {
+          name: "Ant Design",
+          icon: SiAntdesign,
+          color: "group-hover:text-blue-500",
+        },
         {
           name: "shadcn/ui",
           icon: SiShadcnui,
-          color: "text-slate-900 dark:text-white",
+          color: "group-hover:text-neutral-900 dark:group-hover:text-white",
         },
         {
           name: "Radix UI",
           icon: SiRadixui,
-          color: "text-slate-900 dark:text-white",
+          color: "group-hover:text-neutral-900 dark:group-hover:text-white",
         },
-        { name: "Material UI", icon: SiMui, color: "text-blue-500" },
-        { name: "Vitest", icon: SiVitest, color: "text-green-500" },
-        { name: "Jest", icon: SiJest, color: "text-red-500" },
+        {
+          name: "Material UI",
+          icon: SiMui,
+          color: "group-hover:text-blue-500",
+        },
+        { name: "Vitest", icon: SiVitest, color: "group-hover:text-green-500" },
+        { name: "Jest", icon: SiJest, color: "group-hover:text-red-500" },
         {
           name: "Playwright",
           icon: SiPlaywright,
-          color: "text-green-600 dark:text-green-500",
+          color: "group-hover:text-green-600 dark:group-hover:text-green-500",
         },
       ],
     },
@@ -115,66 +139,120 @@ const Technologies = () => {
       title: t("technologies.backend.title"),
       icon: "",
       technologies: [
-        { name: "JavaScript", icon: SiJavascript, color: "text-yellow-500" },
-        { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
-        { name: "Node.js", icon: SiNodedotjs, color: "text-green-600" },
+        {
+          name: "JavaScript",
+          icon: SiJavascript,
+          color: "group-hover:text-yellow-500",
+        },
+        {
+          name: "TypeScript",
+          icon: SiTypescript,
+          color: "group-hover:text-blue-600",
+        },
+        {
+          name: "Node.js",
+          icon: SiNodedotjs,
+          color: "group-hover:text-green-600",
+        },
         {
           name: "Express",
           icon: SiExpress,
-          color: "text-gray-600 dark:text-gray-300",
+          color:
+            "group-hover:text-neutral-600 dark:group-hover:text-neutral-300",
         },
-        { name: "NestJS", icon: SiNestjs, color: "text-red-500" },
+        { name: "NestJS", icon: SiNestjs, color: "group-hover:text-red-500" },
         {
           name: "Next.js",
           icon: SiNextdotjs,
-          color: "text-gray-800 dark:text-white",
+          color: "group-hover:text-neutral-900 dark:group-hover:text-white",
         },
         {
           name: "Prisma",
           icon: SiPrisma,
-          color: "text-gray-700 dark:text-gray-200",
+          color:
+            "group-hover:text-neutral-700 dark:group-hover:text-neutral-200",
         },
-        { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-700" },
-        { name: "SQLite", icon: SiSqlite, color: "text-blue-500" },
-        { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
-        { name: "Supabase", icon: SiSupabase, color: "text-green-600" },
-        { name: "Firebase", icon: SiFirebase, color: "text-amber-500" },
+        {
+          name: "PostgreSQL",
+          icon: SiPostgresql,
+          color: "group-hover:text-blue-700",
+        },
+        { name: "SQLite", icon: SiSqlite, color: "group-hover:text-blue-500" },
+        {
+          name: "MongoDB",
+          icon: SiMongodb,
+          color: "group-hover:text-green-500",
+        },
+        {
+          name: "Supabase",
+          icon: SiSupabase,
+          color: "group-hover:text-green-600",
+        },
+        {
+          name: "Firebase",
+          icon: SiFirebase,
+          color: "group-hover:text-amber-500",
+        },
       ],
     },
     {
       title: t("technologies.mobile.title"),
       icon: "",
       technologies: [
-        { name: "React Native", icon: SiReact, color: "text-cyan-500" },
-        { name: "Expo", icon: SiExpo, color: "text-gray-800 dark:text-white" },
-        { name: "Redux", icon: SiRedux, color: "text-purple-500" },
-        { name: "Zustand", icon: SiRedux, color: "text-orange-600" },
+        {
+          name: "React Native",
+          icon: SiReact,
+          color: "group-hover:text-cyan-500",
+        },
+        {
+          name: "Expo",
+          icon: SiExpo,
+          color: "group-hover:text-neutral-900 dark:group-hover:text-white",
+        },
+        { name: "Redux", icon: SiRedux, color: "group-hover:text-purple-500" },
+        {
+          name: "Zustand",
+          icon: SiRedux,
+          color: "group-hover:text-orange-650",
+        },
         {
           name: "Styled Components",
           icon: SiStyledcomponents,
-          color: "text-pink-500",
+          color: "group-hover:text-pink-500",
         },
-        { name: "Jest", icon: SiJest, color: "text-red-500" },
+        { name: "Jest", icon: SiJest, color: "group-hover:text-red-500" },
       ],
     },
     {
       title: t("technologies.others.title"),
       icon: "",
       technologies: [
-        { name: "C", icon: SiCplusplus, color: "text-blue-600" },
-        { name: "Python", icon: SiPython, color: "text-yellow-600" },
-        { name: "Java", icon: SiOpenjdk, color: "text-red-600" },
-        { name: "Docker", icon: SiDocker, color: "text-blue-500" },
-        { name: "Git", icon: SiGit, color: "text-orange-500" },
+        { name: "C", icon: SiCplusplus, color: "group-hover:text-blue-600" },
+        {
+          name: "Python",
+          icon: SiPython,
+          color: "group-hover:text-yellow-600",
+        },
+        { name: "Java", icon: SiOpenjdk, color: "group-hover:text-red-600" },
+        { name: "Docker", icon: SiDocker, color: "group-hover:text-blue-500" },
+        { name: "Git", icon: SiGit, color: "group-hover:text-orange-500" },
         {
           name: "GitHub",
           icon: SiGithub,
-          color: "text-gray-800 dark:text-white",
+          color: "group-hover:text-neutral-900 dark:group-hover:text-white",
         },
-        { name: "Bitbucket", icon: SiBitbucket, color: "text-blue-600" },
-        { name: "Linux", icon: SiLinux, color: "text-yellow-600" },
-        { name: "Jira", icon: SiJira, color: "text-blue-500" },
-        { name: "Windows", icon: FaWindows, color: "text-blue-500" },
+        {
+          name: "Bitbucket",
+          icon: SiBitbucket,
+          color: "group-hover:text-blue-600",
+        },
+        { name: "Linux", icon: SiLinux, color: "group-hover:text-yellow-600" },
+        { name: "Jira", icon: SiJira, color: "group-hover:text-blue-500" },
+        {
+          name: "Windows",
+          icon: FaWindows,
+          color: "group-hover:text-blue-500",
+        },
       ],
     },
   ];
@@ -182,46 +260,50 @@ const Technologies = () => {
   return (
     <section
       id="technologies"
-      className="section-padding bg-gradient-to-br from-white to-primary-50/20 dark:from-gray-900 dark:to-gray-800"
+      className="section-padding bg-zinc-50 dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-900 transition-colors duration-300 relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-20">
-          <SectionTitle title={t("technologies.title")} />
+      <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
+        <div className="flex flex-col gap-12">
+          
+          {/* Header */}
+          <div className="flex items-center gap-2">
+            <Cpu className="w-5 h-5 text-zinc-500" />
+            <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 font-sans">
+              {t("technologies.title")}
+            </h2>
+          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="flex flex-col border-t border-zinc-200 dark:border-zinc-900">
             {technologyCategories.map((category) => (
               <div
                 key={`${sectionId}-${category.title}`}
-                className="card hover:scale-[1.02] transition-all duration-300"
+                className="grid grid-cols-1 md:grid-cols-12 py-8 md:py-10 border-b border-zinc-200 dark:border-zinc-900 gap-6 items-start"
               >
-                <div className="space-y-6">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-8 bg-gradient-to-b from-primary-500 to-primary-700 rounded-full" />
-                    <h3 className="text-2xl font-display font-bold text-gray-900 dark:text-white">
-                      {category.title}
-                    </h3>
-                  </div>
+                {/* Category Header (Left Column) */}
+                <div className="md:col-span-4">
+                  <h3 className="text-xs uppercase tracking-wider font-mono text-neutral-450 dark:text-neutral-500">
+                    {category.title}
+                  </h3>
+                </div>
 
-                  <div className="grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 gap-3 sm:gap-4">
-                    {category.technologies.map((tech) => {
-                      const IconComponent = tech.icon;
-                      return (
-                        <div
-                          key={`${sectionId}-${category.title}-${tech.name}`}
-                          className="group flex flex-col items-center p-3 sm:p-4 rounded-lg bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700/50 dark:to-gray-800/50 hover:from-primary-50 hover:to-primary-100 dark:hover:from-primary-900/20 dark:hover:to-primary-800/20 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
-                        >
-                          <div className="p-3 rounded-lg bg-white/80 dark:bg-gray-800/80 border border-gray-200/50 dark:border-gray-600/50 group-hover:border-gray-300 dark:group-hover:border-gray-500 transition-all duration-300">
-                            <IconComponent
-                              className={`w-6 h-6 ${tech.color} group-hover:scale-110 transition-transform duration-200`}
-                            />
-                          </div>
-                          <span className="text-xs font-semibold text-gray-700 dark:text-gray-300 mt-2 text-center leading-tight group-hover:text-primary-700 dark:group-hover:text-primary-300 transition-colors break-words hyphens-auto">
-                            {tech.name}
-                          </span>
-                        </div>
-                      );
-                    })}
-                  </div>
+                {/* Technology Tags (Right Column) */}
+                <div className="md:col-span-8 flex flex-wrap gap-2">
+                  {category.technologies.map((tech) => {
+                    const IconComponent = tech.icon;
+                    return (
+                      <div
+                        key={`${sectionId}-${category.title}-${tech.name}`}
+                        className="group flex items-center gap-2 px-3 py-1.5 border border-zinc-200 dark:border-zinc-900 text-zinc-600 dark:text-zinc-400 hover:border-zinc-400 dark:hover:border-zinc-700 hover:text-zinc-900 dark:hover:text-zinc-100 transition-all duration-200 bg-white dark:bg-zinc-950/20 backdrop-blur-sm"
+                      >
+                        <IconComponent
+                          className="w-3.5 h-3.5 text-zinc-400 dark:text-zinc-550 transition-colors duration-200"
+                        />
+                        <span className="text-xs font-mono tracking-tight">
+                          {tech.name}
+                        </span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             ))}

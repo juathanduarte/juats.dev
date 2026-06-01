@@ -43,12 +43,7 @@ const writeStoredTheme = (theme: TTheme) => {
 };
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const prefersDark = (() => {
-    if (typeof window === "undefined") return false;
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
-  })();
-
-  const initialTheme = readStoredTheme() ?? (prefersDark ? "dark" : "light");
+  const initialTheme = readStoredTheme() ?? "dark";
   const [theme, setThemeState] = useState<TTheme>(initialTheme);
 
   useEffect(() => {

@@ -66,22 +66,22 @@ const About = () => {
     // biome-ignore lint/correctness/useUniqueElementIds: <>
     <section
       id="about"
-      className="section-padding bg-gradient-to-br from-primary-50/30 to-primary-100/30 dark:from-gray-800 dark:to-gray-900"
+      className="section-padding bg-[#fcfcfc] dark:bg-[#0a0a0a] border-t border-neutral-150 dark:border-neutral-900"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-20">
+      <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="space-y-16 sm:space-y-20">
           <div className="space-y-6">
-            <SectionTitle title={t("about.journey.title")} />
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-center leading-relaxed">
+            <SectionTitle title={t("about.title")} />
+            <p className="text-sm sm:text-base text-neutral-550 dark:text-neutral-400 max-w-2xl mx-auto text-center leading-relaxed font-sans">
               {t("about.bio.paragraph")}
             </p>
           </div>
 
-          <div className="card">
-            <Stats />
-          </div>
+          <Stats />
 
-          <Timeline items={experiences} />
+          <div className="pt-4">
+            <Timeline items={experiences} />
+          </div>
         </div>
       </div>
     </section>

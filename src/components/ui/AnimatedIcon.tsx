@@ -1,10 +1,22 @@
 import { useEffect, useState } from "react";
 
-type TEmojiItem = { emoji: string; label: string };
+type TEmojiItem = { emojiUrl: string; label: string; key: string };
 const ICONS: TEmojiItem[] = [
-  { emoji: "🧉", label: "mate" },
-  { emoji: "☕", label: "hot beverage" },
-  { emoji: "💻", label: "laptop" },
+  { 
+    emojiUrl: "https://cdn.jsdelivr.net/npm/emoji-datasource-apple@14.0.0/img/apple/64/1f9c9.png", 
+    label: "mate",
+    key: "mate"
+  },
+  { 
+    emojiUrl: "https://cdn.jsdelivr.net/npm/emoji-datasource-apple@14.0.0/img/apple/64/2615.png", 
+    label: "hot beverage",
+    key: "coffee"
+  },
+  { 
+    emojiUrl: "https://cdn.jsdelivr.net/npm/emoji-datasource-apple@14.0.0/img/apple/64/1f4bb.png", 
+    label: "laptop",
+    key: "laptop"
+  },
 ];
 
 const AnimatedIcon = () => {
@@ -19,25 +31,26 @@ const AnimatedIcon = () => {
   }, []);
 
   return (
-    <div className="relative w-6 h-6 lg:w-8 lg:h-8 overflow-hidden flex items-center justify-center">
+    <div className="relative w-5 h-5 lg:w-6 lg:h-6 overflow-hidden flex items-center justify-center">
       {ICONS.map((item, index) => {
         const isActive = index === currentIcon;
 
         return (
           <span
-            key={item.emoji}
-            role="img"
-            aria-label={item.label}
+            key={item.key}
             className={`absolute transition-all duration-500 [transition-timing-function:cubic-bezier(0.22,0.61,0.36,1)] will-change-transform select-none ${
               isActive
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 -translate-x-3"
+                ? "opacity-100 translate-x-0 scale-100"
+                : "opacity-0 -translate-x-3 scale-95"
             }`}
             aria-hidden={!isActive}
           >
-            <span className="text-[1.25rem] leading-none lg:text-[1.5rem]">
-              {item.emoji}
-            </span>
+            <img
+              src={item.emojiUrl}
+              alt={item.label}
+              className="w-5 h-5 lg:w-6 lg:h-6 object-contain select-none"
+              draggable="false"
+            />
           </span>
         );
       })}

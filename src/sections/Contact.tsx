@@ -3,7 +3,6 @@ import Input from "@components/ui/Input";
 import SectionTitle from "@components/ui/SectionTitle";
 import TextArea from "@components/ui/TextArea";
 import { SOCIAL_LINKS } from "@constants/index";
-import { getSocialIcon } from "@utils/social";
 import { useId, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
@@ -50,10 +49,8 @@ const Contact = () => {
     setSubmitStatus("idle");
 
     try {
-      // Simular envio de email (aqui você pode integrar com um serviço como EmailJS, Formspree, etc.)
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      // Por enquanto, vamos redirecionar para o WhatsApp com a mensagem
       const whatsappMessage = encodeURIComponent(
         `Olá Juats! Meu nome é ${formData.name} e quero falar sobre: ${formData.subject}\n\nMensagem: ${formData.message}\n\nEmail: ${formData.email}`
       );
@@ -82,22 +79,25 @@ const Contact = () => {
   };
 
   return (
-    // biome-ignore lint/correctness/useUniqueElementIds: <>
     <section
       id="contact"
-      className="min-h-[calc(100vh)] py-6 flex items-center bg-white dark:bg-gray-800"
+      className="section-padding bg-[#fcfcfc] dark:bg-[#0a0a0a] border-t border-neutral-150 dark:border-neutral-900"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center gap-16">
+      <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 w-full flex flex-col gap-16">
         <div className="w-full">
           <SectionTitle title={t("contact.title")} />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full">
-          <div className="flex flex-col gap-6">
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 w-full items-start">
+          {/* Form Area */}
+          <div className="lg:col-span-7 flex flex-col gap-6">
+            <h3 className="text-md font-bold text-neutral-950 dark:text-white font-mono uppercase tracking-wider border-b border-neutral-150 dark:border-neutral-900 pb-2">
               {t("contact.form.title")}
             </h3>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-6 bg-transparent w-full"
+            >
               <Input
                 id={nameId}
                 name="name"
@@ -143,16 +143,16 @@ const Contact = () => {
               />
 
               {submitStatus === "success" && (
-                <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
-                  <p className="text-green-700 dark:text-green-300 text-sm">
+                <div className="p-4 bg-neutral-100 dark:bg-neutral-900 border border-neutral-350 dark:border-neutral-800">
+                  <p className="text-neutral-900 dark:text-neutral-100 text-xs font-semibold font-mono">
                     {t("contact.form.successMessage")}
                   </p>
                 </div>
               )}
 
               {submitStatus === "error" && (
-                <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
-                  <p className="text-red-700 dark:text-red-300 text-sm">
+                <div className="p-4 bg-neutral-100 dark:bg-neutral-900 border border-neutral-350 dark:border-neutral-800">
+                  <p className="text-neutral-900 dark:text-neutral-100 text-xs font-semibold font-mono">
                     {t("contact.form.errorMessage")}
                   </p>
                 </div>
@@ -161,9 +161,10 @@ const Contact = () => {
               <Button
                 type="submit"
                 variant="primary"
-                size="lg"
+                size="md"
                 fullWidth
                 disabled={isSubmitting}
+                className="font-mono uppercase tracking-wider text-xs"
               >
                 {isSubmitting
                   ? t("contact.form.submitting")
@@ -172,23 +173,24 @@ const Contact = () => {
             </form>
           </div>
 
-          <div className="flex flex-col gap-8">
-            <div className="flex flex-col gap-6">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          {/* Contact Info Area */}
+          <div className="lg:col-span-5 flex flex-col gap-10">
+            <div className="flex flex-col gap-4">
+              <h3 className="text-md font-bold text-neutral-950 dark:text-white font-mono uppercase tracking-wider border-b border-neutral-150 dark:border-neutral-900 pb-2">
                 {t("contact.info.title")}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+              <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed font-sans">
                 {t("contact.info.description")}
               </p>
             </div>
 
-            <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center">
-                  <FaEnvelope className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+            <div className="flex flex-col gap-6 border-t border-neutral-200 dark:border-neutral-850 pt-6">
+              <div className="flex items-center gap-4">
+                <div className="w-5 h-5 flex items-center justify-center shrink-0 text-neutral-550 dark:text-neutral-450">
+                  <FaEnvelope className="w-4 h-4" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-900 dark:text-white">
+                  <p className="text-[10px] font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 font-mono">
                     {t("contact.info.email")}
                   </p>
                   <a
@@ -196,78 +198,76 @@ const Contact = () => {
                       SOCIAL_LINKS.find((link) => link.icon === "email")?.url ||
                       "mailto:juathanduarte13@gmail.com"
                     }
-                    className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
-                    tabIndex={0}
+                    className="text-sm text-neutral-850 dark:text-neutral-200 hover:text-neutral-950 dark:hover:text-white transition-colors font-mono"
                   >
                     juathanduarte13@gmail.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center">
-                  <FaMapMarkerAlt className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+              <div className="flex items-center gap-4">
+                <div className="w-5 h-5 flex items-center justify-center shrink-0 text-neutral-550 dark:text-neutral-450">
+                  <FaMapMarkerAlt className="w-4 h-4" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-900 dark:text-white">
+                  <p className="text-[10px] font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 font-mono">
                     {t("contact.info.location")}
                   </p>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <p className="text-sm text-neutral-850 dark:text-neutral-200 font-mono">
                     {t("contact.info.locationValue")}
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center">
-                  <FaWhatsapp className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+              <div className="flex items-center gap-4">
+                <div className="w-5 h-5 flex items-center justify-center shrink-0 text-neutral-550 dark:text-neutral-450">
+                  <FaWhatsapp className="w-4 h-4" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-900 dark:text-white">
+                  <p className="text-[10px] font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 font-mono">
                     {t("contact.info.whatsapp")}
                   </p>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <p className="text-sm text-neutral-850 dark:text-neutral-200 font-mono">
                     (53) 99951-5492
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col gap-4">
-              <h4 className="text-lg font-medium text-gray-900 dark:text-white">
+            <div className="flex flex-col gap-4 border-t border-neutral-200 dark:border-neutral-850 pt-6">
+              <h4 className="text-[10px] font-semibold uppercase tracking-wider text-neutral-950 dark:text-white font-mono">
                 {t("contact.whatsapp.title")}
               </h4>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed font-sans">
                 {t("contact.whatsapp.description")}
               </p>
               <Button
                 onClick={handleWhatsAppClick}
-                variant="primary"
-                size="lg"
+                variant="outline"
+                size="md"
                 fullWidth
-                className="bg-green-600 hover:bg-green-700 text-white"
+                className="font-mono text-xs uppercase tracking-wider hover:border-neutral-950 dark:hover:border-white hover:text-neutral-950 dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors"
               >
-                <FaWhatsapp className="w-5 h-5 mr-2" />
+                <FaWhatsapp className="w-4 h-4 mr-2 shrink-0" />
                 {t("contact.whatsapp.button")}
               </Button>
             </div>
 
-            <div className="flex flex-col gap-4">
-              <h4 className="text-lg font-medium text-gray-900 dark:text-white">
+            <div className="flex flex-col gap-4 border-t border-neutral-200 dark:border-neutral-850 pt-6">
+              <h4 className="text-[10px] font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 font-mono">
                 {t("common.followMe")}
               </h4>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-2">
                 {SOCIAL_LINKS.map((link) => (
                   <a
                     key={link.name}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary-100 dark:hover:bg-primary-900 transition-colors"
+                    className="text-xs uppercase tracking-wider font-mono text-neutral-500 hover:text-neutral-950 dark:text-neutral-400 dark:hover:text-white transition-colors border border-neutral-200 dark:border-neutral-850 px-4 py-2 hover:bg-neutral-50 dark:hover:bg-neutral-900"
                     aria-label={`${t("common.followMe")} ${link.name}`}
                   >
-                    <span className="sr-only">{link.name}</span>
-                    {getSocialIcon(link.icon, "w-6 h-6")}
+                    {link.name}
                   </a>
                 ))}
               </div>

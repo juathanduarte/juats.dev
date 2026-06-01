@@ -81,8 +81,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Poppins", "Inter", "system-ui", "sans-serif"],
-        mono: ["JetBrains Mono", "Fira Code", "monospace"],
+        display: ["Inter", "system-ui", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
       },
       fontSize: {
         xs: ["0.75rem", { lineHeight: "1rem" }],

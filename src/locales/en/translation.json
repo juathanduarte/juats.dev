@@ -13,7 +13,9 @@
     "yearsExperience": "Years Experience",
     "projectsCompleted": "Projects Completed",
     "happyClients": "Happy Clients",
-    "clientSatisfaction": "Client Satisfaction"
+    "clientSatisfaction": "Client Satisfaction",
+    "detailsAndImpact": "Details & Impact",
+    "organizationOrRole": "Organization / Role"
   },
   "header": {
     "logo": "juats.dev",
@@ -27,35 +29,28 @@
     }
   },
   "hero": {
-    "greeting": "Hi, my name is",
-    "nicknameIntro": "But you can call me",
-    "title": "Juats",
-    "subtitle": "Juathan Coelho Duarte is a Full-Stack Developer with a degree in Computer Science from the Federal University of Pelotas. I create beautiful, performant, and accessible experiences.",
+    "name": "Juathan Coelho Duarte",
+    "tagline": "Computer Scientist & Software Engineer",
+    "impact": "Designing and developing high-scale systems — combining robust architectures and intuitive interfaces to deliver reliable, end-to-end solutions.",
     "cta": {
-      "viewWork": "View My Work",
-      "getInTouch": "Get In Touch"
-    },
-    "scrollIndicator": "Scroll down"
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "cv": "Resume"
+    }
   },
   "about": {
     "title": "About Me",
-    "subtitle": "Full-Stack Developer with a degree in Computer Science, experienced in high-impact products, leading front-end initiatives and delivering end-to-end solutions.",
+    "subtitle": "Computer Scientist graduated from the Federal University of Pelotas, with experience in high-impact products, leading teams and delivering end-to-end solutions.",
     "bio": {
-      "paragraph": "I am Juathan Coelho Duarte, a full-stack developer with over three years of experience, graduated in Computer Science from the Federal University of Pelotas. I work from the front-end to the back-end, participating from defining the architecture to supporting solutions, always focusing on scalability, code quality, accessibility, and high performance. I have experience leading front-end initiatives, structuring systems to support millions of interactions, building secure and scalable APIs, and delivering products that balance technical excellence with a seamless user experience."
+      "paragraph": "I am Juathan Coelho Duarte, a full-stack developer with over three years of experience, graduated in Computer Science from the Federal University of Pelotas. I work from the front-end to the back-end, participating from defining the architecture to supporting solutions, always focusing on scalability, code quality, accessibility, and high performance. I have experience leading engineering teams and projects, structuring systems to support millions of interactions, building secure and scalable APIs, and delivering products that balance technical excellence with a seamless user experience."
     },
     "journey": {
       "title": "My Journey",
       "experience1": {
         "title": "Front-End Technical Lead",
         "company": "Smart NX",
-        "description": "Leadership in front-end restructuring, ensuring scalability, performance and efficiency at scale. Development and improvement of the user support screen, optimizing the experience to handle more than 5,000,000 monthly chats in a fluid and responsive way.",
+        "description": "Technical leadership of the front-end ecosystem, implementing a micro-frontend architecture (React, Next.js). Processed 4M+ monthly chats with an 85% bot resolution rate.",
         "period": "June 2023 - June 2026"
-      },
-      "experience2": {
-        "title": "Junior Full-Stack Developer",
-        "company": "Meupass",
-        "description": "Architecture definition and strategic technology choices, ensuring a robust, scalable and business-aligned foundation. Coordination of the administrative dashboard front-end team, promoting development best practices.",
-        "period": "October 2024 - October 2025"
       },
       "experience3": {
         "title": "Senior Full-Stack Developer",
@@ -63,17 +58,23 @@
         "description": "Technical leadership and end-to-end solution development, participating from architecture definition to solution maintenance, ensuring robustness, scalability, and technical excellence.",
         "period": "September 2025 - Present"
       },
-      "experience4": {
-        "title": "Front-end / Mobile Developer",
-        "company": "Hut8 - Junior Computing Company",
-        "description": "Android application development using React Native for equine weight control with specific monitoring features. Team management of over 25 students, process structuring for new member orientation, and organization of selection processes.",
-        "period": "November 2020 - October 2022"
-      },
       "experience5": {
         "title": "Mid-Level Full-Stack Developer",
         "company": "Murabei",
         "description": "Development of end-to-end solutions, integrating data science and software engineering to deliver robust, scalable, and high-performance applications.",
         "period": "June 2026 - Present"
+      },
+      "experience2": {
+        "title": "Junior Full-Stack Developer",
+        "company": "Meupass",
+        "description": "Architecture definition and strategic technology choices, ensuring a robust, scalable and business-aligned foundation. Coordinated the administrative dashboard front-end team.",
+        "period": "October 2024 - October 2025"
+      },
+      "experience4": {
+        "title": "Front-end / Mobile Developer",
+        "company": "Hut8 - Junior Computing Company",
+        "description": "Android application development using React Native for equine weight control. Managed a team of over 25 students, structuring processes and selection events.",
+        "period": "November 2020 - October 2022"
       }
     },
     "skills": {
@@ -136,8 +137,12 @@
     "experience": {
       "title": "Volunteer Full-Stack Developer",
       "company": "NGO Amigo de Pelo",
-      "description": "Full development of the Amigo de Pelo NGO platform, including an adoption system, rescue management, donation control, and a volunteer administrative dashboard. Utilizing modern technologies to create a scalable solution with high social impact.",
-      "period": "April 2026 - Present"
+      "description": "Full development of the Amigo de Pelo NGO platform, including an adoption system, rescue management, donation control, and a volunteer administrative dashboard. Utilizing modern technologies to create a scalable solution with high social impact."
+    },
+    "experience_gc": {
+      "title": "Software Developer / Contributor",
+      "company": "Gamers Club Booster",
+      "description": "Developed features and optimizations for Gamers Club Booster, an open-source browser extension designed to enhance the Gamers Club platform user experience."
     }
   },
   "contact": {
