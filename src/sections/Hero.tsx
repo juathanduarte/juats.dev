@@ -21,9 +21,8 @@ const Hero = () => {
     },
     {
       name: t("hero.cta.cv"),
-      url: "/cv.pdf",
+      url: "https://drive.google.com/file/d/1Gu7oQmcLx0UFqUKQ8OpyqPiv_-QJBU04/view?usp=sharing",
       icon: FileText,
-      download: true,
     },
   ];
 
