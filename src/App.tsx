@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { useState } from "react";
 import Footer from "./components/layout/Footer";
 import Header from "./components/layout/Header";
@@ -25,6 +26,7 @@ const App = () => {
   };
 
   return (
+    <>
     <div className="min-h-screen bg-[#fcfcfc] dark:bg-[#0a0a0a]">
       {isLoading && <InitialLoading onComplete={handleLoadingComplete} />}
 
@@ -43,6 +45,8 @@ const App = () => {
         </div>
       )}
     </div>
+    <SpeedInsights />
+    </>
   );
 };
 
