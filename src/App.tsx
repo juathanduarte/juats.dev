@@ -1,20 +1,21 @@
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import Footer from "./components/layout/Footer";
 import Header from "./components/layout/Header";
 import InitialLoading from "./components/ui/InitialLoading";
 import { useSEO } from "./hooks/useSEO";
-import Experience from "./sections/Experience";
-import Contact from "./sections/Contact";
 import Hero from "./sections/Hero";
-import Projects from "./sections/Projects";
-import Technologies from "./sections/Technologies";
-import Volunteer from "./sections/Volunteer";
+
+const Experience = lazy(() => import("./sections/Experience"));
+const Technologies = lazy(() => import("./sections/Technologies"));
+const Projects = lazy(() => import("./sections/Projects"));
+const Volunteer = lazy(() => import("./sections/Volunteer"));
+const Contact = lazy(() => import("./sections/Contact"));
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [showContent, setShowContent] = useState(false);
+  const [showBelowFold, setShowBelowFold] = useState(false);
 
   useSEO({
     keywords:
@@ -23,31 +24,31 @@ const App = () => {
 
   const handleLoadingComplete = () => {
     setIsLoading(false);
-    setShowContent(true);
+    setShowBelowFold(true);
   };
 
   return (
     <>
-    <div className="min-h-screen bg-[#fcfcfc] dark:bg-[#0a0a0a]">
-      {isLoading && <InitialLoading onComplete={handleLoadingComplete} />}
+      <div className="min-h-screen bg-[#fcfcfc] dark:bg-[#0a0a0a]">
+        {isLoading && <InitialLoading onComplete={handleLoadingComplete} />}
 
-      {showContent && (
-        <div className="min-h-screen animate-slide-up">
-          <Header />
-          <main className="flex flex-col">
-            <Hero />
-            <Experience />
-            <Technologies />
-            <Projects />
-            <Volunteer />
-            <Contact />
-          </main>
-          <Footer />
-        </div>
-      )}
-    </div>
-    <Analytics />
-    <SpeedInsights />
+        <Header />
+        <main className="flex flex-col">
+          <Hero />
+          {showBelowFold && (
+            <Suspense fallback={null}>
+              <Experience />
+              <Technologies />
+              <Projects />
+              <Volunteer />
+              <Contact />
+            </Suspense>
+          )}
+        </main>
+        {showBelowFold && <Footer />}
+      </div>
+      <Analytics />
+      <SpeedInsights />
     </>
   );
 };

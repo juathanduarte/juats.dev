@@ -26,5 +26,10 @@
   "files.associations": {
     "*.ts": "typescript",
     "*.tsx": "typescriptreact"
+  },
+  "plugins": {
+    "vercel": {
+      "enabled": true
+    }
   }
 }

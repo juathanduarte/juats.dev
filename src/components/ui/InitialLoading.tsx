@@ -13,8 +13,8 @@ const InitialLoading = ({ onComplete }: IInitialLoadingProps) => {
   const word = "juats.dev";
 
   useEffect(() => {
-    const typeSpeed = 80;
-    const pauseTime = 800;
+    const typeSpeed = 30;
+    const pauseTime = 150;
 
     const timer = setTimeout(() => {
       if (currentLetterIndex < word.length) {
@@ -23,7 +23,7 @@ const InitialLoading = ({ onComplete }: IInitialLoadingProps) => {
       } else if (currentLetterIndex === word.length) {
         setTimeout(() => {
           setIsVisible(false);
-          setTimeout(onComplete, 400);
+          setTimeout(onComplete, 200);
         }, pauseTime);
       }
     }, typeSpeed);
@@ -41,8 +41,8 @@ const InitialLoading = ({ onComplete }: IInitialLoadingProps) => {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] bg-[#fcfcfc] dark:bg-[#0a0a0a] flex items-center justify-center transition-opacity duration-400 ${
-        isVisible ? "opacity-100" : "opacity-0"
+      className={`fixed inset-0 z-[9999] bg-[#fcfcfc] dark:bg-[#0a0a0a] flex items-center justify-center transition-opacity duration-200 ${
+        isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
       <div className="relative z-10 flex flex-col items-center gap-6">
