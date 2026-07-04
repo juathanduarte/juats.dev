@@ -74,7 +74,6 @@ const Hero = () => {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      download={link.download}
                       className="relative w-full md:w-auto px-4 py-3 md:py-2 text-xs font-mono uppercase tracking-wider text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-50 transition-colors focus:outline-none flex items-center justify-center md:justify-start gap-2 group border-b border-zinc-200/50 dark:border-zinc-800/30 md:border-b-0 last:border-b-0"
                       onMouseEnter={() => setHoveredIdx(idx)}
                       onMouseLeave={() => setHoveredIdx(null)}
