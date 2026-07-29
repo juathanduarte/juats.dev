@@ -75,6 +75,18 @@
         "company": "Hut8 - Empresa Júnior da Computação",
         "description": "Desenvolvimento de aplicação Android utilizando React Native para controle de pesos de equinos. Gerenciamento de equipe com mais de 25 estudantes, estruturação de processos e organização de processos seletivos.",
         "period": "Novembro 2020 - Outubro 2022"
+      },
+      "experience6": {
+        "title": "Estagiário de Ciência da Computação",
+        "company": "Prefeitura Municipal de Canguçu",
+        "description": "Desenvolvimento e implantação de projetos de informatização, com manutenção de infraestrutura computacional e instalação e configuração de dispositivos e software. Atuação no diagnóstico e correção de falhas, otimização de processos informatizados, supervisão da rede municipal e prestação de suporte técnico e administrativo.",
+        "period": "Março 2021 - Agosto 2022"
+      },
+      "experience7": {
+        "title": "Estagiário de Informática",
+        "company": "Câmara Municipal de Vereadores de Canguçu",
+        "description": "Criação e implementação de soluções tecnológicas, com definição de requisitos e melhorias em processos informatizados. Atuação na avaliação e configuração de redes e servidores, manutenção preventiva e corretiva de hardware e software, instalação e configuração de softwares, implementação de novos dispositivos, além de diagnóstico técnico e otimização de sistemas.",
+        "period": "Janeiro 2016 - Janeiro 2018"
       }
     },
     "skills": {

@@ -75,6 +75,18 @@
         "company": "Hut8 - Junior Computing Company",
         "description": "Android application development using React Native for equine weight control. Managed a team of over 25 students, structuring processes and selection events.",
         "period": "November 2020 - October 2022"
+      },
+      "experience6": {
+        "title": "Computer Science Intern",
+        "company": "Canguçu City Hall",
+        "description": "Development and deployment of informatization projects, including computing infrastructure maintenance and device and software installation and configuration. Worked on troubleshooting and fault correction, optimization of informatized processes, municipal network supervision, and technical and administrative support.",
+        "period": "March 2021 - August 2022"
+      },
+      "experience7": {
+        "title": "IT Intern",
+        "company": "Canguçu City Council",
+        "description": "Creation and implementation of technological solutions, including requirements definition and improvements to informatized processes. Worked on network and server evaluation and configuration, preventive and corrective hardware and software maintenance, software installation and configuration, implementation of new devices, and technical diagnostics and system optimization.",
+        "period": "January 2016 - January 2018"
       }
     },
     "skills": {

@@ -75,6 +75,18 @@
         "company": "Hut8 - Empresa Junior de Computación",
         "description": "Desarrollo de aplicación Android utilizando React Native para control de pesos de equinos. Gestión de equipo con más de 25 estudiantes, estructuración de procesos y organización de procesos selectivos.",
         "period": "Noviembre 2020 - Octubre 2022"
+      },
+      "experience6": {
+        "title": "Pasante de Ciencias de la Computación",
+        "company": "Municipalidad de Canguçu",
+        "description": "Desarrollo e implementación de proyectos de informatización, con mantenimiento de infraestructura computacional e instalación y configuración de dispositivos y software. Actuación en el diagnóstico y corrección de fallas, optimización de procesos informatizados, supervisión de la red municipal y soporte técnico y administrativo.",
+        "period": "Marzo 2021 - Agosto 2022"
+      },
+      "experience7": {
+        "title": "Pasante de Informática",
+        "company": "Concejo Deliberante de Canguçu",
+        "description": "Creación e implementación de soluciones tecnológicas, con definición de requisitos y mejoras en procesos informatizados. Actuación en la evaluación y configuración de redes y servidores, mantenimiento preventivo y correctivo de hardware y software, instalación y configuración de software, implementación de nuevos dispositivos, además de diagnóstico técnico y optimización de sistemas.",
+        "period": "Enero 2016 - Enero 2018"
       }
     },
     "skills": {

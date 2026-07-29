@@ -2,6 +2,8 @@ import SectionTitle from "@components/ui/SectionTitle";
 import Stats from "@components/ui/Stats";
 import Timeline from "@components/ui/Timeline";
 import { useTranslation } from "react-i18next";
+import camaraCangucuLogo from "@/assets/images/camara_cangucu.png";
+import cangucuLogo from "@/assets/images/cangucu.png";
 import dhauzLogo from "@/assets/images/dhauz_logo.jpeg";
 import hut8Logo from "@/assets/images/hut8_logo.jpeg";
 import meupassLogo from "@/assets/images/meupass_logo.jpeg";
@@ -58,6 +60,24 @@ const About = () => {
       period: t("about.journey.experience4.period"),
       logo: hut8Logo,
       websites: "https://www.hut8.com.br/",
+    },
+    {
+      id: "experience6",
+      title: t("about.journey.experience6.title"),
+      company: t("about.journey.experience6.company"),
+      description: t("about.journey.experience6.description"),
+      period: t("about.journey.experience6.period"),
+      logo: cangucuLogo,
+      websites: "https://www.cangucu.rs.gov.br/",
+    },
+    {
+      id: "experience7",
+      title: t("about.journey.experience7.title"),
+      company: t("about.journey.experience7.company"),
+      description: t("about.journey.experience7.description"),
+      period: t("about.journey.experience7.period"),
+      logo: camaraCangucuLogo,
+      websites: "https://camaracangucu.rs.gov.br/",
       isLast: true,
     },
   ];

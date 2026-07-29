@@ -1,3 +1,5 @@
+import camaraCangucuLogo from "@/assets/images/camara_cangucu.png";
+import cangucuLogo from "@/assets/images/cangucu.png";
 import dhauzLogo from "@/assets/images/dhauz_logo.jpeg";
 import hut8Logo from "@/assets/images/hut8_logo.jpeg";
 import meupassLogo from "@/assets/images/meupass_logo.jpeg";
@@ -30,6 +32,16 @@ const Experience = () => {
       logo: meupassLogo,
     },
     { key: "experience4", url: "https://www.hut8.com.br/", logo: hut8Logo },
+    {
+      key: "experience6",
+      url: "https://www.cangucu.rs.gov.br/",
+      logo: cangucuLogo,
+    },
+    {
+      key: "experience7",
+      url: "https://camaracangucu.rs.gov.br/",
+      logo: camaraCangucuLogo,
+    },
   ];
 
   return (
