@@ -196,6 +196,12 @@
     "connect": "Conecta",
     "copyright": "Todos los derechos reservados, tchê! 🧉"
   },
+  "seo": {
+    "title": "Juathan C. Duarte | Ingeniero de Software",
+    "description": "Ingeniero de Software con título en Ciencias de la Computación de la UFPel. Especialista en React, TypeScript y Node.js con experiencia en productos de alto impacto y liderazgo técnico.",
+    "keywords": "juathan, juathan coelho duarte, juats, juathan duarte, ingeniero de software, desarrollador full-stack, react, typescript, nodejs, frontend, backend, javascript, portafolio, ufpel, ciencias de la computación, software engineer, pelotas, desarrollador web",
+    "imageAlt": "Juathan C. Duarte - Ingeniero de Software"
+  },
   "languages": {
     "pt": "Português",
     "en": "English",

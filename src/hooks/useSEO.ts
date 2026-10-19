@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { getOgLocale, SEO_CONFIG } from "../config/seo";
 
 interface IUseSEOProps {
   title?: string;
@@ -14,21 +15,21 @@ export const useSEO = ({
   title,
   description,
   keywords,
-  image = "https://juats.dev/src/assets/images/avatar.jpg",
-  url = "https://juats.dev",
+  image = SEO_CONFIG.defaultImage,
+  url = SEO_CONFIG.siteUrl,
   type = "website",
 }: IUseSEOProps = {}) => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const currentLanguage = i18n.language;
-    const baseTitle =
-      "juats.dev | Desenvolvedor Full-Stack | Juathan Coelho Duarte";
-    const baseDescription =
-      "Desenvolvedor Full-Stack formado em Ciência da Computação pela UFPel. Especialista em React, TypeScript, Node.js com experiência em produtos de alto impacto e liderança técnica.";
+    const baseTitle = t("seo.title");
+    const baseDescription = t("seo.description");
+    const baseKeywords = t("seo.keywords");
 
     const finalTitle = title ? `${title} | ${baseTitle}` : baseTitle;
-    const finalDescription = description || baseDescription;
+    const finalDescription = description ?? baseDescription;
+    const finalKeywords = keywords ?? baseKeywords;
     const finalUrl =
       url + (currentLanguage !== "pt-BR" ? `?lang=${currentLanguage}` : "");
 
@@ -57,24 +58,14 @@ export const useSEO = ({
     };
 
     updateMetaTag("description", finalDescription);
-    if (keywords) {
-      updateMetaTag("keywords", keywords);
-    }
+    updateMetaTag("keywords", finalKeywords);
 
     updateMetaTag("og:title", finalTitle, true);
     updateMetaTag("og:description", finalDescription, true);
     updateMetaTag("og:image", image, true);
     updateMetaTag("og:url", finalUrl, true);
     updateMetaTag("og:type", type, true);
-    updateMetaTag(
-      "og:locale",
-      currentLanguage === "pt-BR"
-        ? "pt_BR"
-        : currentLanguage === "en"
-          ? "en_US"
-          : "es_ES",
-      true
-    );
+    updateMetaTag("og:locale", getOgLocale(currentLanguage), true);
 
     updateMetaTag("twitter:title", finalTitle);
     updateMetaTag("twitter:description", finalDescription);
@@ -90,7 +81,16 @@ export const useSEO = ({
       document.head.appendChild(canonical);
     }
     canonical.setAttribute("href", finalUrl);
-  }, [title, description, keywords, image, url, type, i18n.language]);
+  }, [
+    title,
+    description,
+    keywords,
+    image,
+    url,
+    type,
+    i18n.language,
+    t,
+  ]);
 };
 
 export default useSEO;

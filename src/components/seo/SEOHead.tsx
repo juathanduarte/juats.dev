@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { getOgLocale, SEO_CONFIG } from "../../config/seo";
 
 interface ISEOHeadProps {
   title?: string;
@@ -11,17 +13,24 @@ interface ISEOHeadProps {
 }
 
 const SEOHead = ({
-  title = "juats.dev | Desenvolvedor Full-Stack | Juathan Coelho Duarte",
-  description = "Desenvolvedor Full-Stack formado em Ciência da Computação pela UFPel. Especialista em React, TypeScript, Node.js com experiência em produtos de alto impacto e liderança técnica.",
-  keywords = "desenvolvedor full-stack, react, typescript, nodejs, frontend, backend, javascript, juathan coelho duarte, juats, portfólio",
-  image = "https://juats.dev/src/assets/images/avatar.jpg",
-  url = "https://juats.dev",
+  title,
+  description,
+  keywords,
+  image = SEO_CONFIG.defaultImage,
+  url = SEO_CONFIG.siteUrl,
   type = "website",
-  locale = "pt_BR",
+  locale,
 }: ISEOHeadProps) => {
+  const { t, i18n } = useTranslation();
+
+  const resolvedTitle = title ?? t("seo.title");
+  const resolvedDescription = description ?? t("seo.description");
+  const resolvedKeywords = keywords ?? t("seo.keywords");
+  const resolvedLocale = locale ?? getOgLocale(i18n.language);
+
   useEffect(() => {
-    if (title) {
-      document.title = title;
+    if (resolvedTitle) {
+      document.title = resolvedTitle;
     }
 
     const updateMetaTag = (
@@ -54,18 +63,18 @@ const SEOHead = ({
       updateMetaTag(name, content);
     };
 
-    updateMetaTag("description", description);
-    updateMetaTag("keywords", keywords);
+    updateMetaTag("description", resolvedDescription);
+    updateMetaTag("keywords", resolvedKeywords);
 
-    updateOGTag("og:title", title);
-    updateOGTag("og:description", description);
+    updateOGTag("og:title", resolvedTitle);
+    updateOGTag("og:description", resolvedDescription);
     updateOGTag("og:image", image);
     updateOGTag("og:url", url);
     updateOGTag("og:type", type);
-    updateOGTag("og:locale", locale);
+    updateOGTag("og:locale", resolvedLocale);
 
-    updateTwitterTag("twitter:title", title);
-    updateTwitterTag("twitter:description", description);
+    updateTwitterTag("twitter:title", resolvedTitle);
+    updateTwitterTag("twitter:description", resolvedDescription);
     updateTwitterTag("twitter:image", image);
     updateTwitterTag("twitter:url", url);
 
@@ -78,7 +87,15 @@ const SEOHead = ({
       document.head.appendChild(canonical);
     }
     canonical.setAttribute("href", url);
-  }, [title, description, keywords, image, url, type, locale]);
+  }, [
+    resolvedTitle,
+    resolvedDescription,
+    resolvedKeywords,
+    image,
+    url,
+    type,
+    resolvedLocale,
+  ]);
 
   return null;
 };

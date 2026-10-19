@@ -1,9 +1,19 @@
+export const getOgLocale = (language: string): string => {
+  if (language === "pt-BR") {
+    return "pt_BR";
+  }
+  if (language === "en") {
+    return "en_US";
+  }
+  return "es_ES";
+};
+
 export const SEO_CONFIG = {
   siteName: "juats.dev",
   siteUrl: "https://juats.dev",
-  defaultTitle: "juats.dev | Desenvolvedor Full-Stack | Juathan Coelho Duarte",
+  defaultTitle: "Juathan C. Duarte | Engenheiro de Software",
   defaultDescription:
-    "Desenvolvedor Full-Stack formado em Ciência da Computação pela UFPel. Especialista em React, TypeScript, Node.js com experiência em produtos de alto impacto e liderança técnica.",
+    "Engenheiro de Software formado em Ciência da Computação pela UFPel. Especialista em React, TypeScript, Node.js com experiência em produtos de alto impacto e liderança técnica.",
   defaultKeywords: [
     "desenvolvedor full-stack",
     "react",
@@ -21,7 +31,7 @@ export const SEO_CONFIG = {
   author: "Juathan Coelho Duarte",
   twitterHandle: "@juathanduarte",
   defaultImage: "https://juats.dev/src/assets/images/avatar.jpg",
-  defaultImageAlt: "Juathan Coelho Duarte - Desenvolvedor Full-Stack",
+  defaultImageAlt: "Juathan C. Duarte - Engenheiro de Software",
   supportedLanguages: ["pt-BR", "en", "es"],
   defaultLanguage: "pt-BR",
 } as const;

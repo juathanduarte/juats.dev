@@ -196,6 +196,12 @@
     "connect": "Connect",
     "copyright": "All rights reserved, tchê! 🧉"
   },
+  "seo": {
+    "title": "Juathan C. Duarte | Software Engineer",
+    "description": "Software Engineer with a degree in Computer Science from UFPel. Specialized in React, TypeScript, and Node.js with experience in high-impact products and technical leadership.",
+    "keywords": "juathan, juathan coelho duarte, juats, juathan duarte, software engineer, full-stack developer, react, typescript, nodejs, frontend, backend, javascript, portfolio, ufpel, computer science, pelotas, web developer",
+    "imageAlt": "Juathan C. Duarte - Software Engineer"
+  },
   "languages": {
     "pt": "Português",
     "en": "English",

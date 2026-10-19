@@ -17,10 +17,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [showBelowFold, setShowBelowFold] = useState(false);
 
-  useSEO({
-    keywords:
-      "juathan, juathan coelho duarte, juats, juathan duarte, desenvolvedor full-stack, react, typescript, nodejs, frontend, backend, javascript, portfólio, ufpel, ciência da computação, software engineer, pelotas, desenvolvedor web",
-  });
+  useSEO();
 
   const handleLoadingComplete = () => {
     setIsLoading(false);
