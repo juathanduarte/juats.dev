@@ -30,11 +30,28 @@ const projectImages: Record<string, string> = {
   "logvcinteligencia.jpeg": logvcinteligenciaImg,
 };
 
+const DRAG_THRESHOLD_PX = 4;
+const MOMENTUM_MIN_VELOCITY = 0.02;
+const MOMENTUM_FRICTION = 0.94;
+const MAX_SCROLL_VELOCITY = 2.2;
+
 const Projects = () => {
   const { t } = useTranslation();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const momentumRafRef = useRef(0);
+  const dragRef = useRef({
+    isActive: false,
+    pointerId: -1,
+    startX: 0,
+    scrollLeft: 0,
+    didDrag: false,
+    lastX: 0,
+    lastTime: 0,
+    velocity: 0,
+  });
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const [isGrabbing, setIsGrabbing] = useState(false);
 
   const checkScrollLimits = () => {
     const container = scrollContainerRef.current;
@@ -44,6 +61,70 @@ const Projects = () => {
     setCanScrollRight(
       container.scrollLeft < container.scrollWidth - container.clientWidth - 5
     );
+  };
+
+  const cancelMomentum = () => {
+    if (!momentumRafRef.current) return;
+    cancelAnimationFrame(momentumRafRef.current);
+    momentumRafRef.current = 0;
+  };
+
+  const snapToNearestCard = (container: HTMLDivElement) => {
+    const cards = container.querySelectorAll<HTMLElement>("[data-project-card]");
+    if (!cards.length) return;
+
+    const { scrollLeft } = container;
+    let nearestOffset = cards[0].offsetLeft;
+    let minDistance = Math.abs(nearestOffset - scrollLeft);
+
+    cards.forEach((card) => {
+      const distance = Math.abs(card.offsetLeft - scrollLeft);
+      if (distance < minDistance) {
+        minDistance = distance;
+        nearestOffset = card.offsetLeft;
+      }
+    });
+
+    container.scrollTo({ left: nearestOffset, behavior: "smooth" });
+  };
+
+  const runMomentumScroll = (container: HTMLDivElement, initialVelocity: number) => {
+    cancelMomentum();
+
+    let velocity = Math.max(
+      -MAX_SCROLL_VELOCITY,
+      Math.min(MAX_SCROLL_VELOCITY, initialVelocity)
+    );
+    let lastTime = performance.now();
+
+    const tick = (now: number) => {
+      const deltaTime = Math.min(now - lastTime, 32);
+      lastTime = now;
+
+      container.scrollLeft += velocity * deltaTime;
+
+      const maxScroll = container.scrollWidth - container.clientWidth;
+      if (container.scrollLeft <= 0) {
+        container.scrollLeft = 0;
+        velocity = 0;
+      } else if (container.scrollLeft >= maxScroll) {
+        container.scrollLeft = maxScroll;
+        velocity = 0;
+      }
+
+      velocity *= Math.pow(MOMENTUM_FRICTION, deltaTime / 16);
+
+      if (Math.abs(velocity) < MOMENTUM_MIN_VELOCITY) {
+        momentumRafRef.current = 0;
+        snapToNearestCard(container);
+        checkScrollLimits();
+        return;
+      }
+
+      momentumRafRef.current = requestAnimationFrame(tick);
+    };
+
+    momentumRafRef.current = requestAnimationFrame(tick);
   };
 
   useEffect(() => {
@@ -58,6 +139,7 @@ const Projects = () => {
     return () => {
       container.removeEventListener("scroll", checkScrollLimits);
       window.removeEventListener("resize", checkScrollLimits);
+      cancelMomentum();
     };
   }, []);
 
@@ -70,6 +152,89 @@ const Projects = () => {
       left: direction === "left" ? -scrollAmount : scrollAmount,
       behavior: "smooth",
     });
+  };
+
+  const handlePointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
+    if (event.button !== 0 || event.pointerType !== "mouse") return;
+
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    cancelMomentum();
+
+    const now = performance.now();
+    dragRef.current = {
+      isActive: true,
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      scrollLeft: container.scrollLeft,
+      didDrag: false,
+      lastX: event.clientX,
+      lastTime: now,
+      velocity: 0,
+    };
+    setIsGrabbing(true);
+    container.setPointerCapture(event.pointerId);
+  };
+
+  const handlePointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
+    const drag = dragRef.current;
+    if (!drag.isActive || event.pointerId !== drag.pointerId) return;
+
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const deltaX = event.clientX - drag.startX;
+    if (Math.abs(deltaX) > DRAG_THRESHOLD_PX) {
+      drag.didDrag = true;
+    }
+
+    if (drag.didDrag) {
+      event.preventDefault();
+
+      const now = performance.now();
+      const deltaTime = now - drag.lastTime;
+      if (deltaTime > 0) {
+        const instantVelocity = (drag.lastX - event.clientX) / deltaTime;
+        drag.velocity = drag.velocity * 0.55 + instantVelocity * 0.45;
+      }
+      drag.lastX = event.clientX;
+      drag.lastTime = now;
+
+      container.scrollLeft = drag.scrollLeft - deltaX;
+    }
+  };
+
+  const handlePointerUp = (event: React.PointerEvent<HTMLDivElement>) => {
+    const drag = dragRef.current;
+    if (!drag.isActive || event.pointerId !== drag.pointerId) return;
+
+    const container = scrollContainerRef.current;
+    if (container?.hasPointerCapture(event.pointerId)) {
+      container.releasePointerCapture(event.pointerId);
+    }
+
+    const didDrag = drag.didDrag;
+    const releaseVelocity = drag.velocity;
+
+    drag.isActive = false;
+    setIsGrabbing(false);
+
+    if (didDrag && container) {
+      if (Math.abs(releaseVelocity) > 0.06) {
+        runMomentumScroll(container, releaseVelocity);
+      } else {
+        snapToNearestCard(container);
+      }
+    }
+  };
+
+  const handleClickCapture = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (!dragRef.current.didDrag) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+    dragRef.current.didDrag = false;
   };
 
   return (
@@ -112,11 +277,23 @@ const Projects = () => {
 
           <div
             ref={scrollContainerRef}
-            className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-6"
+            role="region"
+            aria-label={t("projects.title")}
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handlePointerUp}
+            onPointerCancel={handlePointerUp}
+            onClickCapture={handleClickCapture}
+            className={`flex gap-6 overflow-x-auto scrollbar-none pb-6 ${
+              isGrabbing
+                ? "cursor-grabbing snap-none select-none scroll-auto"
+                : "cursor-grab snap-x snap-proximity scroll-smooth"
+            }`}
           >
             {PROJECTS.map((project, index) => (
               <div
                 key={project.id}
+                data-project-card
                 className="w-[280px] sm:w-[360px] shrink-0 snap-start flex flex-col border border-zinc-200 dark:border-zinc-900 bg-white dark:bg-zinc-950/20 backdrop-blur-sm transition-all duration-300 hover:border-zinc-400 dark:hover:border-zinc-700"
               >
                 <div className="h-44 relative overflow-hidden border-b border-zinc-200 dark:border-zinc-900 bg-zinc-100 dark:bg-zinc-900/50">
