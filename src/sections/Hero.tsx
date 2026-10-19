@@ -54,7 +54,7 @@ const Hero = () => {
     >
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 w-full relative z-10">
+      <div className="section-container relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-8 flex flex-col gap-8">
             <div className="block md:hidden">

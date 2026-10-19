@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#fcfcfc] dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 border-t border-neutral-150 dark:border-neutral-900">
-      <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 py-16 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+      <div className="section-container py-16 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
         <div className="flex flex-col gap-2">
           <h3 className="text-md font-bold text-neutral-950 dark:text-white">
             Juathan Coelho Duarte

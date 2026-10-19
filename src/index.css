@@ -124,6 +124,10 @@
     @apply max-w-5xl mx-auto;
   }
 
+  .section-container {
+    @apply max-width container-padding w-full;
+  }
+
   .card {
     @apply bg-transparent p-0 border-none transition-colors duration-200;
   }

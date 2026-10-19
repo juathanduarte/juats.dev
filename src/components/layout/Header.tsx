@@ -83,7 +83,7 @@ const Header = () => {
         isHeaderVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16">
+      <div className="section-container">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <div className="flex items-center gap-2">

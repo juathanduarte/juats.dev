@@ -87,7 +87,7 @@ const About = () => {
       id="about"
       className="section-padding bg-[#fcfcfc] dark:bg-[#0a0a0a] border-t border-neutral-150 dark:border-neutral-900"
     >
-      <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16">
+      <div className="section-container">
         <div className="space-y-16 sm:space-y-20">
           <div className="space-y-6">
             <SectionTitle title={t("about.title")} />

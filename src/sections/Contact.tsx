@@ -83,7 +83,7 @@ const Contact = () => {
       id="contact"
       className="section-padding bg-[#fcfcfc] dark:bg-[#0a0a0a] border-t border-neutral-150 dark:border-neutral-900"
     >
-      <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 w-full flex flex-col gap-16">
+      <div className="section-container flex flex-col gap-16">
         <div className="w-full">
           <SectionTitle title={t("contact.title")} />
         </div>

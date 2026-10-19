@@ -49,7 +49,7 @@ const Experience = () => {
       id="about"
       className="section-padding bg-zinc-50 dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-900 transition-colors duration-300 relative overflow-hidden"
     >
-      <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
+      <div className="section-container relative z-10">
         <div className="flex flex-col gap-12">
           <div className="flex items-center gap-2">
             <Terminal className="w-5 h-5 text-zinc-500" />
