@@ -7,9 +7,11 @@ import {
   SiBitbucket,
   SiCplusplus,
   SiCss3,
+  SiDjango,
   SiDocker,
   SiExpo,
   SiExpress,
+  SiFlask,
   SiFirebase,
   SiGit,
   SiGithub,
@@ -161,6 +163,17 @@ const Technologies = () => {
             "group-hover:text-neutral-600 dark:group-hover:text-neutral-300",
         },
         { name: "NestJS", icon: SiNestjs, color: "group-hover:text-red-500" },
+        {
+          name: "Django",
+          icon: SiDjango,
+          color: "group-hover:text-green-800 dark:group-hover:text-green-600",
+        },
+        {
+          name: "Flask",
+          icon: SiFlask,
+          color:
+            "group-hover:text-neutral-700 dark:group-hover:text-neutral-300",
+        },
         {
           name: "Next.js",
           icon: SiNextdotjs,

@@ -20,6 +20,24 @@ export const SOCIAL_LINKS: ISocialLink[] = [
 
 export const PROJECTS: IProject[] = [
   {
+    id: "10",
+    title: "CEMIG",
+    descriptionKey: "projects.descriptions.cemig",
+    technologies: ["TypeScript", "Next.js", "Django", "Flask", "Docker"],
+    featured: true,
+    category: "fullstack",
+    projectType: "professional",
+  },
+  {
+    id: "11",
+    title: "PREVIC",
+    descriptionKey: "projects.descriptions.previc",
+    technologies: ["TypeScript", "Next.js", "Django", "Flask", "Docker"],
+    featured: true,
+    category: "fullstack",
+    projectType: "professional",
+  },
+  {
     id: "9",
     title: "Log.VC.Inteligência - Votorantim Cimentos",
     descriptionKey: "projects.descriptions.logvcinteligencia",

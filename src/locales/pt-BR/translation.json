@@ -140,7 +140,9 @@
       "siiepe": "Aplicativo mobile desenvolvido em React Native para registro e controle de presenças em eventos acadêmicos do SIIEPE (Semana Integrada de Inovação, Ensino, Pesquisa e Extensão), facilitando o gerenciamento de participantes e a validação de certificados com integração GraphQL.",
       "blablacampus": "Aplicativo mobile de carona compartilhada entre os campus da UFPEL, inspirado no BlaBlaCar, conectando estudantes e servidores para facilitar o deslocamento entre as diferentes unidades da universidade.",
       "amigoDePelo": "Plataforma para uma ONG onde é possível adotar novos animais, ver os resgates, doações e uma área de voluntário onde tem o CRUD de todas informações e adoções e etc.",
-      "logvcinteligencia": "Plataforma inteligente voltada para a otimização de preços de fretes e análise de mercado, permitindo a visualização estratégica de lacunas operacionais e oportunidades de eficiência logística com base na distribuição por mesorregiões."
+      "logvcinteligencia": "Plataforma inteligente voltada para a otimização de preços de fretes e análise de mercado, permitindo a visualização estratégica de lacunas operacionais e oportunidades de eficiência logística com base na distribuição por mesorregiões.",
+      "cemig": "Ecossistema de jurimetria para companhia elétrica: crawlers (Escavador/BigData), enriquecimento de dados judiciais, gestão de processos, PF/PJ, documentos, grafos de relações e filas, com front Pumpwood/Next.js e monitoramento preditivo.",
+      "previc": "Linha de planos de previdência com bases regulatórias (SQL Server), modelos de risco de insolvência e indicadores atuariais/contábeis; e PREVIC Sistemas (Pumpwood/Next.js) com ingestão em lote, LLM, cadastro de planos e Assistente Previc para supervisão."
     }
   },
   "volunteer": {

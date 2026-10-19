@@ -2,7 +2,7 @@ export interface IProject {
   id: string;
   title: string;
   descriptionKey: string;
-  image: string;
+  image?: string;
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;

@@ -1,6 +1,12 @@
 import { useRef, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { ChevronLeft, ChevronRight, FolderOpen, ArrowUpRight } from "lucide-react";
+import {
+  ArrowUpRight,
+  ChevronLeft,
+  ChevronRight,
+  FolderOpen,
+  ImageOff,
+} from "lucide-react";
 import { PROJECTS } from "@constants/index";
 import amigoDePeloImg from "../assets/projects/amigo-de-pelo.png";
 import appMeupassImg from "../assets/projects/app-meupass.jpg";
@@ -114,12 +120,24 @@ const Projects = () => {
                 className="w-[280px] sm:w-[360px] shrink-0 snap-start flex flex-col border border-zinc-200 dark:border-zinc-900 bg-white dark:bg-zinc-950/20 backdrop-blur-sm transition-all duration-300 hover:border-zinc-400 dark:hover:border-zinc-700"
               >
                 <div className="h-44 relative overflow-hidden border-b border-zinc-200 dark:border-zinc-900 bg-zinc-100 dark:bg-zinc-900/50">
-                  <img
-                    src={projectImages[project.image]}
-                    alt={project.title}
-                    className="w-full h-full object-cover grayscale contrast-110 brightness-95 opacity-80 transition-all duration-500 hover:scale-105 hover:grayscale-0 hover:brightness-100 hover:opacity-100 ease-out"
-                    loading={index < 3 ? "eager" : "lazy"}
-                  />
+                  {project.image && projectImages[project.image] ? (
+                    <img
+                      src={projectImages[project.image]}
+                      alt={project.title}
+                      className="w-full h-full object-cover grayscale contrast-110 brightness-95 opacity-80 transition-all duration-500 hover:scale-105 hover:grayscale-0 hover:brightness-100 hover:opacity-100 ease-out"
+                      loading={index < 3 ? "eager" : "lazy"}
+                    />
+                  ) : (
+                    <div
+                      className="w-full h-full flex items-center justify-center bg-zinc-200/80 dark:bg-zinc-800/80"
+                      aria-hidden
+                    >
+                      <ImageOff
+                        className="w-10 h-10 text-zinc-400 dark:text-zinc-500"
+                        strokeWidth={1.25}
+                      />
+                    </div>
+                  )}
                   
                   <div className="absolute top-3 left-3 right-3 flex justify-between items-start gap-2 select-none">
                     <span className="px-2 py-0.5 text-[9px] font-bold font-mono uppercase bg-white dark:bg-zinc-950 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 tracking-wider">
@@ -169,7 +187,7 @@ const Projects = () => {
                     </div>
                   </div>
 
-                  <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed font-sans line-clamp-3">
+                  <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed font-sans">
                     {t(project.descriptionKey)}
                   </p>
 
