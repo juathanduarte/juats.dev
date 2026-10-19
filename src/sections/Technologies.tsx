@@ -262,7 +262,7 @@ const Technologies = () => {
       id="technologies"
       className="section-padding bg-zinc-50 dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-900 transition-colors duration-300 relative overflow-hidden"
     >
-      <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
         <div className="flex flex-col gap-12">
           
           <div className="flex items-center gap-2">
@@ -272,19 +272,17 @@ const Technologies = () => {
             </h2>
           </div>
 
-          <div className="flex flex-col border-t border-zinc-200 dark:border-zinc-900">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 border-t border-zinc-200 dark:border-zinc-900 pt-8 md:pt-10">
             {technologyCategories.map((category) => (
               <div
                 key={`${sectionId}-${category.title}`}
-                className="grid grid-cols-1 md:grid-cols-12 py-8 md:py-10 border-b border-zinc-200 dark:border-zinc-900 gap-6 items-start"
+                className="flex flex-col gap-4"
               >
-                <div className="md:col-span-4">
-                  <h3 className="text-xs uppercase tracking-wider font-mono text-neutral-450 dark:text-neutral-500">
-                    {category.title}
-                  </h3>
-                </div>
+                <h3 className="text-xs uppercase tracking-wider font-mono text-neutral-450 dark:text-neutral-500">
+                  {category.title}
+                </h3>
 
-                <div className="md:col-span-8 flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2">
                   {category.technologies.map((tech) => {
                     const IconComponent = tech.icon;
                     return (
